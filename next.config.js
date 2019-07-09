@@ -11,6 +11,6 @@ module.exports = withPlugins(
         '/': { page: '/' }
       };
     },
-    assetPrefix: isProd ? '/website' : '',
+    assetPrefix: isProd ? '/website' : '', // TODO: remove when we use custom domain
   },
 );
