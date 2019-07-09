@@ -51,8 +51,8 @@ const Header = () => (
       <Link href="/network">
         <NavLink>Network</NavLink>
       </Link>
-      <Link href="/governanace">
-        <NavLink>Governanace</NavLink>
+      <Link href="/governance">
+        <NavLink>Governance</NavLink>
       </Link>
       <NavLink>Communty</NavLink>
     </Nav>

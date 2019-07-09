@@ -54,6 +54,7 @@ const Section = styled(Wrapper)`
 
 const SectionColumn = styled(Section)`
   flex-direction: column;
+  padding: 140px 0 0 0;
 `;
 
 const ImageOne = styled.img`
@@ -187,7 +188,7 @@ const LitepaperSection = styled.div`
   display: flex;
   justify-content: center;
   background-color: rgb(239, 239, 245);
-  padding: 77px 0 73px 0;
+  padding: 67px 0 63px 0;
 `;
 
 const LitepaperContent = styled.div`
@@ -215,6 +216,35 @@ const UnderlineLink = styled.a`
 const UnderlineLinkAligned = styled(UnderlineLink)`
   margin-top: auto;
 `;
+
+const AltSectionWrapper = styled.div`
+  background-color: rgb(246, 246, 249);
+  margin-top: 200px;
+`;
+
+const PartnersSection = styled(SectionColumn)`
+  padding-top: 66px;
+`;
+
+const SectionHeaderControls = styled.div`
+  display: flex;
+`;
+
+const BuildButton = styled.a`
+  width: 235px;
+  height: 52px;
+  line-height: 52px;
+  border-radius: 5px;
+  background-color: rgb(75, 107, 220);
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  margin-left: auto;
+  margin-top: auto;
+`;
+
+
 
 const Index = () => (
   <Page>
@@ -292,35 +322,43 @@ const Index = () => (
         </RowItem>
       </NetworkSection>
     </SectionColumn>
-    <SectionColumn>
-      <HeaderMarker />
-      <SectionTitle>
-        Partners
-      </SectionTitle>
-      <Partner>
-        <PartnerImage>
-          <VerifiableImage/>
-          <PartnerImageTitle>
-            Verifiable.com
-          </PartnerImageTitle>
-        </PartnerImage>
-        <PartnerContent>
-          <PartnerTitle>
-            Verifiable.com
-          </PartnerTitle>
-          <PartnerDescription>
-            Verifiable works with universities, trade associations and enterprise companies,
-            providing a turn-key platform to issue verifiable credentials.
 
-            The platform provides the ability to design credential templates,
-            manage recipients and track business goals with analytics.
-          </PartnerDescription>
-          <UnderlineLinkAligned>
-            Read case study
-          </UnderlineLinkAligned>
-        </PartnerContent>
-      </Partner>
-    </SectionColumn>
+    <AltSectionWrapper>
+      <PartnersSection>
+        <HeaderMarker />
+        <SectionHeaderControls>
+          <SectionTitle>
+            Partners
+          </SectionTitle>
+          <BuildButton>
+            Build with Dock
+          </BuildButton>
+        </SectionHeaderControls>
+        <Partner>
+          <PartnerImage>
+            <VerifiableImage/>
+            <PartnerImageTitle>
+              Verifiable.com
+            </PartnerImageTitle>
+          </PartnerImage>
+          <PartnerContent>
+            <PartnerTitle>
+              Verifiable.com
+            </PartnerTitle>
+            <PartnerDescription>
+              Verifiable works with universities, trade associations and enterprise companies,
+              providing a turn-key platform to issue verifiable credentials.
+
+              The platform provides the ability to design credential templates,
+              manage recipients and track business goals with analytics.
+            </PartnerDescription>
+            <UnderlineLinkAligned>
+              Read case study
+            </UnderlineLinkAligned>
+          </PartnerContent>
+        </Partner>
+      </PartnersSection>
+    </AltSectionWrapper>
 
     <LitepaperSection>
         <LitepaperImage src={litepaperPNG}/>
