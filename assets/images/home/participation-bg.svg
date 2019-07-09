@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="331" height="159" viewBox="0 0 331 159">
+    <defs>
+        <path id="a" d="M3 0h325a3 3 0 0 1 3 3v153a3 3 0 0 1-3 3H3a3 3 0 0 1-3-3V3a3 3 0 0 1 3-3z"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <mask id="b" fill="#fff">
+            <use xlink:href="#a"/>
+        </mask>
+        <use fill="#4B6BDC" xlink:href="#a"/>
+        <g mask="url(#b)" opacity=".2">
+            <g transform="translate(-212 -94)">
+                <circle cx="190.5" cy="200.5" r="189" stroke="#FFF" stroke-width="3" opacity=".169"/>
+                <circle cx="445.5" cy="463.5" r="281" stroke="#FFF" stroke-width="3" opacity=".197"/>
+                <circle cx="445.5" cy="463.5" r="281" stroke="#FFF" stroke-width="3" opacity=".197"/>
+                <circle cx="604" cy="291" r="279.5" stroke="#5E4DAC" stroke-width="23" opacity=".083"/>
+                <path stroke="#FFF" stroke-linecap="square" stroke-width="3" d="M327.376 169.96l105.189 4.974M327.376 169.96L195.18 215.435M483.027 113.829l-50.462 61.105M553.034 249.54l-65.743-135.711" opacity=".756"/>
+                <path fill="#4B6BDC" d="M546.637 55.921h-59.702V419h59.702z" opacity=".065"/>
+                <path stroke="#FFF" stroke-linecap="square" stroke-width="3" d="M608.116 98.908l-120.825 14.92M549.125 249.54l-116.56-74.606M549.125 249.54l-93.817 12.789" opacity=".756"/>
+                <path stroke="#FFF" stroke-linecap="square" stroke-width="3" d="M437.54 180.618l17.768 81.71"/>
+                <path stroke="#FFF" stroke-linecap="square" stroke-width="3" d="M312.45 255.934l18.48-85.973M312.45 255.934l-63.254-55.42" opacity=".756"/>
+                <g stroke-width="3" transform="translate(205 55)">
+                    <ellipse cx="125.236" cy="114.531" fill="#4B6BDC" stroke="#FFF" rx="13.046" ry="13.038"/>
+                    <ellipse cx="250.827" cy="208.851" fill="#5E4DAC" stroke="#FFF" rx="13.046" ry="13.038"/>
+                    <ellipse cx="233.088" cy="125.169" fill="#4B6BDC" stroke="#FFF" rx="23.689" ry="23.676"/>
+                    <ellipse cx="347.68" cy="197.859" fill="#1F1A40" stroke="#E0EE6B" rx="14.82" ry="14.811"/>
+                    <ellipse cx="105.368" cy="201.05" fill="#4B6BDC" stroke="#BEBEBE" rx="41.428" ry="41.405"/>
+                    <ellipse cx="282.756" cy="58.507" fill="#4B6BDC" stroke="#A6ACBF" rx="23.689" ry="23.676"/>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

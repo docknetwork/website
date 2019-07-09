@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="331" height="159" viewBox="0 0 331 159">
+    <defs>
+        <path id="a" d="M3 0h325a3 3 0 0 1 3 3v153a3 3 0 0 1-3 3H3a3 3 0 0 1-3-3V3a3 3 0 0 1 3-3z"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <mask id="b" fill="#fff">
+            <use xlink:href="#a"/>
+        </mask>
+        <use fill="#5E4DAC" xlink:href="#a"/>
+        <g mask="url(#b)" opacity=".15">
+            <path stroke="#FFF" stroke-linecap="square" stroke-width="3" d="M134.51 96.308H66.3" opacity=".32"/>
+            <g transform="translate(55 32.508)">
+                <rect width="42.702" height="42.661" x="96.035" y="1.5" stroke="#FFF" stroke-width="3" opacity=".753" rx="3"/>
+                <rect width="14.277" height="14.263" x="51.085" y="30.398" stroke="#FFF" stroke-width="2" opacity=".443" rx="3"/>
+                <rect width="14.277" height="14.263" x="51.085" y="5.378" stroke="#FFF" stroke-width="2" opacity=".443" rx="3"/>
+                <rect width="14.277" height="14.263" x="26.042" y="30.398" stroke="#FFF" stroke-width="2" opacity=".443" rx="3"/>
+                <rect width="14.277" height="14.263" x="1" y="30.398" stroke="#FFF" stroke-width="2" opacity=".233" rx="3"/>
+                <rect width="45.702" height="45.661" x="151.506" fill="#FFF" opacity=".319" rx="3"/>
+                <rect width="27.547" height="27.522" x="274.213" y="8.757" fill="#F3F3F3" opacity=".319" rx="3"/>
+                <rect width="42.702" height="42.661" x="209.977" y="1.5" stroke="#FFF" stroke-width="3" opacity=".636" rx="3"/>
+                <rect width="42.702" height="42.661" x="266.948" y="1.5" stroke="#E0EE6B" stroke-width="3" rx="3"/>
+                <rect width="42.702" height="42.661" x="209.977" y="59.045" stroke="#FFF" stroke-width="3" rx="3"/>
+                <rect width="42.702" height="42.661" x="266.948" y="59.045" stroke="#FFF" stroke-width="3" opacity=".788" rx="3"/>
+            </g>
+            <path stroke="#FFF" stroke-linecap="square" stroke-width="3" d="M366 149.5H215" opacity=".756"/>
+            <path stroke="#C1C2D0" stroke-linecap="square" stroke-width="3" d="M255 20.5H135M135.5 95.777V20"/>
+            <g stroke-linecap="square" stroke-width="3">
+                <path stroke="#FFF" d="M206.35 149.5h-12.61" opacity=".756"/>
+                <path stroke="#4B6BDC" d="M184.77 149.5h-12.61"/>
+                <path stroke="#FFF" d="M163.465 149.5h-34.19" opacity=".756"/>
+            </g>
+        </g>
+    </g>
+</svg>
