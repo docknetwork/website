@@ -8,4 +8,5 @@ jobs:
       - run: yarn
       - run: yarn build
       - run: yarn export
+      - run: touch out/.nojekyll
       - run: ./scripts/deploy-ghpages.sh build
