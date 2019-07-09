@@ -7,6 +7,10 @@ export default ({ children }) => (
       <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700|Poppins:400,700&display=swap" rel="stylesheet" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta charSet="utf-8" />
+      <meta
+        name="viewport"
+        content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width, minimal-ui"
+      />
     </Head>
     <style jsx global>{`
       * {

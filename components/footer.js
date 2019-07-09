@@ -2,14 +2,28 @@ import React from 'react';
 import Link from 'next/link';
 import styled from 'styled-components';
 
+import media from '../helpers/media';
+
 import logoSVG from '../assets/images/dock-logo.svg';
+import binanceSVG from '../assets/images/icons/icn-b.svg';
+import facebookSVG from '../assets/images/icons/icn-facebook.svg';
+import githubSVG from '../assets/images/icons/icn-github.svg';
+import mediumSVG from '../assets/images/icons/icn-medium.svg';
+import redditSVG from '../assets/images/icons/icn-reddit.svg';
+import twitterSVG from '../assets/images/icons/icn-twitter.svg';
+import telegramSVG from '../assets/images/icons/icn-telegram.svg';
 
 const Wrapper = styled.div`
   display: flex;
   width: 100%;
   max-width: 1024px;
   margin: 0 auto;
+  flex-direction: column;
   align-items: flex-start;
+
+  @media ${media.medium} {
+    flex-direction: row;
+  }
 `;
 
 const Root = styled.div`
@@ -36,6 +50,14 @@ const NavLink = styled.a`
   line-height: 2;
   font-weight: bold;
   color: rgb(255, 255, 255);
+`;
+
+const Socials = styled.div`
+  display: flex;
+
+  @media ${media.medium} {
+    margin-left: auto;
+  }
 `;
 
 const Footer = () => (
@@ -69,6 +91,11 @@ const Footer = () => (
           </Link>
         </NavColumn>
       </Nav>
+      <Socials>
+        <a href="#">
+          <img src={telegramSVG}/>
+        </a>
+      </Socials>
     </Wrapper>
   </Root>
 );

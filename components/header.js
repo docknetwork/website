@@ -2,6 +2,8 @@ import React from 'react';
 import Link from 'next/link';
 import styled from 'styled-components';
 
+import media from '../helpers/media';
+
 import logoSVG from '../assets/images/dock-logo.svg';
 
 const Wrapper = styled.div`
@@ -12,13 +14,21 @@ const Wrapper = styled.div`
 `;
 
 const HeaderWrapper = styled(Wrapper)`
-  padding-top: 30px;
+  padding-top: 20px;
   align-items: center;
+
+  @media ${media.medium} {
+    padding-top: 30px;
+  }
 `;
 
 const Nav = styled.div`
   margin-left: auto;
-  display: flex;
+  display: none;
+
+  @media ${media.medium} {
+    display: flex;
+  }
 `;
 
 const NavLink = styled.a`
@@ -41,9 +51,18 @@ const NavLink = styled.a`
   }
 `;
 
+const LogoImg = styled.img`
+  width: 62px;
+
+  @media ${media.medium} {
+    padding-top: 20px;
+    width: 82px;
+  }
+`;
+
 const Header = () => (
   <HeaderWrapper>
-    <img src={logoSVG} />
+    <LogoImg src={logoSVG} />
     <Nav>
       <Link href="/">
         <NavLink>Home</NavLink>

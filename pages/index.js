@@ -4,13 +4,14 @@ import styled from 'styled-components';
 
 import Page from '../layouts/main';
 import HeaderHero from '../components/sections/header-hero';
+import media from '../helpers/media';
 
 import imageOneSVG from '../assets/images/home/image-one.svg';
-
 import participationBGSVG from '../assets/images/home/participation-bg.svg';
 import webstandardsBGSVG from '../assets/images/home/web-standards-bg.svg';
 import governanceBGSVG from '../assets/images/home/governance-bg.svg';
 
+import arrowRightSVG from '../assets/images/icons/arrow-right-dark.svg';
 import webstandardsIconSVG from '../assets/images/home/webstandards-icon.svg';
 import governanceIconSVG from '../assets/images/home/governance-bg-icon.svg';
 import networkIconSVG from '../assets/images/home/network-icon.svg';
@@ -27,38 +28,72 @@ const IntroSectionRight = styled.div`
   margin-left: auto;
   display: flex;
   flex-direction: column;
-  width: 425px;
-  margin: 96px 0 0 0;
+  margin: 40px 0 0 0;
+
+  @media ${media.medium} {
+    margin: 96px 0 0 0;
+    width: 425px;
+  }
 `;
 
 const SectionTitle = styled.h4`
-  font-size: 40px;
   font-weight: 600;
-  line-height: 1.25;
   color: rgb(32, 33, 46);
   max-width: 683px;
+  line-height: 1.38;
+  font-size: 32px;
+  max-width: 311px;
+
+  @media ${media.medium} {
+    line-height: 1.25;
+    font-size: 40px;
+    max-width: 100%;
+  }
 `;
 
 const SectionSubtitle = styled.p`
-  font-size: 18px;
   font-weight: normal;
-  line-height: 1.56;
   color: rgb(49, 42, 67);
   margin: 20px 0 0 0;
   max-width: 683px;
+  font-size: 16px;
+  line-height: 1.75;
+
+  @media ${media.medium} {
+    font-size: 18px;
+    line-height: 1.56;
+  }
 `;
 
 const Section = styled(Wrapper)`
-  padding: 170px 0 0 0;
+  padding: 40px 20px 0 20px;
+  flex-direction: column-reverse;
+
+  @media ${media.medium} {
+    padding: 170px 0 0 0;
+    flex-direction: row;
+  }
 `;
 
 const SectionColumn = styled(Section)`
   flex-direction: column;
-  padding: 140px 0 0 0;
+
+  @media ${media.medium} {
+    flex-direction: column;
+    padding: 140px 0 0 0;
+  }
 `;
 
 const ImageOne = styled.img`
-  transform: translate(-36px, 0);
+  width: 355px;
+  height: 355px;
+  transform: translate(-10px, 0);
+
+  @media ${media.medium} {
+    width: auto;
+    height: auto;
+    transform: translate(-36px, 0);
+  }
 `;
 
 const HeaderMarker = styled.div`
@@ -70,8 +105,14 @@ const HeaderMarker = styled.div`
 
 const NetworkSection = styled.div`
   display: flex;
-  margin: 60px 0 0 0;
+  margin: 35px 0 0 0;
   justify-content: space-between;
+  flex-direction: column;
+
+  @media ${media.medium} {
+    margin: 60px 0 0 0;
+    flex-direction: row;
+  }
 `;
 
 const RowItem = styled.div`
@@ -83,6 +124,11 @@ const RowItem = styled.div`
   box-shadow: 0 19px 56px -20px rgba(0, 0, 0, 0.2);
   background-color: rgb(255, 255, 255);
   position: relative;
+  margin-bottom: 35px;
+
+  @media ${media.medium} {
+    margin-bottom: 0;
+  }
 `;
 
 const RowItemTitle = styled.div`
@@ -116,6 +162,8 @@ const RowItemContent = styled.div`
   padding: 25px 33px 46px 33px;
   box-sizing: border-box;
   flex: auto;
+  display: flex;
+  flex-direction: column;
 `;
 
 const RowItemContentText = styled.p`
@@ -129,23 +177,34 @@ const RowItemContentText = styled.p`
 `;
 
 const Partner = styled.div`
-  display: flex;
-  height: 383px;
   box-shadow: 0 19px 56px -20px rgba(0, 0, 0, 0.2);
   background-color: rgb(255, 255, 255);
-  margin-top: 60px;
-  margin-bottom: 140px;
+  flex-direction: column;
+  display: flex;
+  margin-top: 44px;
+
+  @media ${media.medium} {
+    flex-direction: row;
+    margin-bottom: 140px;
+    margin-top: 60px;
+    height: 383px;
+  }
 `;
 
 const PartnerImage = styled.div`
-  width: 371px;
-  height: 383px;
+  width: 333px;
+  height: 334px;
   background-color: rgb(53, 188, 152);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+
+  @media ${media.medium} {
+    width: 371px;
+    height: 383px;
+  }
 `;
 
 const PartnerImageTitle = styled.h4`
@@ -165,9 +224,13 @@ const VerifiableImage = styled.div`
 `;
 
 const PartnerContent = styled.div`
-  padding: 46px 50px;
   display: flex;
   flex-direction: column;
+  padding: 40px 53px 42px 16px;
+
+  @media ${media.medium} {
+    padding: 46px 50px;
+  }
 `;
 
 const PartnerTitle = styled.h4`
@@ -181,36 +244,59 @@ const PartnerDescription = styled.p`
   font-size: 18px;
   line-height: 1.56;
   color: rgb(49, 42, 67);
-  margin: 10px 0 0 0;
+  margin: 10px 0 15px 0;
+
+  @media ${media.medium} {
+    margin: 10px 0 0 0;
+  }
 `;
 
 const LitepaperSection = styled.div`
   display: flex;
   justify-content: center;
   background-color: rgb(239, 239, 245);
-  padding: 67px 0 63px 0;
+  flex-direction: column-reverse;
+  padding: 50px 20px 10px 20px;
+
+  @media ${media.medium} {
+    padding: 67px 0 63px 0;
+    flex-direction: row;
+  }
 `;
 
 const LitepaperContent = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 25px 0 0 0;
+
+  @media ${media.medium} {
+    margin: 90px 0 0 0;
+  }
 `;
 
 const LitepaperImage = styled.img`
-  width: 213px;
-  margin-right: 40px;
+  width: 228px;
+  margin: 65px auto 0 auto;
+
+  @media ${media.medium} {
+    width: 213px;
+    margin: 65px 40px 0 0;
+  }
 `;
 
 const UnderlineLink = styled.a`
   border-bottom: 3px solid rgb(75, 107, 220);
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
   line-height: 1.56;
   padding: 4px 5px;
   color: rgb(60, 60, 72);
-  margin-top: 30px;
   align-self: flex-start;
+  margin-top: 13px;
+
+  @media ${media.medium} {
+    margin-top: 30px;
+    font-size: 18px;
+  }
 `;
 
 const UnderlineLinkAligned = styled(UnderlineLink)`
@@ -219,7 +305,11 @@ const UnderlineLinkAligned = styled(UnderlineLink)`
 
 const AltSectionWrapper = styled.div`
   background-color: rgb(246, 246, 249);
-  margin-top: 200px;
+  margin-top: 20px;
+
+  @media ${media.medium} {
+    margin-top: 200px;
+  }
 `;
 
 const PartnersSection = styled(SectionColumn)`
@@ -242,9 +332,26 @@ const BuildButton = styled.a`
   color: rgb(255, 255, 255);
   margin-left: auto;
   margin-top: auto;
+  display: none;
+
+  @media ${media.medium} {
+    display: block;
+  }
 `;
 
+const BuildButtonMobile = styled(BuildButton)`
+  margin: 45px 0 50px 0;
+  display: block;
+  width: 100%;
 
+  @media ${media.medium} {
+    display: none;
+  }
+`;
+
+const UnderlineLinkIcon = styled.img`
+  margin-left: 15px;
+`;
 
 const Index = () => (
   <Page>
@@ -286,6 +393,7 @@ const Index = () => (
             </RowItemContentText>
             <UnderlineLinkAligned>
               Learn more
+              <UnderlineLinkIcon src={arrowRightSVG}/>
             </UnderlineLinkAligned>
           </RowItemContent>
         </RowItem>
@@ -303,6 +411,7 @@ const Index = () => (
             </RowItemContentText>
             <UnderlineLinkAligned>
               Learn more
+              <UnderlineLinkIcon src={arrowRightSVG}/>
             </UnderlineLinkAligned>
           </RowItemContent>
         </RowItem>
@@ -354,9 +463,14 @@ const Index = () => (
             </PartnerDescription>
             <UnderlineLinkAligned>
               Read case study
+              <UnderlineLinkIcon src={arrowRightSVG}/>
             </UnderlineLinkAligned>
           </PartnerContent>
         </Partner>
+
+        <BuildButtonMobile>
+          Become a partner
+        </BuildButtonMobile>
       </PartnersSection>
     </AltSectionWrapper>
 
@@ -371,6 +485,7 @@ const Index = () => (
           </SectionSubtitle>
           <UnderlineLink>
             Read Litepaper
+            <UnderlineLinkIcon src={arrowRightSVG}/>
           </UnderlineLink>
         </LitepaperContent>
     </LitepaperSection>
