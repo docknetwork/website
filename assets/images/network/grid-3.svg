@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="168" height="167" viewBox="0 0 168 167">
+    <defs>
+        <path id="a" d="M13 .687L.374 66.688l69.52-34.9L86.656 5z"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <g transform="translate(1)">
+            <circle cx="83.5" cy="83.5" r="79" fill="#D6D6E0" stroke="#FFF" stroke-width="9"/>
+            <path fill="#858399" d="M103 2h43a3 3 0 0 1 3 3v51.632L136.3 69H103a3 3 0 0 1-3-3V5a3 3 0 0 1 3-3z"/>
+            <path stroke="#FFF" stroke-linecap="round" stroke-width="2" d="M110.5 15.5h17.166M110.778 25h26.702M110.778 35h26.702M110.778 45h26.702"/>
+            <g>
+                <path fill="#080022" d="M120 25h43a3 3 0 0 1 3 3v51.632L153.3 92H120a3 3 0 0 1-3-3V28a3 3 0 0 1 3-3z"/>
+                <path stroke="#FFF" stroke-linecap="round" stroke-width="2" d="M127.5 38.5h17.166M127.778 48h26.702M127.778 58h26.702M127.778 68h26.702"/>
+            </g>
+        </g>
+        <g stroke="#4B6BDC">
+            <path fill="#FFF" stroke-width="5" d="M33.8 139C13.267 131.997 3 120.548 3 104.654V73.652c8.795.714 19.061-3.17 30.8-11.652 11.739 8.482 22.005 12.366 30.8 11.652v31.002c0 15.894-10.267 27.343-30.8 34.346z"/>
+            <path stroke-linecap="round" stroke-width="4.5" d="M22.453 100.5l9.726 8.926 15.4-21.301"/>
+        </g>
+        <g transform="rotate(-74 65.145 14.44)">
+            <mask id="b" fill="#fff">
+                <use xlink:href="#a"/>
+            </mask>
+            <path stroke="#080022" stroke-dasharray="6" stroke-width="3" d="M-9.467 124.78c33.137 0 60-26.863 60-60s-26.863-60-60-60-60 26.863-60 60 26.863 60 60 60z" mask="url(#b)"/>
+        </g>
+        <path fill="#080022" d="M80.057 32.953l16.753 6.324-15.072 9.67z"/>
+    </g>
+</svg>

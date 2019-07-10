@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="570" height="588" viewBox="0 0 570 588">
+    <defs>
+        <filter id="b" width="163.4%" height="156.5%" x="-31.7%" y="-28.3%" filterUnits="objectBoundingBox">
+            <feMorphology in="SourceAlpha" radius="10" result="shadowSpreadOuter1"/>
+            <feOffset dy="19" in="shadowSpreadOuter1" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="28"/>
+            <feColorMatrix in="shadowBlurOuter1" result="shadowMatrixOuter1" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0"/>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+        <rect id="c" width="424" height="476" rx="3"/>
+        <circle id="f" cx="87" cy="263" r="33"/>
+        <filter id="e" width="289.4%" height="289.4%" x="-94.7%" y="-73.5%" filterUnits="objectBoundingBox">
+            <feMorphology in="SourceAlpha" radius="7" result="shadowSpreadOuter1"/>
+            <feOffset dy="14" in="shadowSpreadOuter1" result="shadowOffsetOuter1"/>
+            <feMorphology in="SourceAlpha" operator="dilate" radius="4" result="shadowInner"/>
+            <feOffset dy="14" in="shadowInner" result="shadowInner"/>
+            <feComposite in="shadowOffsetOuter1" in2="shadowInner" operator="out" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="19.5"/>
+            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0"/>
+        </filter>
+        <circle id="h" cx="56.5" cy="81.5" r="56.5"/>
+        <filter id="g" width="207.1%" height="207.1%" x="-53.5%" y="-41.2%" filterUnits="objectBoundingBox">
+            <feMorphology in="SourceAlpha" radius="7" result="shadowSpreadOuter1"/>
+            <feOffset dy="14" in="shadowSpreadOuter1" result="shadowOffsetOuter1"/>
+            <feMorphology in="SourceAlpha" operator="dilate" radius="2" result="shadowInner"/>
+            <feOffset dy="14" in="shadowInner" result="shadowInner"/>
+            <feComposite in="shadowOffsetOuter1" in2="shadowInner" operator="out" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="19.5"/>
+            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0"/>
+        </filter>
+        <path id="i" d="M66.681.168L.61 30.785l5.183 19.307 141.83 39.015 13.024-21.635z"/>
+        <circle id="a" cx="38.511" cy="231.808" r="195.5"/>
+        <mask id="k" width="391" height="391" x="0" y="0" fill="#fff">
+            <use xlink:href="#a"/>
+        </mask>
+    </defs>
+    <g fill="none" fill-rule="evenodd" transform="translate(0 37)">
+        <g filter="url(#b)" transform="translate(90)">
+            <mask id="d" fill="#fff">
+                <use xlink:href="#c"/>
+            </mask>
+            <use fill="#1A1637" xlink:href="#c"/>
+            <g mask="url(#d)">
+                <g transform="translate(-350 -17)">
+                    <circle cx="268" cy="282" r="266.5" stroke="#FFF" stroke-width="3" opacity=".169"/>
+                    <circle cx="627" cy="652" r="396.5" stroke="#FFF" stroke-width="3" opacity=".197"/>
+                    <circle cx="627" cy="652" r="396.5" stroke="#FFF" stroke-width="3" opacity=".197"/>
+                    <circle cx="850.5" cy="409.5" r="398" stroke="#5E4DAC" stroke-width="23" opacity=".083"/>
+                    <path stroke="#FFF" stroke-linecap="square" stroke-width="3" d="M461.5 239.5l148 7M461.5 239.5l-186 64M680.5 160.5l-71 86M779 351.5l-92.5-191" opacity=".756"/>
+                    <path fill="#4B6BDC" d="M770 79h-84v511h84z" opacity=".065"/>
+                    <path fill="#5E4DAC" d="M780 58h-10v522h10z"/>
+                    <path stroke="#FFF" stroke-linecap="square" stroke-width="3" d="M856.5 139.5l-170 21M773.5 351.5l-164-105M773.5 351.5l-132 18" opacity=".756"/>
+                    <path stroke="#FFF" stroke-linecap="square" stroke-width="3" d="M616.5 254.5l25 115"/>
+                    <path stroke="#FFF" stroke-linecap="square" stroke-width="3" d="M440.5 360.5l201 9M461.5 483.5l180-114M800.5 534.5l-159-165" opacity=".756"/>
+                    <path stroke="#FFF" stroke-linecap="square" stroke-width="3" d="M453.5 483.5l-20-114" opacity=".9"/>
+                    <path stroke="#FFF" stroke-linecap="square" stroke-width="3" d="M440.5 360.5l26-121M440.5 360.5l-89-78" opacity=".756"/>
+                    <g transform="translate(289 76)">
+                        <circle cx="176.5" cy="161.5" r="19" fill="#1F1A40" stroke="#FFF" stroke-width="3"/>
+                        <circle cx="353.5" cy="294.5" r="19" fill="#5E4DAC" stroke="#FFF" stroke-width="3"/>
+                        <circle cx="328.5" cy="176.5" r="34" fill="#1F1A40" stroke="#FFF" stroke-width="3"/>
+                        <circle cx="162.5" cy="411.5" r="34" fill="#1F1A40" stroke="#A6ACBF" stroke-width="3"/>
+                        <circle cx="490" cy="279" r="21.5" fill="#1F1A40" stroke="#E0EE6B" stroke-width="3"/>
+                        <circle cx="148.5" cy="283.5" r="59" fill="#1F1A40" stroke="#A6ACBF" stroke-width="3"/>
+                        <circle cx="398.5" cy="82.5" r="34" fill="#1A1637" stroke="#A6ACBF" stroke-width="3"/>
+                    </g>
+                </g>
+            </g>
+            <circle cx="90" cy="666" r="266.5" stroke="#FFF" stroke-width="3" mask="url(#d)" opacity=".169"/>
+        </g>
+        <g opacity=".124">
+            <use fill="#000" filter="url(#e)" xlink:href="#f"/>
+            <circle cx="87" cy="263" r="31.5" stroke="#FFF" stroke-linejoin="square" stroke-width="3"/>
+        </g>
+        <g transform="translate(13 37)">
+            <circle cx="48.5" cy="46.5" r="42.5" fill="#5E4DAC"/>
+            <circle cx="42.5" cy="42.5" r="41" stroke="#FFF" stroke-width="3"/>
+            <g transform="translate(11.697 12)">
+                <ellipse cx="30.652" cy="31" stroke="#FFF" stroke-width="3" rx="29.152" ry="29.5"/>
+                <ellipse cx="30.652" cy="31" stroke="#FFF" stroke-width="3" rx="20.792" ry="21.045"/>
+                <path fill="#5E4DAC" d="M43.191 19.808l7.469-3.34L56.427 31 45.705 50.838l-15.402 5.971-2.896-11.657 18.298-7.283z"/>
+            </g>
+            <path fill="#5E4DAC" d="M61.674 16.057l-4.273 5.793 7.814 10.938L73 30.035zM11 39.542l5.225 1.697 1.942-6.341-6.47-3.09z"/>
+            <path stroke="#FFF" stroke-linecap="square" stroke-width="2" d="M13 40.5h8"/>
+        </g>
+        <g opacity=".154">
+            <use fill="#000" filter="url(#g)" xlink:href="#h"/>
+            <circle cx="56.5" cy="81.5" r="54" stroke="#FFF" stroke-linejoin="square" stroke-width="5"/>
+        </g>
+        <g transform="rotate(34 -27.095 213.418)">
+            <mask id="j" fill="#fff">
+                <use xlink:href="#i"/>
+            </mask>
+            <g stroke="#FFF" stroke-dasharray="7,9" stroke-width="6" mask="url(#j)">
+                <use mask="url(#k)" xlink:href="#a"/>
+            </g>
+        </g>
+        <circle cx="87.5" cy="261.5" r="19" fill="#1F1A40" stroke="#A6ACBF" stroke-width="3"/>
+    </g>
+</svg>

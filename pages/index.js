@@ -249,6 +249,7 @@ const BuildButtonMobile = styled(BuildButton)`
 const Index = () => (
   <Page>
     <HeaderHero />
+
     <Section>
       <ImageOne src={imageOneSVG}/>
       <IntroSectionRight>
@@ -262,6 +263,7 @@ const Index = () => (
         </SectionSubtitle>
       </IntroSectionRight>
     </Section>
+
     <SectionColumn>
       <HeaderMarker />
       <SectionTitle>
@@ -363,6 +365,7 @@ const Index = () => (
         </BuildButtonMobile>
       </PartnersSection>
     </AltSectionWrapper>
+
     <LitepaperSection />
   </Page>
 );
