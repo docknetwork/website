@@ -8,9 +8,9 @@ import logoSVG from '../assets/images/dock-logo.svg';
 
 const Wrapper = styled.div`
   display: flex;
-  width: 100%;
   max-width: 1024px;
   margin: 0 auto;
+  width: 100%;
 `;
 
 const HeaderWrapper = styled(Wrapper)`

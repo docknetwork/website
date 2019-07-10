@@ -54,10 +54,16 @@ const NavLink = styled.a`
 
 const Socials = styled.div`
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
 
   @media ${media.medium} {
     margin-left: auto;
   }
+`;
+
+const SocialLink = styled.a`
+  margin-left: 25px;
 `;
 
 const Footer = () => (
@@ -92,9 +98,33 @@ const Footer = () => (
         </NavColumn>
       </Nav>
       <Socials>
-        <a href="#">
+        <SocialLink href="#">
           <img src={telegramSVG}/>
-        </a>
+        </SocialLink>
+
+        <SocialLink href="#">
+          <img src={mediumSVG}/>
+        </SocialLink>
+
+        <SocialLink href="#">
+          <img src={twitterSVG}/>
+        </SocialLink>
+
+        <SocialLink href="#">
+          <img src={redditSVG}/>
+        </SocialLink>
+
+        <SocialLink href="#">
+          <img src={githubSVG}/>
+        </SocialLink>
+
+        <SocialLink href="#">
+          <img src={facebookSVG}/>
+        </SocialLink>
+
+        <SocialLink href="#">
+          <img src={binanceSVG}/>
+        </SocialLink>
       </Socials>
     </Wrapper>
   </Root>
