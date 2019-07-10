@@ -11,6 +11,7 @@ export default ({ children }) => (
         name="viewport"
         content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width, minimal-ui"
       />
+      <title>Dock</title>
     </Head>
     <style jsx global>{`
       * {

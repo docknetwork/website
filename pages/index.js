@@ -1,10 +1,21 @@
 import React from 'react';
 import Link from 'next/link';
 import styled from 'styled-components';
+import media from '../helpers/media';
 
 import Page from '../layouts/main';
 import HeaderHero from '../components/sections/header-hero';
-import media from '../helpers/media';
+import LitepaperSection from '../components/sections/litepaper';
+import { UnderlineLinkAligned } from '../components/underline-link';
+
+import {
+  HeaderMarker,
+  Wrapper,
+  SectionTitle,
+  SectionSubtitle,
+  Section,
+  SectionColumn
+} from '../components/sections';
 
 import imageOneSVG from '../assets/images/home/image-one.svg';
 import participationBGSVG from '../assets/images/home/participation-bg.svg';
@@ -16,13 +27,6 @@ import webstandardsIconSVG from '../assets/images/home/webstandards-icon.svg';
 import governanceIconSVG from '../assets/images/home/governance-bg-icon.svg';
 import networkIconSVG from '../assets/images/home/network-icon.svg';
 import litepaperPNG from '../assets/images/home/litepaper.png';
-
-const Wrapper = styled.div`
-  display: flex;
-  width: 100%;
-  max-width: 1024px;
-  margin: 0 auto;
-`;
 
 const IntroSectionRight = styled.div`
   margin-left: auto;
@@ -36,54 +40,6 @@ const IntroSectionRight = styled.div`
   }
 `;
 
-const SectionTitle = styled.h4`
-  font-weight: 600;
-  color: rgb(32, 33, 46);
-  max-width: 683px;
-  line-height: 1.38;
-  font-size: 32px;
-  max-width: 311px;
-
-  @media ${media.medium} {
-    line-height: 1.25;
-    font-size: 40px;
-    max-width: 100%;
-  }
-`;
-
-const SectionSubtitle = styled.p`
-  font-weight: normal;
-  color: rgb(49, 42, 67);
-  margin: 20px 0 0 0;
-  max-width: 683px;
-  font-size: 16px;
-  line-height: 1.75;
-
-  @media ${media.medium} {
-    font-size: 18px;
-    line-height: 1.56;
-  }
-`;
-
-const Section = styled(Wrapper)`
-  padding: 40px 20px 0 20px;
-  flex-direction: column-reverse;
-
-  @media ${media.medium} {
-    padding: 170px 0 0 0;
-    flex-direction: row;
-  }
-`;
-
-const SectionColumn = styled(Section)`
-  flex-direction: column;
-
-  @media ${media.medium} {
-    flex-direction: column;
-    padding: 140px 0 0 0;
-  }
-`;
-
 const ImageOne = styled.img`
   width: 355px;
   height: 355px;
@@ -94,13 +50,6 @@ const ImageOne = styled.img`
     height: auto;
     transform: translate(-36px, 0);
   }
-`;
-
-const HeaderMarker = styled.div`
-  width: 39px;
-  height: 2px;
-  background: rgb(32, 28, 60);
-  margin: 0 0 10px 0;
 `;
 
 const NetworkSection = styled.div`
@@ -251,58 +200,6 @@ const PartnerDescription = styled.p`
   }
 `;
 
-const LitepaperSection = styled.div`
-  display: flex;
-  justify-content: center;
-  background-color: rgb(239, 239, 245);
-  flex-direction: column-reverse;
-  padding: 50px 20px 10px 20px;
-
-  @media ${media.medium} {
-    padding: 67px 0 63px 0;
-    flex-direction: row;
-  }
-`;
-
-const LitepaperContent = styled.div`
-  display: flex;
-  flex-direction: column;
-
-  @media ${media.medium} {
-    margin: 90px 0 0 0;
-  }
-`;
-
-const LitepaperImage = styled.img`
-  width: 228px;
-  margin: 65px auto 0 auto;
-
-  @media ${media.medium} {
-    width: 213px;
-    margin: 65px 40px 0 0;
-  }
-`;
-
-const UnderlineLink = styled.a`
-  border-bottom: 3px solid rgb(75, 107, 220);
-  font-size: 16px;
-  font-weight: bold;
-  line-height: 1.56;
-  padding: 4px 5px;
-  color: rgb(60, 60, 72);
-  align-self: flex-start;
-  margin-top: 13px;
-
-  @media ${media.medium} {
-    margin-top: 30px;
-    font-size: 18px;
-  }
-`;
-
-const UnderlineLinkAligned = styled(UnderlineLink)`
-  margin-top: auto;
-`;
-
 const AltSectionWrapper = styled.div`
   background-color: rgb(246, 246, 249);
   margin-top: 20px;
@@ -349,10 +246,6 @@ const BuildButtonMobile = styled(BuildButton)`
   }
 `;
 
-const UnderlineLinkIcon = styled.img`
-  margin-left: 15px;
-`;
-
 const Index = () => (
   <Page>
     <HeaderHero />
@@ -393,7 +286,6 @@ const Index = () => (
             </RowItemContentText>
             <UnderlineLinkAligned>
               Learn more
-              <UnderlineLinkIcon src={arrowRightSVG}/>
             </UnderlineLinkAligned>
           </RowItemContent>
         </RowItem>
@@ -411,7 +303,6 @@ const Index = () => (
             </RowItemContentText>
             <UnderlineLinkAligned>
               Learn more
-              <UnderlineLinkIcon src={arrowRightSVG}/>
             </UnderlineLinkAligned>
           </RowItemContent>
         </RowItem>
@@ -463,7 +354,6 @@ const Index = () => (
             </PartnerDescription>
             <UnderlineLinkAligned>
               Read case study
-              <UnderlineLinkIcon src={arrowRightSVG}/>
             </UnderlineLinkAligned>
           </PartnerContent>
         </Partner>
@@ -473,22 +363,7 @@ const Index = () => (
         </BuildButtonMobile>
       </PartnersSection>
     </AltSectionWrapper>
-
-    <LitepaperSection>
-        <LitepaperImage src={litepaperPNG}/>
-        <LitepaperContent>
-          <SectionTitle>
-            Read the Litepaper
-          </SectionTitle>
-          <SectionSubtitle>
-            Overview of the Dock blockchain and network.
-          </SectionSubtitle>
-          <UnderlineLink>
-            Read Litepaper
-            <UnderlineLinkIcon src={arrowRightSVG}/>
-          </UnderlineLink>
-        </LitepaperContent>
-    </LitepaperSection>
+    <LitepaperSection />
   </Page>
 );
 
