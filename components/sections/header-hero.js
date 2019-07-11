@@ -41,7 +41,7 @@ const HeaderHeroImage = styled.img`
   @media ${media.medium} {
     display: block;
     width: auto;
-    max-width: auto;
+    max-width: 100%;
     right: 20px;
     bottom: -100px;
   }

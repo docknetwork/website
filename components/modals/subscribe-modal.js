@@ -3,6 +3,8 @@ import Link from 'next/link';
 import styled from 'styled-components';
 import media from '../../helpers/media';
 
+import { UnderlineLink } from '../underline-link';
+
 import Modal from '../modal';
 
 const ModalContent = styled.div`
@@ -15,6 +17,15 @@ const Title = styled.p`
   font-weight: bold;
   line-height: 1.5;
   color: rgb(44, 43, 63);
+`;
+
+const ModalContentCentered = styled.div`
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 34px 38px 55px 38px;
 `;
 
 const Text = styled.p`
@@ -66,10 +77,9 @@ const Submit = styled.input`
   margin: 30px 0 20px 0;
 `;
 
-
-
 const SubscribeModal = ({onClose}) => {
   const [email, setEmail] = useState();
+  const [isSubscribed, setIsSubscribed] = useState();
 
   function handleInputChange(event) {
     setEmail(event.target.value);
@@ -88,13 +98,26 @@ const SubscribeModal = ({onClose}) => {
       window._cio.track('marketing-subscribe');
     }
 
-    setTimeout(() => {
-      onClose();
-    }, 1000);
+    setIsSubscribed(true);
   }
 
   return (
     <Modal type="small" onClose={onClose}>
+      {isSubscribed ? (
+        <ModalContentCentered>
+          <Title>
+            You’re subscribed!
+          </Title>
+          <Text>
+            We’ll keep you updated with the latest Dock news and updates.
+            <br /><br />
+            In the meantime, you can find the most recent news at the Dock blog.
+          </Text>
+          <UnderlineLink href="https://blog.dock.io">
+            Read the latest Dock news
+          </UnderlineLink>
+        </ModalContentCentered>
+      ) : (
       <ModalContent>
         <Title>
           Subscribe
@@ -109,6 +132,7 @@ const SubscribeModal = ({onClose}) => {
           <Submit type="submit" value="Submit" />
         </Form>
       </ModalContent>
+      )}
     </Modal>
   );
 };
