@@ -75,7 +75,7 @@ const HeroSubtitle = styled.h2`
   line-height: 1.56;
   color: rgb(255, 255, 255);
   margin: 0 0 50px 0;
-  max-width: 391px;
+  max-width: 491px;
   font-size: 16px;
 
   @media ${media.medium} {
@@ -144,10 +144,10 @@ const HeaderHero = () => {
         <Wrapper>
           <div>
             <HeroTitle>
-              Verifiable credential engine
+              Scalable Blockchain Credentialing Solutions
             </HeroTitle>
             <HeroSubtitle>
-              High-performance distributed ledger technology to produce verifiable credentials.
+              High-performance distributed ledger technology to help organizations produce verifiable credentials at scale.
             </HeroSubtitle>
 
             <Buttons>
