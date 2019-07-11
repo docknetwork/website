@@ -20,6 +20,10 @@ export default ({ children }) => (
         margin: 0;
         padding: 0;
       }
+
+      body {
+        width: 100%;
+      }
     `}</style>
     { children }
     <Footer />

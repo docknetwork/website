@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="382" height="121" viewBox="0 0 382 121">
+    <defs>
+        <rect id="b" width="264.54" height="537.346" x="39.681" y="12.257" rx="49.601"/>
+        <filter id="a" width="175.2%" height="137%" x="-32.7%" y="-14.4%" filterUnits="objectBoundingBox">
+            <feMorphology in="SourceAlpha" radius="2.5" result="shadowSpreadOuter1"/>
+            <feOffset dx="13" dy="22" in="shadowSpreadOuter1" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="32"/>
+            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0"/>
+        </filter>
+        <path id="c" d="M0 .008h341.036v602.167H0z"/>
+        <path id="f" d="M197.909 11.921h71.756c22.372 0 40.508 18.136 40.508 40.508v327.533c0 22.371-18.136 40.507-40.508 40.507h-71.756c-22.372 0-40.508-18.136-40.508-40.507V52.429c0-22.372 18.136-40.508 40.508-40.508z"/>
+        <filter id="e" width="160.2%" height="124.5%" x="-24.9%" y="-6.1%" filterUnits="objectBoundingBox">
+            <feMorphology in="SourceAlpha" radius="2.5" result="shadowSpreadOuter1"/>
+            <feOffset dx="8" dy="29" in="shadowSpreadOuter1" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="13"/>
+            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.3 0"/>
+        </filter>
+        <rect id="g" width="291.975" height="580.006" rx="54.952"/>
+        <filter id="h" width="101.7%" height="100.9%" x="-.9%" y="-.4%" filterUnits="objectBoundingBox">
+            <feOffset dx="-5" in="SourceAlpha" result="shadowOffsetInner1"/>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" k2="-1" k3="1" operator="arithmetic" result="shadowInnerInner1"/>
+            <feColorMatrix in="shadowInnerInner1" values="0 0 0 0 0.17254902 0 0 0 0 0.168627451 0 0 0 0 0.247058824 0 0 0 0.977270154 0"/>
+        </filter>
+        <path id="i" d="M71.137 16.534a17.92 17.92 0 0 0 13.666 6.328h122.26a17.92 17.92 0 0 0 13.666-6.328h15.37c22.444 0 40.64 18.195 40.64 40.64v467.968c0 22.445-18.196 40.64-40.64 40.64H57.174c-22.446 0-40.641-18.195-40.641-40.64V57.175c0-22.446 18.195-40.641 40.64-40.641h13.963z"/>
+        <path id="l" d="M6 16h277v55H6z"/>
+        <filter id="k" width="105.1%" height="125.5%" x="-2.5%" y="-9.1%" filterUnits="objectBoundingBox">
+            <feOffset dy="2" in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="2"/>
+            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.0824409965 0"/>
+        </filter>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <g transform="translate(6 24)">
+            <use fill="#000" filter="url(#a)" xlink:href="#b"/>
+            <use fill="#FFF" xlink:href="#b"/>
+        </g>
+        <g transform="translate(6 24)">
+            <mask id="d" fill="#fff">
+                <use xlink:href="#c"/>
+            </mask>
+            <g mask="url(#d)">
+                <use fill="#000" filter="url(#e)" xlink:href="#f"/>
+                <use fill="#FFF" xlink:href="#f"/>
+            </g>
+            <g mask="url(#d)">
+                <g transform="translate(26.62 7.292)">
+                    <g>
+                        <use fill="#2C2B40" xlink:href="#g"/>
+                        <use fill="#000" filter="url(#h)" xlink:href="#g"/>
+                    </g>
+                    <mask id="j" fill="#fff">
+                        <use xlink:href="#i"/>
+                    </mask>
+                    <use fill="#FFF" xlink:href="#i"/>
+                    <g mask="url(#j)">
+                        <use fill="#000" filter="url(#k)" xlink:href="#l"/>
+                        <use fill="#FFF" xlink:href="#l"/>
+                    </g>
+                    <rect width="224" height="24" x="32" y="37" fill="#E9E9F2" mask="url(#j)" rx="12"/>
+                    <text fill="#312A43" font-family="OpenSans-Regular, Open Sans" font-size="13" mask="url(#j)">
+                        <tspan x="101.268" y="49">verifiable.com</tspan>
+                    </text>
+                    <g font-family="Lato-Bold, Lato" font-size="18.518" font-weight="bold" mask="url(#j)">
+                        <text fill="#2C2B3F" transform="translate(-99.533 16.203)">
+                            <tspan x="0" y="18">Get Verified</tspan>
+                        </text>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
