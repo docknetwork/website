@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Link from 'next/link';
+import Link from './active-link';
 import styled from 'styled-components';
 
 import media from '../helpers/media';
@@ -58,7 +58,7 @@ const NavLink = styled.a`
     color: rgb(75, 107, 220);
   }
 
-  .active {
+  &.active {
     border-color: rgb(75, 107, 220);
   }
 `;
