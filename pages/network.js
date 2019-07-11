@@ -147,10 +147,6 @@ const CustomSectionSubtitle = styled(SectionSubtitle)`
 const WideSection = styled(Section)`
   max-width: 100%;
   padding: 0;
-
-  @media ${media.medium} {
-    padding: 40px 20px 0 20px;
-  }
 `;
 
 const DarkSection = styled.div`
