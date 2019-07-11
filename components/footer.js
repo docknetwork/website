@@ -66,6 +66,7 @@ const NavLink = styled.a`
   font-size: 14px;
   line-height: 2;
   color: rgb(255, 255, 255);
+  font-family: Lato;
 
   @media ${media.medium} {
     font-weight: bold;
