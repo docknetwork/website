@@ -30,11 +30,12 @@ import recordsPNG from '../assets/images/network/records.png';
 
 const ParticipantsGrid = styled.div`
   display: flex;
-  margin: 60px 0 100px 0;
+  margin: 60px 0 10px 0;
   flex-direction: column;
   align-items: center;
 
   @media ${media.medium} {
+    margin: 60px 0 100px 0;
     justify-content: space-between;
     flex-direction: row;
     flex-wrap: wrap;
@@ -43,11 +44,12 @@ const ParticipantsGrid = styled.div`
 
 const ParticipantsGridItem = styled.div`
   display: flex;
-  margin-bottom: 80px;
+  margin-bottom: 60px;
   flex-direction: column;
   align-items: center;
 
   @media ${media.medium} {
+    margin-bottom: 80px;
     flex-direction: row;
     max-width: 500px;
     width: 50%;
@@ -82,27 +84,37 @@ const ParticipantsGridItemText = styled.p`
   line-height: 1.75;
   color: rgb(49, 42, 67);
   text-align: center;
+  margin: 10px 0 0 0;
+  max-width: 288px;
 
   @media ${media.medium} {
+    max-width: auto;
     text-align: left;
     font-size: 18px;
     line-height: 1.56;
+    margin: 0;
   }
 `;
 
 const TokenGrid = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 60px 0 140px 0;
+  margin: 60px 0 67px 0;
 
   @media ${media.medium} {
     flex-direction: row;
+    margin: 60px 0 140px 0;
   }
 `;
 
 const TokenGridItem = styled.div`
   display: flex;
   flex-direction: column;
+  margin: 0 0 50px 0;
+
+  @media ${media.medium} {
+    margin: 0;
+  }
 `;
 
 const TokenGridItemTitle = styled.h4`
@@ -110,7 +122,11 @@ const TokenGridItemTitle = styled.h4`
   font-weight: bold;
   line-height: 1.5;
   color: rgb(49, 42, 67);
-  margin: 35px 0 10px 0;
+  margin: 20px 0 10px 0;
+
+  @media ${media.medium} {
+    margin: 35px 0 10px 0;
+  }
 `;
 
 const TokenGridItemText = styled.p`
@@ -130,6 +146,11 @@ const CustomSectionSubtitle = styled(SectionSubtitle)`
 
 const WideSection = styled(Section)`
   max-width: 100%;
+  padding: 0;
+
+  @media ${media.medium} {
+    padding: 40px 20px 0 20px;
+  }
 `;
 
 const DarkSection = styled.div`
@@ -139,11 +160,15 @@ const DarkSection = styled.div`
 `;
 
 const DarkSectionWrapper = styled.div`
-  padding: 100px 80px 100px 0;
+  padding: 70px 20px 87px 20px;
   margin-left: auto;
   width: 100%;
   max-width: 447px;
   flex-shrink: 0;
+
+  @media ${media.medium} {
+    padding: 100px 80px 100px 0;
+  }
 `;
 
 const DarkSectionTitle = styled(SectionTitle)`
@@ -156,21 +181,31 @@ const DarkHeaderMarker = styled(HeaderMarker)`
 
 const DarkRightSection = styled.div`
   width: 100%;
+  padding: 40px 15px;
   background-color: rgb(26, 22, 55);
-  padding: 100px;
+
+  @media ${media.medium} {
+    padding: 100px;
+  }
 `;
 
 const RecordsImage = styled.img`
-  width: 468px;
+  width: 100%;
+  max-width: 468px;
   margin-right: auto;
 `;
 
 const DarkSectionText = styled.p`
-  font-size: 18px;
-  line-height: 1.56;
   color: rgb(255, 255, 255);
   margin: 25px 0 0 0;
   max-width: 347px;
+  font-size: 16px;
+  line-height: 1.75;
+
+  @media ${media.medium} {
+    font-size: 18px;
+    line-height: 1.56;
+  }
 `;
 
 const Network = () => (

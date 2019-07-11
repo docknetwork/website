@@ -8,6 +8,7 @@ import media from '../../helpers/media';
 import logoSVG from '../../assets/images/dock-logo.svg';
 import headerHeroSVG from '../../assets/images/network/hero.svg';
 import headerHeroBGSVG from '../../assets/images/network/hero-bg.svg';
+import headerHeroBGMblSVG from '../../assets/images/network/hero-bg-mbl.svg';
 import arrowRightSVG from '../../assets/images/icons/arrow-right-white.svg';
 
 const Wrapper = styled.div`
@@ -18,25 +19,41 @@ const Wrapper = styled.div`
 `;
 
 const Root = styled.div`
-  height: 575px;
+  height: 640px;
   width: 100%;
   position: relative;
   background-color: rgb(8, 0, 34);
   padding: 0 20px 25px 20px;
+  margin: 0 0 60px 0;
 
   @media ${media.medium} {
-    padding: 0px;
+    height: 575px;
+    padding: 0;
+    margin: 0;
   }
 `;
 
 const HeaderHeroImage = styled.img`
   position: absolute;
-  right: 20px;
-  bottom: -100px;
-  display: none;
+  width: 100%;
+  right: -20px;
+  bottom: -80px;
 
   @media ${media.medium} {
-    display: block;
+    width: auto;
+    right: 20px;
+    bottom: -100px;
+  }
+`;
+
+const HeaderHeroBGImageMobile = styled.img`
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: block;
+
+  @media ${media.medium} {
+    display: none;
   }
 `;
 
@@ -44,6 +61,11 @@ const HeaderHeroBGImage = styled.img`
   position: absolute;
   right: 0;
   bottom: 0;
+  display: none;
+
+  @media ${media.medium} {
+    display: block;
+  }
 `;
 
 const HeroTitle = styled.h1`
@@ -67,12 +89,12 @@ const HeroSubtitle = styled.h2`
   font-weight: normal;
   line-height: 1.56;
   color: rgb(255, 255, 255);
-  margin: 0 0 50px 0;
+  margin: 0 0 30px 0;
   max-width: 391px;
   font-size: 16px;
 
   @media ${media.medium} {
-    margin: 0 0 20px 0;
+    margin: 0 0 50px 0;
     font-size: 18px;
   }
 `;
@@ -138,6 +160,7 @@ const NetworkHero = () => (
           <UnderlineLinkIcon src={arrowRightSVG}/>
         </UnderlineLink>
       </div>
+      <HeaderHeroBGImageMobile src={headerHeroBGMblSVG}/>
       <HeaderHeroBGImage src={headerHeroBGSVG}/>
       <HeaderHeroImage src={headerHeroSVG}/>
     </Wrapper>
