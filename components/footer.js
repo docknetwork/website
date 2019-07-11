@@ -28,42 +28,75 @@ const Wrapper = styled.div`
 
 const Root = styled.div`
   background-color: rgb(8, 0, 34);
-  padding: 50px 0;
+  padding: 60px 38px 10px 38px;
   width: 100%;
-  height: 238px;
+
+  @media ${media.medium} {
+    padding: 50px 0;
+    height: 238px;
+  }
 `;
 
 const Nav = styled.div`
   display: flex;
-  margin-left: 13px;
+  margin-top: 26px;
+
+  @media ${media.medium} {
+    margin-left: 13px;
+    margin-top: 0;
+  }
 `;
 
 const NavColumn = styled.div`
   display: flex;
   flex-direction: column;
-  margin-left: 50px;
+
+  @media ${media.small} {
+    &:last-child {
+      margin-left: 30px;
+    }
+  }
+
+  @media ${media.medium} {
+    margin-left: 50px;
+  }
 `;
 
 const NavLink = styled.a`
-  opacity: 0.8;
   font-size: 14px;
   line-height: 2;
-  font-weight: bold;
   color: rgb(255, 255, 255);
+
+  @media ${media.medium} {
+    font-weight: bold;
+    opacity: 0.8;
+  }
 `;
 
 const Socials = styled.div`
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
+  margin: 80px 0 60px 0;
 
   @media ${media.medium} {
+    margin: 0;
     margin-left: auto;
   }
 `;
 
 const SocialLink = styled.a`
+  margin-bottom: 10px;
   margin-left: 25px;
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  @media ${media.medium} {
+    margin-bottom: 0;
+  }
 `;
 
 const Footer = () => (
