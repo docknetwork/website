@@ -36,7 +36,7 @@ const Root = styled.div`
 const HeaderHeroImage = styled.img`
   position: absolute;
   width: 100%;
-  right: -20px;
+  right: 0;
   bottom: -80px;
 
   @media ${media.medium} {

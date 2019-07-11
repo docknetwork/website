@@ -365,7 +365,6 @@ const VerifiableModal = ({onClose}) => (
   </Modal>
 );
 
-
 const Index = () => {
   const [showModal, setShowModal] = useState(false);
 

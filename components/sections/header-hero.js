@@ -1,9 +1,11 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Link from 'next/link';
 import styled from 'styled-components';
 
 import Header from '../../components/header';
 import media from '../../helpers/media';
+
+import SubscribeModal from '../../components/modals/subscribe-modal';
 
 import logoSVG from '../../assets/images/dock-logo.svg';
 import headerHeroSVG from '../../assets/images/home/header-hero.svg';
@@ -31,12 +33,17 @@ const Root = styled.div`
 
 const HeaderHeroImage = styled.img`
   position: absolute;
-  right: 20px;
-  bottom: -100px;
-    display: none;
+  right: 0;
+  bottom: -80px;
+  width: 100%;
+  max-width: 383px;
 
   @media ${media.medium} {
     display: block;
+    width: auto;
+    max-width: auto;
+    right: 20px;
+    bottom: -100px;
   }
 `;
 
@@ -127,33 +134,43 @@ const Buttons = styled.div`
   }
 `;
 
-const HeaderHero = () => (
-  <Root>
-    <Header />
-    <Wrapper>
-      <div>
-        <HeroTitle>
-          Verifiable credential engine
-        </HeroTitle>
-        <HeroSubtitle>
-          High-performance distributed ledger technology to produce verifiable credentials.
-        </HeroSubtitle>
+const HeaderHero = () => {
+  const [showSubscribeModal, setShowSubscribeModal] = useState(false);
 
-        <Buttons>
-          <IssueButton href="#">
-            Build with Dock
-          </IssueButton>
-          <UnderlineLink>
-            Subscribe to updates
-            <UnderlineLinkIcon src={arrowRightSVG}/>
-          </UnderlineLink>
-        </Buttons>
-      </div>
-      <HeaderHeroBGImage src={headerHeroBGSVG}/>
-      <HeaderHeroImage src={headerHeroSVG}/>
-    </Wrapper>
-  </Root>
-);
+  return (
+    <>
+      <Root>
+        <Header />
+        <Wrapper>
+          <div>
+            <HeroTitle>
+              Verifiable credential engine
+            </HeroTitle>
+            <HeroSubtitle>
+              High-performance distributed ledger technology to produce verifiable credentials.
+            </HeroSubtitle>
+
+            <Buttons>
+              <IssueButton href="#">
+                Build with Dock
+              </IssueButton>
+              <UnderlineLink onClick={() => setShowSubscribeModal(true)}>
+                Subscribe to updates
+                <UnderlineLinkIcon src={arrowRightSVG}/>
+              </UnderlineLink>
+            </Buttons>
+          </div>
+          <HeaderHeroBGImage src={headerHeroBGSVG}/>
+          <HeaderHeroImage src={headerHeroSVG}/>
+        </Wrapper>
+      </Root>
+
+      {showSubscribeModal && (
+        <SubscribeModal onClose={() => setShowSubscribeModal(false)} />
+      )}
+    </>
+  );
+};
 
 
 export default HeaderHero;

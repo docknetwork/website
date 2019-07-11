@@ -41,6 +41,10 @@ const ModalWrapper = styled.div`
     box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.06);
     border-radius: 5px;
     height: auto;
+
+    &.small {
+      max-width: 384px;
+    }
   }
 `;
 
@@ -66,7 +70,7 @@ class Modal extends React.Component {
     return (
       <Root>
         <Background onClick={this.handleClose.bind(this)} />
-        <ModalWrapper>
+        <ModalWrapper className={this.props.type}>
           {this.props.children}
         </ModalWrapper>
       </Root>
