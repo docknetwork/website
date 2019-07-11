@@ -11,6 +11,7 @@ import facebookIcon from '../assets/images/menu-icons/facebook.svg';
 import githubIcon from '../assets/images/menu-icons/github.svg';
 import telegramIcon from '../assets/images/menu-icons/telegram.svg';
 import twitterIcon from '../assets/images/menu-icons/twitter.svg';
+import chevronDown from '../assets/images/icons/chevron-down.svg';
 
 const Wrapper = styled.div`
   display: flex;
@@ -130,6 +131,12 @@ const CommunityMenuIcon = styled.a`
   }
 `;
 
+const NavLinkCommunityIcon = styled.img`
+  transform: translate(3px, 3px);
+  width: 17px;
+  opacity: 0.8;
+`;
+
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
 
@@ -151,7 +158,7 @@ const Header = () => {
           onMouseLeave={() => setShowMenu(false)}
           onClick={() => setShowMenu(!showMenu)}>
           <NavLinkCommunity href="#">
-            Communty
+            Communty <NavLinkCommunityIcon src={chevronDown} />
           </NavLinkCommunity>
           {showMenu && (
             <CommunityMenu>
