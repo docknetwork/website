@@ -254,11 +254,18 @@ const Banner = styled.a`
   text-align: center;
   color: rgb(255, 255, 255);
   width: 100%;
-  height: 52px;
   display: flex;
-  align-items: center;
-  justify-content: center;
   text-decoration: none;
+  flex-direction: column;
+  padding: 10px 0;
+  align-items: center;
+
+  @media ${media.medium} {
+    flex-direction: row;
+    justify-content: center;
+    padding: 0;
+    height: 52px;
+  }
 `;
 
 const BannerButton = styled.span`
