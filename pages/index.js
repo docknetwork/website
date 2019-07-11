@@ -365,7 +365,7 @@ const Index = () => {
   return (
     <>
       <Page>
-        <Banner href="https://verifable.com" onClick={e => { e.stopPropagation(); setShowModal(true); }}>
+        <Banner href="https://verifiable.com" onClick={e => { e.preventDefault(); e.stopPropagation(); setShowModal(true); }}>
           The Dock app has moved to Verifiable.
           <BannerButton>
             Learn more
