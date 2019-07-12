@@ -162,7 +162,7 @@ const Header = () => {
           </NavLinkCommunity>
           {showMenu && (
             <CommunityMenu>
-              <CommunityMenuLink>
+              <CommunityMenuLink href="https://blog.dock.io">
                 Blog
               </CommunityMenuLink>
               <CommunityMenuLink href="https://community.dock.io">

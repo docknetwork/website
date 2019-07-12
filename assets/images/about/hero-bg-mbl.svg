@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="724" height="256" viewBox="0 0 724 256">
+    <g fill="none" fill-rule="evenodd" stroke-width="3" opacity=".1">
+        <g>
+            <rect width="31" height="31" x="160.5" y="240.5" stroke="#FFF" rx="3"/>
+            <rect width="31" height="31" x="41.5" y="240.5" stroke="#FFF" rx="3"/>
+            <rect width="31" height="31" x="1.5" y="240.5" stroke="#FFF" rx="3"/>
+            <rect width="31" height="31" x="200.5" y="240.5" stroke="#FFF" rx="3"/>
+            <rect width="31" height="31" x="81.5" y="240.5" stroke="#FFF" rx="3"/>
+            <rect width="31" height="31" x="240.5" y="240.5" stroke="#FFF" rx="3"/>
+            <rect width="31" height="31" x="121.5" y="240.5" stroke="#FFF" rx="3"/>
+            <rect width="31" height="31" x="280.5" y="240.5" stroke="#FFF" rx="3"/>
+            <rect width="31" height="31" x="240.5" y="200.5" stroke="#FFF" rx="3"/>
+            <rect width="31" height="31" x="280.5" y="200.5" stroke="#FFF" rx="3"/>
+            <rect width="31" height="31" x="320.5" y="200.5" stroke="#FFF" rx="3"/>
+            <rect width="31" height="31" x="160.5" y="160.5" stroke="#FFF" rx="3"/>
+            <rect width="31" height="31" x="160.5" y="200.5" stroke="#FFF" rx="3"/>
+            <rect width="31" height="31" x="121.5" y="160.5" stroke="#4B6BDC" rx="3"/>
+            <rect width="31" height="31" x="81.5" y="160.5" stroke="#FFF" rx="3"/>
+            <rect width="31" height="31" x="200.5" y="160.5" stroke="#FFF" rx="3"/>
+            <rect width="31" height="31" x="280.5" y="160.5" stroke="#FFF" rx="3"/>
+            <rect width="31" height="31" x="320.5" y="160.5" stroke="#FFF" rx="3"/>
+            <rect width="31" height="31" x="359.5" y="160.5" stroke="#FFF" rx="3"/>
+            <rect width="31" height="31" x="399.5" y="160.5" stroke="#FFF" rx="3"/>
+            <rect width="31" height="31" x="399.5" y="200.5" stroke="#FFF" rx="3"/>
+            <rect width="31" height="31" x="399.5" y="240.5" stroke="#FFF" rx="3"/>
+            <rect width="31" height="31" x="399.5" y="121.5" stroke="#FFF" rx="3"/>
+            <rect width="31" height="31" x="399.5" y="81.5" stroke="#FFF" rx="3"/>
+            <rect width="31" height="31" x="439.5" y="81.5" stroke="#FFF" rx="3"/>
+            <rect width="31" height="31" x="399.5" y="41.5" stroke="#FFF" rx="3"/>
+            <rect width="31" height="31" x="399.5" y="1.5" stroke="#FFF" rx="3"/>
+            <rect width="31" height="31" x="439.5" y="160.5" stroke="#FFF" rx="3"/>
+            <rect width="31" height="31" x="160.5" y="121.5" stroke="#FFF" rx="3"/>
+            <rect width="31" height="31" x="121.5" y="121.5" stroke="#FFF" rx="3"/>
+            <rect width="31" height="31" x="121.5" y="81.5" stroke="#5E4DAC" rx="3"/>
+            <rect width="31" height="31" x="121.5" y="41.5" stroke="#FFF" rx="3"/>
+            <rect width="31" height="31" x="200.5" y="121.5" stroke="#FFF" rx="3"/>
+            <rect width="31" height="31" x="240.5" y="121.5" stroke="#FFF" rx="3"/>
+            <rect width="31" height="31" x="280.5" y="121.5" stroke="#FFF" rx="3"/>
+            <rect width="31" height="31" x="320.5" y="121.5" stroke="#FFF" rx="3"/>
+            <rect width="31" height="31" x="200.5" y="81.5" stroke="#FFF" rx="3"/>
+            <rect width="31" height="31" x="240.5" y="81.5" stroke="#FFF" rx="3"/>
+            <rect width="31" height="31" x="320.5" y="81.5" stroke="#FFF" rx="3"/>
+        </g>
+        <g transform="translate(442)">
+            <rect width="31" height="31" x="120.5" y="240.5" stroke="#FFF" rx="3"/>
+            <rect width="31" height="31" x="1.5" y="240.5" stroke="#FFF" rx="3"/>
+            <rect width="31" height="31" x="160.5" y="240.5" stroke="#FFF" rx="3"/>
+            <rect width="31" height="31" x="41.5" y="240.5" stroke="#FFF" rx="3"/>
+            <rect width="31" height="31" x="200.5" y="240.5" stroke="#FFF" rx="3"/>
+            <rect width="31" height="31" x="81.5" y="240.5" stroke="#FFF" rx="3"/>
+            <rect width="31" height="31" x="240.5" y="240.5" stroke="#FFF" rx="3"/>
+            <rect width="31" height="31" x="200.5" y="200.5" stroke="#FFF" rx="3"/>
+            <rect width="31" height="31" x="240.5" y="200.5" stroke="#FFF" rx="3"/>
+            <rect width="31" height="31" x="280.5" y="200.5" stroke="#FFF" rx="3"/>
+            <rect width="31" height="31" x="120.5" y="160.5" stroke="#FFF" rx="3"/>
+            <rect width="31" height="31" x="120.5" y="200.5" stroke="#FFF" rx="3"/>
+            <rect width="31" height="31" x="81.5" y="160.5" stroke="#FFF" rx="3"/>
+            <rect width="31" height="31" x="41.5" y="160.5" stroke="#FFF" rx="3"/>
+            <rect width="31" height="31" x="160.5" y="160.5" stroke="#FFF" rx="3"/>
+            <rect width="31" height="31" x="240.5" y="160.5" stroke="#5E4DAC" rx="3"/>
+            <rect width="31" height="31" x="280.5" y="160.5" stroke="#FFF" rx="3"/>
+            <rect width="31" height="31" x="120.5" y="121.5" stroke="#FFF" rx="3"/>
+            <rect width="31" height="31" x="81.5" y="121.5" stroke="#FFF" rx="3"/>
+            <rect width="31" height="31" x="81.5" y="81.5" stroke="#FFF" rx="3"/>
+            <rect width="31" height="31" x="81.5" y="41.5" stroke="#FFF" rx="3"/>
+            <rect width="31" height="31" x="160.5" y="121.5" stroke="#FFF" rx="3"/>
+            <rect width="31" height="31" x="200.5" y="121.5" stroke="#FFF" rx="3"/>
+            <rect width="31" height="31" x="240.5" y="121.5" stroke="#FFF" rx="3"/>
+            <rect width="31" height="31" x="280.5" y="121.5" stroke="#E0EE6B" rx="3"/>
+            <rect width="31" height="31" x="160.5" y="81.5" stroke="#FFF" rx="3"/>
+            <rect width="31" height="31" x="200.5" y="81.5" stroke="#FFF" rx="3"/>
+            <rect width="31" height="31" x="280.5" y="81.5" stroke="#FFF" rx="3"/>
+        </g>
+    </g>
+</svg>

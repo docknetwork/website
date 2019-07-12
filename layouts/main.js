@@ -45,7 +45,7 @@ export default class MainLayout extends React.Component {
           <meta name="description" content={defaultDescription} />
           <meta name="og:description" content={defaultDescription} />
 
-          <title>Dock</title>
+          <title>{defaultTitle}</title>
           <Safe.script type="text/javascript" jsx global>{`
             var _cio = _cio || [];
             (function() {

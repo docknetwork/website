@@ -13,6 +13,7 @@ const Root = styled.a`
   align-self: flex-start;
   margin-top: 13px;
   text-decoration: none;
+  cursor: pointer;
 
   @media ${media.medium} {
     margin-top: 30px;
@@ -24,8 +25,8 @@ const UnderlineLinkIcon = styled.img`
   margin-left: 15px;
 `;
 
-export const UnderlineLink = ({href, children}) => (
-  <Root href={href}>
+export const UnderlineLink = ({href, onClick, children}) => (
+  <Root href={href} onClick={onClick}>
     {children}
     <UnderlineLinkIcon src={arrowRightSVG}/>
   </Root>

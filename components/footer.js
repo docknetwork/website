@@ -120,19 +120,16 @@ const Footer = () => (
           </Link>
         </NavColumn>
         <NavColumn>
-          <Link href="/about">
-            <NavLink>Blog</NavLink>
-          </Link>
-          <Link href="/about">
-            <NavLink>Forum</NavLink>
-          </Link>
-          <Link href="/about">
-            <NavLink>Litepaper</NavLink>
-          </Link>
+          <NavLink href="https://blog.dock.io">Blog</NavLink>
+          <NavLink href="https://community.dock.io">Blog</NavLink>
+          <NavLink href="https://dock.io/litepaper.pdf">Litepaper</NavLink>
         </NavColumn>
       </Nav>
       <Socials>
-        <SocialLink href="#">
+        <SocialLink
+          href="https://t.me/dockio"
+          target="_blank"
+          rel="noopener noreferrer">
           <img src={telegramSVG}/>
         </SocialLink>
 
@@ -140,23 +137,37 @@ const Footer = () => (
           <img src={mediumSVG}/>
         </SocialLink>
 
-        <SocialLink href="#">
+        <SocialLink href="https://twitter.com/docknetwork"
+          target="_blank"
+          rel="noopener noreferrer">
           <img src={twitterSVG}/>
         </SocialLink>
 
-        <SocialLink href="#">
+        <SocialLink
+          href="https://www.reddit.com/r/dockio"
+          target="_blank"
+          rel="noopener noreferrer">
           <img src={redditSVG}/>
         </SocialLink>
 
-        <SocialLink href="#">
+        <SocialLink
+          href="https://github.com/getdock"
+          target="_blank"
+          rel="noopener noreferrer">
           <img src={githubSVG}/>
         </SocialLink>
 
-        <SocialLink href="#">
+        <SocialLink
+          href="https://www.facebook.com/docknetwork/"
+          target="_blank"
+          rel="noopener noreferrer">
           <img src={facebookSVG}/>
         </SocialLink>
 
-        <SocialLink href="#">
+        <SocialLink
+          href="https://www.binance.com/en/trade/DOCK_BTC"
+          target="_blank"
+          rel="noopener noreferrer">
           <img src={binanceSVG}/>
         </SocialLink>
       </Socials>
