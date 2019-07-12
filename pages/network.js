@@ -287,7 +287,7 @@ const Network = () => (
     <SectionColumn>
       <SectionTitle>
         <HeaderMarker />
-        Dock token
+        DOCK token
       </SectionTitle>
       <CustomSectionSubtitle>
         The DOCK token enables a decentralized network with open participation and governance.
