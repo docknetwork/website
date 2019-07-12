@@ -9,5 +9,6 @@ jobs:
       - run: yarn build
       - run: yarn export
       - run: cp ./assets/favicons/favicon.ico ./out/favicon.ico
+      - run: cp ./assets/litepaper.pdf ./out/litepaper.pdf
       - run: touch out/.nojekyll
       - run: ./scripts/deploy-ghpages.sh build
