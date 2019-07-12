@@ -255,7 +255,7 @@ const Network = () => (
           <img src={gridFourSVG}/>
           <ParticipantsGridItemContent>
             <ParticipantsGridItemTitle>
-              Governor
+              Voter
             </ParticipantsGridItemTitle>
             <ParticipantsGridItemText>
               Any Dock token holder has the ability to vote on proposals and participate in consensus.
