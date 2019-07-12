@@ -33,6 +33,23 @@ const Nav = styled.div`
   margin-left: auto;
   display: none;
 
+  &.active {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    max-height: 500px;
+    left: 0;
+    top: 0;
+    position: fixed;
+    z-index: 100;
+    background: #ffffff;
+    padding: 20px 0;
+    margin: 0 auto;
+    box-shadow: 0 15px 30px -10px rgba(0,0,0,.3);
+    border: 1px solid #e5e5e5;
+  }
+
   @media ${media.medium} {
     display: flex;
   }
@@ -41,26 +58,38 @@ const Nav = styled.div`
 const CommunityMenuWrapper = styled.div`
   position: relative;
   margin-top: 3px;
+  display: none;
+
+  @media ${media.medium} {
+    display: block;
+  }
 `;
 
 const NavLink = styled.a`
-  font-size: 16px;
-  line-height: 1.63;
   text-align: center;
-  color: rgb(255, 255, 255);
   transition: color 0.2s ease-in-out;
-  border-bottom: solid 2px transparent;
-  margin-left: 30px;
-  padding: 4px;
   cursor: pointer;
   text-decoration: none;
+  color: rgb(49, 42, 67);
+  line-height: 1.63;
+  font-size: 28px;
+  padding: 0 0 10px 0;
 
-  &:hover {
-    color: rgb(75, 107, 220);
-  }
+  @media ${media.medium} {
+    color: rgb(255, 255, 255);
+    line-height: 1.63;
+    font-size: 16px;
+    margin-left: 30px;
+    border-bottom: solid 2px transparent;
+    padding: 4px;
 
-  &.active {
-    border-color: rgb(75, 107, 220);
+    &:hover {
+      color: rgb(75, 107, 220);
+    }
+
+    &.active {
+      border-color: rgb(75, 107, 220);
+    }
   }
 `;
 
@@ -145,6 +174,7 @@ const HamburgerIcon = styled.div`
   transition: .5s ease-in-out;
   margin: 10px 0 0 auto;
   display: block;
+  z-index: 1001;
 
   @media ${media.medium} {
     display: none;
@@ -180,7 +210,13 @@ const HamburgerIcon = styled.div`
   }
 
   &.active {
+    position: fixed;
+    right: 20px;
+    top: 15px;
+
     span {
+      background: rgb(49, 42, 67);
+
       &:nth-child(1) {
         top: 18px;
         width: 0%;
@@ -205,22 +241,14 @@ const HamburgerIcon = styled.div`
 }
 `;
 
-
-
-
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
+  const [navEnabled, setNavEnabled] = useState(false);
 
   return (
     <HeaderWrapper>
       <LogoImg src={logoSVG} />
-      <HamburgerIcon>
-        <span />
-        <span />
-        <span />
-        <span />
-      </HamburgerIcon>
-      <Nav>
+      <Nav className={navEnabled && 'active'}>
         <Link href="/" passHref>
           <NavLink>Home</NavLink>
         </Link>
@@ -282,6 +310,14 @@ const Header = () => {
           )}
         </CommunityMenuWrapper>
       </Nav>
+      <HamburgerIcon
+        onClick={() => setNavEnabled(!navEnabled)}
+        className={navEnabled && 'active'}>
+        <span />
+        <span />
+        <span />
+        <span />
+      </HamburgerIcon>
     </HeaderWrapper>
   );
 };
