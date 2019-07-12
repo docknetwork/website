@@ -9,7 +9,7 @@ import SubscribeModal from '../../components/modals/subscribe-modal';
 import InquiryModal from '../../components/modals/inquiry-modal';
 
 import logoSVG from '../../assets/images/dock-logo.svg';
-import headerHeroSVG from '../../assets/images/home/header-hero.svg';
+import headerHeroPNG from '../../assets/images/home/header-hero.png';
 import headerHeroBGSVG from '../../assets/images/home/header-hero-bg.svg';
 import arrowRightSVG from '../../assets/images/icons/arrow-right-white.svg';
 
@@ -163,7 +163,7 @@ const HeaderHero = () => {
             </Buttons>
           </div>
           <HeaderHeroBGImage src={headerHeroBGSVG}/>
-          <HeaderHeroImage src={headerHeroSVG}/>
+          <HeaderHeroImage src={headerHeroPNG}/>
         </Wrapper>
       </Root>
 
