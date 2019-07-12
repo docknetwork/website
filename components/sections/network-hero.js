@@ -128,6 +128,7 @@ const UnderlineLink = styled.a`
   display: flex;
   align-self: flex-start;
   width: 180px;
+  text-decoration: none;
 `;
 
 const UnderlineLinkIcon = styled.img`
