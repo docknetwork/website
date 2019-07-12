@@ -53,7 +53,7 @@ const LitepaperSection = () => (
         <SectionSubtitle>
           Overview of the Dock blockchain and network.
         </SectionSubtitle>
-        <UnderlineLink>
+        <UnderlineLink href="https://dock.io/litepaper.pdf">
           Read Litepaper
         </UnderlineLink>
       </LitepaperContent>

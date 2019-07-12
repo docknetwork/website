@@ -155,7 +155,7 @@ const NetworkHero = () => (
         <HeroSubtitle>
           An autonomous network with open participation and governance
         </HeroSubtitle>
-        <UnderlineLink>
+        <UnderlineLink href="https://dock.io/litepaper.pdf">
           Read Litepaper
           <UnderlineLinkIcon src={arrowRightSVG}/>
         </UnderlineLink>

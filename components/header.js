@@ -214,16 +214,12 @@ const Header = () => {
   return (
     <HeaderWrapper>
       <LogoImg src={logoSVG} />
-
-
-            <HamburgerIcon>
-              <span />
-              <span />
-              <span />
-              <span />
-            </HamburgerIcon>
-
-
+      <HamburgerIcon>
+        <span />
+        <span />
+        <span />
+        <span />
+      </HamburgerIcon>
       <Nav>
         <Link href="/" passHref>
           <NavLink>Home</NavLink>
@@ -238,7 +234,7 @@ const Header = () => {
           onMouseEnter={() => setShowMenu(true)}
           onMouseLeave={() => setShowMenu(false)}
           onClick={() => setShowMenu(!showMenu)}>
-          <NavLinkCommunity href="#">
+          <NavLinkCommunity>
             Communty <NavLinkCommunityIcon src={chevronDown} />
           </NavLinkCommunity>
           {showMenu && (

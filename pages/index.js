@@ -353,7 +353,7 @@ const VerifiableModal = ({onClose}) => (
         and a digital wallet for individuals to securely store and share credentials.
 
         &nbsp;
-        <a href="#">Learn more</a>
+        <a href="https://verifiable.com">Learn more</a>
 
         <br /><br />
         <strong>Your Dock account has automatically moved.</strong><br />
@@ -420,7 +420,7 @@ const Index = () => {
                 <RowItemContentText>
                   Open and collaborative governance driven by the DOCK token.
                 </RowItemContentText>
-                <UnderlineLinkAligned>
+                <UnderlineLinkAligned href="https://dock.io">
                   Learn more
                 </UnderlineLinkAligned>
               </RowItemContent>
@@ -437,7 +437,7 @@ const Index = () => {
                 <RowItemContentText>
                   Contribute as an issuer or operator in the network.
                 </RowItemContentText>
-                <UnderlineLinkAligned>
+                <UnderlineLinkAligned href="https://dock.io">
                   Learn more
                 </UnderlineLinkAligned>
               </RowItemContent>
