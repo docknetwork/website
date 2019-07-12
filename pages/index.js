@@ -7,7 +7,9 @@ import Page from '../layouts/main';
 import HeaderHero from '../components/sections/header-hero';
 import LitepaperSection from '../components/sections/litepaper';
 import { UnderlineLinkAligned } from '../components/underline-link';
+
 import Modal from '../components/modal';
+import InquiryModal from '../components/modals/inquiry-modal';
 
 import {
   HeaderMarker,
@@ -367,6 +369,7 @@ const VerifiableModal = ({onClose}) => (
 
 const Index = () => {
   const [showModal, setShowModal] = useState(false);
+  const [showInquiryModal, setShowInquiryModal] = useState(false);
 
   return (
     <>
@@ -463,7 +466,7 @@ const Index = () => {
               <SectionTitle>
                 Partners
               </SectionTitle>
-              <BuildButton>
+              <BuildButton onClick={() => setShowInquiryModal(true)}>
                 Build with Dock
               </BuildButton>
             </SectionHeaderControls>
@@ -502,6 +505,10 @@ const Index = () => {
 
       {showModal && (
         <VerifiableModal onClose={() => setShowModal(false)} />
+      )}
+
+      {showInquiryModal && (
+        <InquiryModal onClose={() => setShowInquiryModal(false)} />
       )}
     </>
   );

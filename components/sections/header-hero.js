@@ -6,6 +6,7 @@ import Header from '../../components/header';
 import media from '../../helpers/media';
 
 import SubscribeModal from '../../components/modals/subscribe-modal';
+import InquiryModal from '../../components/modals/inquiry-modal';
 
 import logoSVG from '../../assets/images/dock-logo.svg';
 import headerHeroSVG from '../../assets/images/home/header-hero.svg';
@@ -136,6 +137,7 @@ const Buttons = styled.div`
 
 const HeaderHero = () => {
   const [showSubscribeModal, setShowSubscribeModal] = useState(false);
+  const [showInquiryModal, setShowInquiryModal] = useState(false);
 
   return (
     <>
@@ -151,7 +153,7 @@ const HeaderHero = () => {
             </HeroSubtitle>
 
             <Buttons>
-              <IssueButton href="#">
+              <IssueButton onClick={() => setShowInquiryModal(true)}>
                 Build with Dock
               </IssueButton>
               <UnderlineLink onClick={() => setShowSubscribeModal(true)}>
@@ -167,6 +169,10 @@ const HeaderHero = () => {
 
       {showSubscribeModal && (
         <SubscribeModal onClose={() => setShowSubscribeModal(false)} />
+      )}
+
+      {showInquiryModal && (
+        <InquiryModal onClose={() => setShowInquiryModal(false)} />
       )}
     </>
   );
