@@ -301,9 +301,12 @@ const Network = () => (
           <TokenGridItemText>
             Token holders are able to submit proposals and vote on decisions contributing to network governance.
           </TokenGridItemText>
-          <UnderlineLinkAligned>
-            Learn more
-          </UnderlineLinkAligned>
+
+          <Link href="/governance" passHref>
+            <UnderlineLinkAligned>
+              Learn more
+            </UnderlineLinkAligned>
+          </Link>
         </TokenGridItem>
 
         <TokenGridItem>

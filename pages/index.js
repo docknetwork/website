@@ -498,9 +498,9 @@ const Index = () => {
                   The platform provides the ability to design credential templates,
                   manage recipients and track business goals with analytics.
                 </PartnerDescription>
-                <UnderlineLinkAligned>
+                {/*<UnderlineLinkAligned>
                   Read case study
-                </UnderlineLinkAligned>
+                </UnderlineLinkAligned>*/}
               </PartnerContent>
             </Partner>
 
