@@ -154,7 +154,7 @@ const HeaderHero = () => {
 
             <Buttons>
               <IssueButton onClick={() => setShowInquiryModal(true)}>
-                Build with Dock
+                Contact Us
               </IssueButton>
               <UnderlineLink onClick={() => setShowSubscribeModal(true)}>
                 Subscribe to updates
