@@ -134,7 +134,10 @@ const Footer = () => (
           <img src={telegramSVG}/>
         </SocialLink>
 
-        <SocialLink href="#">
+        <SocialLink
+          href="https://medium.com/dock"
+          target="_blank"
+          rel="noopener noreferrer">
           <img src={mediumSVG}/>
         </SocialLink>
 
