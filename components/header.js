@@ -150,9 +150,9 @@ const Header = () => {
         <Link href="/network">
           <NavLink>Network</NavLink>
         </Link>
-        <Link href="/governance">
+        {/*<Link href="/governance">
           <NavLink>Governance</NavLink>
-        </Link>
+        </Link>*/}
         <CommunityMenuWrapper
           onMouseEnter={() => setShowMenu(true)}
           onMouseLeave={() => setShowMenu(false)}

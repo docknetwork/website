@@ -67,6 +67,7 @@ const NavLink = styled.a`
   line-height: 2;
   color: rgb(255, 255, 255);
   font-family: Lato;
+  text-decoration: none;
 
   @media ${media.medium} {
     font-weight: bold;
@@ -112,16 +113,16 @@ const Footer = () => (
           <Link href="/network">
             <NavLink>Network</NavLink>
           </Link>
-          <Link href="/governance">
+          {/*<Link href="/governance">
             <NavLink>Governance</NavLink>
-          </Link>
+          </Link>*/}
           <Link href="/about">
             <NavLink>About</NavLink>
           </Link>
         </NavColumn>
         <NavColumn>
           <NavLink href="https://blog.dock.io">Blog</NavLink>
-          <NavLink href="https://community.dock.io">Blog</NavLink>
+          <NavLink href="https://community.dock.io">Forum</NavLink>
           <NavLink href="https://dock.io/litepaper.pdf">Litepaper</NavLink>
         </NavColumn>
       </Nav>
