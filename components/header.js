@@ -137,12 +137,93 @@ const NavLinkCommunityIcon = styled.img`
   opacity: 0.8;
 `;
 
+const HamburgerIcon = styled.div`
+  width: 19px;
+  height: 22px;
+  position: relative;
+  transform: rotate(0deg);
+  transition: .5s ease-in-out;
+  margin: 10px 0 0 auto;
+  display: block;
+
+  @media ${media.medium} {
+    display: none;
+  }
+
+  span {
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: inherit;
+    background: #ffffff;
+    border-radius: 8px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+
+    &:nth-child(1) {
+      top: 0;
+    }
+
+    &:nth-child(2),
+    &:nth-child(3) {
+      top: 6px;
+    }
+
+    &:nth-child(4) {
+      top: 12px;
+      left: auto;
+      right: 0;
+      width: 13px;
+    }
+  }
+
+  &.active {
+    span {
+      &:nth-child(1) {
+        top: 18px;
+        width: 0%;
+        left: 50%;
+      }
+
+      &:nth-child(2) {
+        transform: rotate(45deg);
+      }
+
+      &:nth-child(3) {
+        transform: rotate(-45deg);
+      }
+
+      &:nth-child(4) {
+        top: 18px;
+        width: 0%;
+        left: 50%;
+      }
+    }
+  }
+}
+`;
+
+
+
+
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
 
   return (
     <HeaderWrapper>
       <LogoImg src={logoSVG} />
+
+
+            <HamburgerIcon>
+              <span />
+              <span />
+              <span />
+              <span />
+            </HamburgerIcon>
+
+
       <Nav>
         <Link href="/" passHref>
           <NavLink>Home</NavLink>
