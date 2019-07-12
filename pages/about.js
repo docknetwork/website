@@ -175,7 +175,7 @@ const About = () => {
 
       <HeadlineSection>
         <Headline>
-          Our mission is to create an internet of trust - by producing verifiable data and returning control to owners.
+          Our mission is to enable an internet of trust - by producing verifiable data and returning control to owners.
         </Headline>
       </HeadlineSection>
 
