@@ -322,7 +322,7 @@ const Network = () => (
         <TokenGridItem>
           <TokenGridItemImage src={tokenThreeSVG}/>
           <TokenGridItemTitle>
-            Bonding and payment
+            Transactions
           </TokenGridItemTitle>
           <TokenGridItemText>
             Network participants use tokens to bond and for payments to place requests for issuing and executing those requests.
