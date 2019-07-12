@@ -107,16 +107,16 @@ const Footer = () => (
       <img src={logoSVG} />
       <Nav>
         <NavColumn>
-          <Link href="/">
+          <Link href="/" passHref>
             <NavLink>Home</NavLink>
           </Link>
-          <Link href="/network">
+          <Link href="/network" passHref>
             <NavLink>Network</NavLink>
           </Link>
-          {/*<Link href="/governance">
+          {/*<Link href="/governance" passHref>
             <NavLink>Governance</NavLink>
           </Link>*/}
-          <Link href="/about">
+          <Link href="/about" passHref>
             <NavLink>About</NavLink>
           </Link>
         </NavColumn>

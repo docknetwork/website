@@ -144,13 +144,13 @@ const Header = () => {
     <HeaderWrapper>
       <LogoImg src={logoSVG} />
       <Nav>
-        <Link href="/">
+        <Link href="/" passHref>
           <NavLink>Home</NavLink>
         </Link>
-        <Link href="/network">
+        <Link href="/network" passHref>
           <NavLink>Network</NavLink>
         </Link>
-        {/*<Link href="/governance">
+        {/*<Link href="/governance" passHref>
           <NavLink>Governance</NavLink>
         </Link>*/}
         <CommunityMenuWrapper
