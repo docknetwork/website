@@ -1,4 +1,5 @@
 import { ServerStyleSheet } from 'styled-components';
+import Safe from 'react-safe';
 import Head from 'next/head';
 
 import Footer from '../components/footer';
@@ -45,7 +46,7 @@ export default class MainLayout extends React.Component {
           <meta name="og:description" content={defaultDescription} />
 
           <title>Dock</title>
-          <script type="text/javascript">{`
+          <Safe.script type="text/javascript" jsx global>{`
             var _cio = _cio || [];
             (function() {
                 var a,b,c;a=function(f){return function(){_cio.push([f].
@@ -59,7 +60,7 @@ export default class MainLayout extends React.Component {
                 t.src = 'https://assets.customer.io/assets/track.js';
                 s.parentNode.insertBefore(t, s);
             })();
-          `}</script>
+          `}</Safe.script>
           {this.props.styleTags}
         </Head>
         <style jsx global>{`
