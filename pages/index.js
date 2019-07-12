@@ -424,9 +424,12 @@ const Index = () => {
                 <RowItemContentText>
                   Open and collaborative governance driven by the DOCK token.
                 </RowItemContentText>
-                <UnderlineLinkAligned href="https://dock.io">
-                  Learn more
-                </UnderlineLinkAligned>
+
+                <Link href="/governance" passHref>
+                  <UnderlineLinkAligned href="https://dock.io">
+                    Learn more
+                  </UnderlineLinkAligned>
+                </Link>
               </RowItemContent>
             </RowItem>
 
@@ -441,9 +444,12 @@ const Index = () => {
                 <RowItemContentText>
                   Contribute as an issuer or operator in the network.
                 </RowItemContentText>
-                <UnderlineLinkAligned href="https://dock.io">
-                  Learn more
-                </UnderlineLinkAligned>
+
+                <Link href="/network" passHref>
+                  <UnderlineLinkAligned href="https://dock.io">
+                    Learn more
+                  </UnderlineLinkAligned>
+                </Link>
               </RowItemContent>
             </RowItem>
 
