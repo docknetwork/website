@@ -270,13 +270,12 @@ const Network = () => (
         <DarkSectionWrapper>
           <DarkSectionTitle>
             <DarkHeaderMarker />
-            Issuing records
+            Production workflow
           </DarkSectionTitle>
           <DarkSectionText>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            <br /><br />
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore magna aliqua.
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.
+            Credential issuing is the bloodline of the network and feeds demand.
+            As Issuers request credentials, operators process and issue credentials.
+            The Dock token is used to deter malicous attacks in the network.
           </DarkSectionText>
         </DarkSectionWrapper>
       </DarkSection>
@@ -313,7 +312,7 @@ const Network = () => (
             Operations
           </TokenGridItemTitle>
           <TokenGridItemText>
-            Game theory is applied by rewarding good actors for contributing to the network and by punishing bad actors by losing stake.
+            Good actors are rewarded for contributing to the network and bad actors are published by losing stake.
           </TokenGridItemText>
         </TokenGridItem>
 

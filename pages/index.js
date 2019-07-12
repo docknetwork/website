@@ -302,6 +302,13 @@ const ModalContent = styled.div`
   &, a {
     color: rgb(49, 42, 67);
   }
+
+  @media ${media.medium} {
+    max-width: 433px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 30px 0;
+  }
 `;
 
 const ModalFooter = styled.div`
@@ -349,15 +356,12 @@ const VerifiableModal = ({onClose}) => (
       <ModalImage src={modalImageSVG}/>
     </ModalHeader>
     <ModalContent>
-        The Dock wallet and credential issuing platform are now Verifiable — A place for organizations to issue digital credentials
-        and a digital wallet for individuals to securely store and share credentials.
-
-        &nbsp;
-        <a href="https://verifiable.com">Learn more</a>
-
-        <br /><br />
-        <strong>Your Dock account has automatically moved.</strong><br />
-        Just login with your existing credentials to get started.
+      The Dock wallet and data control apps have moved to Verifiable.
+      &nbsp;
+      <a href="https://verifiable.com">Learn more</a>
+      <br /><br />
+      <strong>Your Dock account has automatically moved.</strong><br />
+      Use your existing login to access your account.
     </ModalContent>
     <ModalFooter>
       <UnderlineLinkAligned href="https://verifiable.com">
