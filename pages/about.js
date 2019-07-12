@@ -31,22 +31,32 @@ import lTwoVenturesPNG from '../assets/images/about/partners/l-2-ventures.png';
 import passportPNG from '../assets/images/about/partners/passport-logo.png';
 
 const HeadlineSection = styled.div`
-  height: 228px;
   background-color: rgb(246, 246, 249);
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 20px 40px;
+
+  @media ${media.medium} {
+    height: 228px;
+    padding: 0;
+  }
 `;
 
 const Headline = styled.h2`
   font-family: Lato;
-  font-size: 32px;
   font-weight: normal;
+  font-size: 18px;
   line-height: 1.38;
   text-align: center;
   color: rgb(31, 31, 44);
   max-width: 892px;
   width: 100%;
+
+  @media ${media.medium} {
+    font-size: 32px;
+    line-height: 1.38;
+  }
 `;
 
 const Text = styled.p`
@@ -68,12 +78,18 @@ const Contributors = styled.div`
 const Contributor = styled.div`
   display: flex;
   flex-direction: column;
-  width: 331px;
-  height: 332px;
+  width: 100%;
   border-radius: 3px;
   box-shadow: 0 19px 56px -20px rgba(0, 0, 0, 0.2);
   background-color: rgb(255, 255, 255);
-  margin-right: 15px;
+  margin-bottom: 15px;
+
+  @media ${media.medium} {
+    margin-right: 15px;
+    margin-bottom: 0;
+    max-width: 331px;
+    height: 332px;
+  }
 `;
 
 const ContributorLogo = styled.div`
@@ -93,7 +109,11 @@ const ContributorText = styled.div`
   font-size: 18px;
   line-height: 1.56;
   color: rgb(49, 42, 67);
-  padding: 24px 33px 37px 33px;
+  padding: 15px;
+
+  @media ${media.medium} {
+    padding: 24px 33px 37px 33px;
+  }
 `;
 
 const SectionColumnCentered = styled(SectionColumn)`
@@ -105,15 +125,24 @@ const Investors = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-direction: column;
   margin: 70px 0 100px 0;
   width: 100%;
+
+  @media ${media.medium} {
+    flex-direction: row;
+  }
 `;
 
 const Investor = styled.div`
   margin: 0 129px;
   width: 100%;
-  max-width: 256px;
-  margin: 0 0 80px 0;
+  margin: 0 0 40px 0;
+
+  @media ${media.medium} {
+    max-width: 256px;
+    margin: 0 0 80px 0;
+  }
 `;
 
 const InvestorsWrapper = styled.div`

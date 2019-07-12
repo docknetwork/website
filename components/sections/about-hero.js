@@ -23,7 +23,6 @@ const Root = styled.div`
   position: relative;
   background-color: rgb(8, 0, 34);
   padding: 0 20px 25px 20px;
-  margin: 0 0 60px 0;
 
   @media ${media.medium} {
     height: 500px;
