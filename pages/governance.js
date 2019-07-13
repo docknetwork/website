@@ -22,8 +22,12 @@ const TokensLinkWrapper = styled.div`
 `;
 
 const ProposalsSection = styled.div`
-  padding: 80px 0 220px 0;
+  padding: 80px 20px 100px 20px;
   background-color: rgb(246, 246, 249);
+
+  @media ${media.medium} {
+    padding: 80px 0 220px 0;
+  }
 `;
 
 const ProposalsSectionTitle = styled.h2`
@@ -34,7 +38,7 @@ const ProposalsSectionTitle = styled.h2`
   color: rgb(32, 33, 46);
 `;
 
-const WrapperSection = styled(Wrapper)`
+const CustomWrapper = styled(Wrapper)`
   flex-direction: column;
 `;
 
@@ -62,12 +66,12 @@ const Governance = () => {
       </SectionColumn>
 
       <ProposalsSection>
-        <WrapperSection>
+        <CustomWrapper>
           <ProposalsSectionTitle>
             Open Proposals
           </ProposalsSectionTitle>
           Coming soon
-        </WrapperSection>
+        </CustomWrapper>
       </ProposalsSection>
     </Page>
   );
