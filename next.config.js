@@ -7,7 +7,9 @@ module.exports = withPlugins([
   }], {
     exportPathMap: function() {
       return {
-        '/': { page: '/' }
+        '/': { page: '/' },
+        '/network': { page: '/network' },
+        '/about': { page: '/about' },
       };
     },
   },
