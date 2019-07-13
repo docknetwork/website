@@ -39,6 +39,7 @@ const LitepaperImage = styled.img`
 
   @media ${media.medium} {
     width: 213px;
+    height: 260px;
     margin: 65px 40px 0 0;
   }
 `;
