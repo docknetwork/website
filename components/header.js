@@ -255,9 +255,9 @@ const Header = () => {
         <Link href="/network" passHref>
           <NavLink>Network</NavLink>
         </Link>
-        {/*<Link href="/governance" passHref>
+        <Link href="/governance" passHref>
           <NavLink>Governance</NavLink>
-        </Link>*/}
+        </Link>
         <CommunityMenuWrapper
           onMouseEnter={() => setShowMenu(true)}
           onMouseLeave={() => setShowMenu(false)}

@@ -10,6 +10,7 @@ module.exports = withPlugins([
         '/': { page: '/' },
         '/network': { page: '/network' },
         '/about': { page: '/about' },
+        '/governance': { page: '/governance' },
       };
     },
   },
