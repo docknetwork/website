@@ -59,7 +59,10 @@ const Governance = () => {
           Note: DOCK tokens are required to vote
         </SectionSubtitle>
         <TokensLinkWrapper>
-          <UnderlineLink>
+          <UnderlineLink
+            href="https://www.binance.com/en/trade/DOCK_BTC"
+            target="_blank"
+            rel="noopener noreferrer">
             Get DOCK tokens
           </UnderlineLink>
         </TokensLinkWrapper>
