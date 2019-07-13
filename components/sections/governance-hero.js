@@ -42,7 +42,7 @@ const HeaderHeroImage = styled.img`
   @media ${media.medium} {
     width: auto;
     right: 20px;
-    bottom: -100px;
+    bottom: -120px;
   }
 `;
 
