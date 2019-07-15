@@ -31,6 +31,8 @@ import governanceIconSVG from '../assets/images/home/governance-bg-icon.svg';
 import networkIconSVG from '../assets/images/home/network-icon.svg';
 import litepaperPNG from '../assets/images/home/litepaper.png';
 
+import verifableImage from '../assets/images/home/verifiable-logo.png';
+
 const IntroSectionRight = styled.div`
   margin-left: auto;
   display: flex;
@@ -487,10 +489,7 @@ const Index = () => {
             </SectionHeaderControls>
             <Partner>
               <PartnerImage>
-                <VerifiableImage/>
-                <PartnerImageTitle>
-                  Verifiable.com
-                </PartnerImageTitle>
+                <img src={verifableImage}/>
               </PartnerImage>
               <PartnerContent>
                 <PartnerTitle>
