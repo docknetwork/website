@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import Link from 'next/link';
+import Head from 'next/head';
 import styled from 'styled-components';
 import media from '../helpers/media';
 
@@ -16,6 +17,9 @@ import {
   Section,
   SectionColumn
 } from '../components/sections';
+
+const pageDesc = 'Dock believes the community should help guide the direction of the project and help with governance. An overview of governance and the Dock token.';
+const pageTitle = 'Dock | Governance and Voting';
 
 const TokensLinkWrapper = styled.div`
   margin: 5px 0 139px 0;
@@ -45,6 +49,12 @@ const CustomWrapper = styled(Wrapper)`
 const Governance = () => {
   return (
     <Page>
+      <Head>
+        <title>{pageTitle}</title>
+        <meta name="og:title" content={pageTitle} />
+        <meta name="description" content={pageDesc} />
+        <meta name="og:description" content={pageDesc} />
+      </Head>
       <GovernanceHero />
       <SectionColumn>
         <SectionTitle>

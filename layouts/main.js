@@ -9,9 +9,8 @@ import favicon16 from '../assets/favicons/favicon-16x16.png';
 import favicon32 from '../assets/favicons/favicon-32x32.png';
 import favicon96 from '../assets/favicons/favicon-96x96.png';
 
-const defaultDescription =
-  'Dock makes it easy for organizations to issue verifiable digital credentials using blockchain and empowers individuals to own and control their digital records.';
-const defaultTitle = 'Micro Credentials & Digital Badges on Blockchain';
+const pageDesc = 'Dock is a decentralized network enabling organizations to produce digital credentials at scale.';
+const pageTitle = 'Dock : High-performance blockchain credentials';
 
 
 const Banner = styled.a`
@@ -194,14 +193,13 @@ export default class MainLayout extends React.Component {
             name="viewport"
             content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width, minimal-ui"
           />
-          <meta name="og:title" content={defaultTitle} />
+          <title>{pageTitle}</title>
+          <meta name="og:title" content={pageTitle} />
+          <meta name="description" content={pageDesc} />
+          <meta name="og:description" content={pageDesc} />
           <meta name="mobile-web-app-capable" content="yes" />
           <meta name="wot-verification" content="69f8c3e17a9ca94cf076" />
           <meta name="fragment" content="!" />
-          <meta name="description" content={defaultDescription} />
-          <meta name="og:description" content={defaultDescription} />
-
-          <title>{defaultTitle}</title>
           <Safe.script type="text/javascript" jsx global>{`
             var _cio = _cio || [];
             (function() {

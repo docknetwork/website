@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import Head from 'next/head';
 import styled from 'styled-components';
 import media from '../helpers/media';
 
@@ -27,6 +28,9 @@ import tokenTwoSVG from '../assets/images/network/token-2.svg';
 import tokenThreeSVG from '../assets/images/network/token-3.svg';
 
 import recordsPNG from '../assets/images/network/records.png';
+
+const pageDesc = 'An overview of Dock’s decentralized blockchain and cryptocurrency enabling the production of digital credentials for organizations at scale.';
+const pageTitle = 'Dock Network | Dock Token';
 
 const ParticipantsGrid = styled.div`
   display: flex;
@@ -210,6 +214,12 @@ const DarkSectionText = styled.p`
 
 const Network = () => (
   <Page>
+    <Head>
+      <title>{pageTitle}</title>
+      <meta name="og:title" content={pageTitle} />
+      <meta name="description" content={pageDesc} />
+      <meta name="og:description" content={pageDesc} />
+    </Head>
     <NetworkHero />
 
     <SectionColumn>
