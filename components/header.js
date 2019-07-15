@@ -266,7 +266,7 @@ const Header = () => {
           onMouseLeave={() => setShowMenu(false)}
           onClick={() => setShowMenu(!showMenu)}>
           <NavLinkCommunity>
-            Communty <NavLinkCommunityIcon src={chevronDown} />
+            Community <NavLinkCommunityIcon src={chevronDown} />
           </NavLinkCommunity>
           {showMenu && (
             <CommunityMenu>
