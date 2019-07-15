@@ -95,6 +95,7 @@ const NavLink = styled.a`
 
 const LogoImg = styled.img`
   width: 62px;
+  cursor: pointer;
 
   @media ${media.medium} {
     padding-top: 20px;
@@ -247,7 +248,9 @@ const Header = () => {
 
   return (
     <HeaderWrapper>
-      <LogoImg src={logoSVG} />
+      <Link href="/">
+        <LogoImg src={logoSVG} />
+      </Link>
       <Nav className={navEnabled && 'active'}>
         <Link href="/" passHref>
           <NavLink>Home</NavLink>
