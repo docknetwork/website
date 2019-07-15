@@ -98,6 +98,7 @@ const IssueButton = styled.a`
   background-color: rgb(75, 107, 220);
   text-decoration: none;
   width: 100%;
+  cursor: pointer;
 
   @media ${media.medium} {
     width: 215px;
@@ -114,6 +115,7 @@ const UnderlineLink = styled.a`
   display: flex;
   margin-top: 30px;
   align-self: flex-start;
+  cursor: pointer;
 
   @media ${media.medium} {
     margin-left: 25px;

@@ -233,6 +233,7 @@ const BuildButton = styled.a`
   margin-left: auto;
   margin-top: auto;
   display: none;
+  cursor: pointer;
 
   @media ${media.medium} {
     display: block;
