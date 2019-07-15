@@ -1,6 +1,7 @@
-import { ServerStyleSheet } from 'styled-components';
+import styled, { ServerStyleSheet } from 'styled-components';
 import Safe from 'react-safe';
 import Head from 'next/head';
+import media from '../helpers/media';
 
 import Footer from '../components/footer';
 
@@ -12,6 +13,154 @@ const defaultDescription =
   'Dock makes it easy for organizations to issue verifiable digital credentials using blockchain and empowers individuals to own and control their digital records.';
 const defaultTitle = 'Micro Credentials & Digital Badges on Blockchain';
 
+
+const Banner = styled.a`
+  background-image: linear-gradient(to right, rgb(75, 107, 220), rgb(94, 77, 172));
+  font-size: 18px;
+  line-height: 1.56;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  width: 100%;
+  display: flex;
+  text-decoration: none;
+  flex-direction: column;
+  padding: 10px 0;
+  align-items: center;
+
+  @media ${media.medium} {
+    flex-direction: row;
+    justify-content: center;
+    padding: 0;
+    height: 52px;
+  }
+`;
+
+const BannerButton = styled.span`
+  display: flex;
+  color: rgb(255, 255, 255);
+  margin-left: 12px;
+  text-decoration: none;
+
+  > img {
+    margin-left: 20px;
+  }
+`;
+
+import arrowRightWhiteSVG from '../assets/images/icons/arrow-right-white.svg';
+
+
+
+
+
+
+
+
+
+
+
+const ModalHeader = styled.div`
+  width: 100%;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.06);
+  background-color: rgb(239, 239, 245);
+  display: flex;
+  flex-direction: column;
+  padding-top: 33px;
+`;
+
+const ModalContent = styled.div`
+  padding: 35px 30px;
+  font-size: 18px;
+  line-height: 1.56;
+  text-align: center;
+
+  &, a {
+    color: rgb(49, 42, 67);
+  }
+
+  @media ${media.medium} {
+    max-width: 433px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 30px 0;
+  }
+`;
+
+const ModalFooter = styled.div`
+  padding: 0 0 47px 0;
+  text-align: center;
+`;
+
+const ModalTitle = styled.h4`
+  font-family: Poppins;
+  font-size: 24px;
+  line-height: 1.67;
+  text-align: center;
+  color: rgb(53, 188, 152);
+  font-weight: normal;
+  margin: 20px 0;
+`;
+
+const ModalSubtitle = styled.h3`
+  font-family: Poppins;
+  font-size: 66px;
+  font-weight: bold;
+  line-height: 0.61;
+  text-align: center;
+  color: rgb(53, 188, 152);
+  margin-bottom: 21px;
+`;
+
+const ModalImage = styled.img`
+  margin-top: auto;
+`;
+
+import modalImageSVG from '../assets/images/verifable-modal/image.svg';
+import arrowSVG from '../assets/images/verifable-modal/arrow.svg';
+
+import Modal from '../components/modal';
+import { UnderlineLinkAligned } from '../components/underline-link';
+
+const VerifiableModal = ({onClose}) => (
+  <Modal onClose={onClose}>
+    <ModalHeader>
+      <img src={arrowSVG}/>
+      <ModalTitle>
+        The Dock app has moved to
+      </ModalTitle>
+      <ModalSubtitle>
+        Verifiable
+      </ModalSubtitle>
+      <ModalImage src={modalImageSVG}/>
+    </ModalHeader>
+    <ModalContent>
+      The Dock wallet and data control apps have moved to Verifiable.
+      &nbsp;
+      <a href="https://blog.dock.io/frequently-asked-questions"
+        target="_blank"
+        rel="noopener noreferrer">
+        Learn more
+      </a>
+      <br /><br />
+      <strong>Your Dock account has automatically moved.</strong><br />
+      Use your existing login to access your account.
+    </ModalContent>
+    <ModalFooter>
+      <UnderlineLinkAligned href="https://verifiable.com">
+        Go to Verifiable
+      </UnderlineLinkAligned>
+    </ModalFooter>
+  </Modal>
+);
+
+
+
+
+
+
+
+
+
+
 export default class MainLayout extends React.Component {
   static getInitialProps({ renderPage }) {
     const sheet = new ServerStyleSheet();
@@ -21,6 +170,13 @@ export default class MainLayout extends React.Component {
 
     const styleTags = sheet.getStyleElement();
     return { ...page, styleTags };
+  }
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      showModal: false
+    };
   }
 
   render() {
@@ -75,7 +231,20 @@ export default class MainLayout extends React.Component {
             width: 100%;
           }
         `}</style>
+
+        <Banner href="https://verifiable.com" onClick={e => { e.preventDefault(); e.stopPropagation(); this.setState({ showModal: true }); }}>
+          The Dock app has moved to Verifiable.
+          <BannerButton>
+            Learn more
+            <img src={arrowRightWhiteSVG}/>
+          </BannerButton>
+        </Banner>
+
         { this.props.children }
+
+        {this.state.showModal && (
+          <VerifiableModal onClose={() => { this.setState({ showModal: false }); }} />
+        )}
         <Footer />
       </>
     );
