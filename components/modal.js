@@ -3,6 +3,8 @@ import Link from 'next/link';
 import styled from 'styled-components';
 import media from '../helpers/media';
 
+import closeSVG from '../assets/images/icons/close.svg';
+
 const Root = styled.div`
   width: 100%;
   height: 100%;
@@ -48,6 +50,17 @@ const ModalWrapper = styled.div`
   }
 `;
 
+const CloseButton = styled.a`
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+`;
+
 class Modal extends React.Component {
   constructor(props) {
     super(props);
@@ -72,6 +85,10 @@ class Modal extends React.Component {
         <Background onClick={this.handleClose.bind(this)} />
         <ModalWrapper className={this.props.type}>
           {this.props.children}
+
+          <CloseButton onClick={this.handleClose.bind(this)}>
+            <img src={closeSVG}/>
+          </CloseButton>
         </ModalWrapper>
       </Root>
     );
