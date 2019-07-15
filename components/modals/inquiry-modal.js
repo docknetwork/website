@@ -73,6 +73,7 @@ const Input = styled.input`
   font-size: 16px;
   font-family: Lato;
   color: rgb(112, 112, 122);
+  -webkit-appearance: none;
 `;
 
 const Submit = styled.input`
@@ -88,6 +89,7 @@ const Submit = styled.input`
   border: none;
   cursor: pointer;
   margin: 30px 0 20px 0;
+  -webkit-appearance: none;
 `;
 
 const InquiryModal = ({onClose}) => {
