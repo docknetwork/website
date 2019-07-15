@@ -359,7 +359,11 @@ const VerifiableModal = ({onClose}) => (
     <ModalContent>
       The Dock wallet and data control apps have moved to Verifiable.
       &nbsp;
-      <a href="https://verifiable.com">Learn more</a>
+      <a href="https://blog.dock.io/frequently-asked-questions"
+        target="_blank"
+        rel="noopener noreferrer">
+        Learn more
+      </a>
       <br /><br />
       <strong>Your Dock account has automatically moved.</strong><br />
       Use your existing login to access your account.
