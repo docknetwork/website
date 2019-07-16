@@ -4,7 +4,7 @@
   "description": "dock.io website",
   "main": "index.js",
   "scripts": {
-    "dev": "next",
+    "dev": "cross-env NODE_ENV=development PORT=3000 node -r @babel/register ./server.js",
     "build": "next build",
     "export": "next export",
     "start": "next start",
@@ -22,9 +22,12 @@
   },
   "homepage": "https://github.com/getdock/website#readme",
   "dependencies": {
+    "@babel/register": "^7.4.4",
     "babel-eslint": "^10.0.1",
+    "cross-env": "^5.2.0",
     "ethereumjs-util": "^6.1.0",
     "ethjs": "^0.4.0",
+    "express": "^4.17.1",
     "ipfs-mini": "^1.1.5",
     "isomorphic-unfetch": "^3.0.0",
     "json-loader": "^0.5.7",

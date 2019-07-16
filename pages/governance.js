@@ -20,16 +20,10 @@ import {
 } from '../components/sections';
 
 
-import {VotingCenter, Poll} from '../components/eth/contracts';
-import EthWrapper from '../components/eth/eth.service';
-import HexUtils from '../components/eth/hex-utils';
-import IPFS from '../components/eth/ipfs';
+import EthService from '../components/eth/eth.service';
 
 const pageDesc = 'Dock believes the community should help guide the direction of the project and help with governance. An overview of governance and the Dock token.';
 const pageTitle = 'Dock | Governance and Voting';
-
-// const votingCenterAddress = '0xdc71eF432328E36cAb08382bDa2597192DC0c7Db'; // Rinkeby Test Net
-const votingCenterAddress = '0x712ed83fAAB76499FA1D3FB51F870FAed61d3C51'; // Main Ethereum Net
 
 
 import timeLeftSVG from '../assets/images/icons/time-left.svg';
@@ -119,11 +113,7 @@ const ProposalDate = styled.span`
   }
 `;
 
-
-
 const Governance = ({from, proposals}) => {
-  console.log('proposals', proposals.length, proposals)
-  console.log('from', from)
   return (
     <Page>
       <Head>
@@ -165,7 +155,8 @@ const Governance = ({from, proposals}) => {
             {proposals.map(proposal => (
               <Link
                 key={proposal.txId}
-                href={'/proposal/' + proposal.txId}
+                href="/proposal/[id]"
+                as={`/proposal/${proposal.txId}`}
                 passHref>
                 <Proposal>
                   <ProposalTitle>
@@ -194,59 +185,31 @@ const Governance = ({from, proposals}) => {
   );
 };
 
-import moment from 'moment';
-
 Governance.getInitialProps = async function() {
-  const eth = new EthWrapper();
-  const from = await eth.getAccount();
-  const contractParams = {
-    gas: 100000,
-  };
+  const eth = EthService.getInstance();
+  await eth.init();
 
-  if (from) {
-    contractParams.from = from;
-  }
-
-  const votingCenter = VotingCenter.at(
-    votingCenterAddress,
-    contractParams
-  );
+  console.log('get  transactions')
 
   const proposals = [];
-  const transactions = await votingCenter.allPolls();
+  const transactions = await eth.votingCenter.allPolls();
 
   // Hack for Dock: dont proposals before DGP-1
   const startIndex = transactions['0'].indexOf('0xf5c57613806020a478e68df7b1ea186ef9206087');
   for (let i = startIndex; i < transactions['0'].length; i++) {
     const transaction = transactions['0'][i];
-    console.log('transaction', transaction);
-    const contract = Poll.at(transaction, contractParams);
-    try {
-      const startTimeData = await contract.startTime();
-      const startTime = moment.unix(startTimeData[0].toNumber());
-      const isOpen = moment().diff(startTime) > 0;
-      if (isOpen) {
-        const endTimeData = await contract.endTime();
-        const endTime = moment.unix(endTimeData[0].toNumber());
-        const isClosed = moment().diff(endTime) > 0;
-        const ipfsHashData = await contract.pollDataMultihash();
-        const ipfsHash = HexUtils.fromHex(ipfsHashData[0]);
-        const proposal = await IPFS.getJSON(ipfsHash);
-        proposal.startTime = startTime;
-        proposal.endTime = endTime;
-        proposal.isClosed = isClosed;
-        proposal.ipfsHash = ipfsHash;
-        proposal.txId = transaction;
-        proposals.push(proposal);
-      }
-    } catch (e) {
-      // noop
+    const proposal = await eth.loadProposal(transaction);
+    if (proposal) {
+      proposals.push(proposal);
+
+      console.log('push proposal ', transaction)
     }
   }
 
+  console.log('got iniit')
+
   return {
     proposals,
-    from,
   };
 };
 

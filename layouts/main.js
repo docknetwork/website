@@ -193,7 +193,7 @@ export default class MainLayout extends React.Component {
           <meta name="mobile-web-app-capable" content="yes" />
           <meta name="wot-verification" content="69f8c3e17a9ca94cf076" />
           <meta name="fragment" content="!" />
-          <Safe.script type="text/javascript" jsx global>{`
+          <Safe.script type="text/javascript" jsx="true" global="true">{`
             var _cio = _cio || [];
             (function() {
                 var a,b,c;a=function(f){return function(){_cio.push([f].
@@ -210,7 +210,7 @@ export default class MainLayout extends React.Component {
           `}</Safe.script>
           {this.props.styleTags}
         </Head>
-        <style jsx global>{`
+        <style jsx="true" global="true">{`
           * {
             font-family: 'Open Sans', sans-serif;
             box-sizing: border-box;
