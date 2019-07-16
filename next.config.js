@@ -13,5 +13,27 @@ module.exports = withPlugins([
         '/governance': { page: '/governance' },
       };
     },
+    webpack: (config, {}) => {
+      config.module.rules.push(
+        {
+          test: /.abi$/,
+          use: [
+            {
+              loader: 'json-loader',
+            },
+          ],
+        },
+        {
+          test: /.bin$/,
+          use: [
+            {
+              loader: 'string-loader',
+            },
+          ],
+        },
+      );
+
+      return config;
+    }
   },
 );
