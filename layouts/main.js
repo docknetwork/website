@@ -132,7 +132,7 @@ const VerifiableModal = ({onClose}) => (
       <ModalImage src={modalImageSVG}/>
     </ModalHeader>
     <ModalContent>
-      The Dock wallet and data control apps have moved to Verifiable.
+      The Dock wallet and data control apps have separated from the Dock blockchain project into a brand new home at Verifiable.com.
       &nbsp;
       <a href="https://blog.dock.io/frequently-asked-questions"
         target="_blank"
