@@ -113,6 +113,29 @@ const ProposalDate = styled.span`
   }
 `;
 
+const ProposalsHeader = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+`;
+
+const NewProposalButton = styled.a`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  width: 186px;
+  height: 52px;
+  border-radius: 5px;
+  border: solid 2px rgb(75, 107, 220);
+  font-family: Lato;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  color: rgb(75, 107, 220);
+  text-decoration: none;
+`;
+
 const Governance = ({from, proposals}) => {
   return (
     <Page>
@@ -147,9 +170,17 @@ const Governance = ({from, proposals}) => {
 
       <ProposalsSection>
         <CustomWrapper>
-          <ProposalsSectionTitle>
-            Open Proposals
-          </ProposalsSectionTitle>
+          <ProposalsHeader>
+            <ProposalsSectionTitle>
+              Open Proposals
+            </ProposalsSectionTitle>
+            <NewProposalButton
+              href="https://github.com/getdock/voting"
+              target="_blank"
+              rel="noopener noreferrer">
+              New proposal
+            </NewProposalButton>
+          </ProposalsHeader>
 
           <ProposalsList>
             {proposals.map(proposal => (
@@ -199,12 +230,8 @@ Governance.getInitialProps = async function() {
     const proposal = await eth.loadProposal(transaction);
     if (proposal) {
       proposals.push(proposal);
-
-      console.log('push proposal ', transaction)
     }
   }
-
-  console.log('got iniit')
 
   return {
     proposals,
