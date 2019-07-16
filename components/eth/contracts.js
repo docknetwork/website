@@ -1,11 +1,11 @@
-import votingCenterABI from './contracts/voteDock.sol:VotingCenter.abi';
-import votingCenterBIN from './contracts/voteDock.sol:VotingCenter.bin';
+import votingCenterABI from './contracts/voteDock.sol:VotingCenter.json';
+import votingCenterBIN from './contracts/voteDock.sol:VotingCenter.bin.js';
 
-import pollABI from './contracts/voteDock.sol:Poll.abi';
-import pollBIN from './contracts/voteDock.sol:Poll.bin';
+import pollABI from './contracts/voteDock.sol:Poll.json';
+import pollBIN from './contracts/voteDock.sol:Poll.bin.js';
 
-import dockTokenABI from './contracts/voteDock.sol:DockToken.abi';
-import dockTokenBIN from './contracts/voteDock.sol:DockToken.bin';
+import dockTokenABI from './contracts/voteDock.sol:DockToken.json';
+import dockTokenBIN from './contracts/voteDock.sol:DockToken.bin.js';
 
 import Contract from './contract';
 

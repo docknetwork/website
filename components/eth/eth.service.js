@@ -33,10 +33,12 @@ export default class EthWrapper {
       this.contractParams.from = from;
     }
 
-    this.votingCenter = VotingCenter.at(
-      votingCenterAddress,
-      this.contractParams
-    );
+    if (!this.votingCenter) {
+      this.votingCenter = VotingCenter.at(
+        votingCenterAddress,
+        this.contractParams
+      );
+    }
   }
 
   async loadProposal(transaction) {

@@ -189,10 +189,8 @@ Governance.getInitialProps = async function() {
   const eth = EthService.getInstance();
   await eth.init();
 
-  console.log('get  transactions')
-
-  const proposals = [];
   const transactions = await eth.votingCenter.allPolls();
+  const proposals = [];
 
   // Hack for Dock: dont proposals before DGP-1
   const startIndex = transactions['0'].indexOf('0xf5c57613806020a478e68df7b1ea186ef9206087');
