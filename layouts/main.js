@@ -119,6 +119,8 @@ import arrowSVG from '../assets/images/verifable-modal/arrow.svg';
 import Modal from '../components/modal';
 import { UnderlineLinkAligned } from '../components/underline-link';
 
+// TODO: move to separate file
+
 const VerifiableModal = ({onClose}) => (
   <Modal onClose={onClose}>
     <ModalHeader>
@@ -150,15 +152,6 @@ const VerifiableModal = ({onClose}) => (
     </ModalFooter>
   </Modal>
 );
-
-
-
-
-
-
-
-
-
 
 export default class MainLayout extends React.Component {
   static getInitialProps({ renderPage }) {
