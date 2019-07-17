@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Head from 'next/head';
 import styled from 'styled-components';
 import media from '../helpers/media';
+import moment from 'moment';
 
 import Page from '../layouts/main';
 import GovernanceHero from '../components/sections/governance-hero';
@@ -201,10 +202,12 @@ const Governance = ({from, proposals}) => {
                     <ProposalDockStacked>
                       123,000 DOCK Voted
                     </ProposalDockStacked>
-                    <ProposalDate>
-                      <img src={timeLeftSVG}/>
-                      12 days left
-                    </ProposalDate>
+                    {proposal.isOpen && (
+                      <ProposalDate>
+                        <img src={timeLeftSVG}/>
+                        {proposal.endTime.diff(moment(), 'days')} days left
+                      </ProposalDate>
+                    )}
                   </ProposalFooter>
                 </Proposal>
               </Link>

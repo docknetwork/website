@@ -1,5 +1,5 @@
 import Eth from 'ethjs';
-import {VotingCenter, Poll} from './contracts';
+import {DockToken, VotingCenter, Poll} from './contracts';
 import HexUtils from './hex-utils';
 import IPFS from './ipfs';
 
@@ -8,6 +8,9 @@ const rpcURL = 'https://mainnet.infura.io/Ij97ilgQwoAhbHk38cyq'; // Main Ethereu
 
 // const votingCenterAddress = '0xdc71eF432328E36cAb08382bDa2597192DC0c7Db'; // Rinkeby Test Net
 const votingCenterAddress = '0x712ed83fAAB76499FA1D3FB51F870FAed61d3C51'; // Main Ethereum Net
+
+// const dockTokenAddress = '0x2cfb8ee40662e19da372f4969d22327a99fda8f8'; // Rinkeby Test Net
+const dockTokenAddress = '0xe5dada80aa6477e85d09747f2842f7993d0df71c'; // Main Ethereum Net
 
 let instance;
 
@@ -90,7 +93,6 @@ export default class EthWrapper {
       return this.account;
     });
   }
-
   fromWei(amount, unit = 'ether') {
     return Eth.fromWei(amount, unit);
   }
@@ -109,6 +111,20 @@ export default class EthWrapper {
           .catch(error => reject(error));
       }, 1000);
     });
+  }
+
+  getTokens(account) {
+    if (!this.dockToken) {
+      this.dockToken = DockToken.at(dockTokenAddress, {
+        from: account,
+        gas: 100000
+      });
+    }
+
+    return this.dockToken.balanceOf(account)
+      .then(result => {
+        return this.fromWei(result[0], 'ether');
+      });
   }
 
   getBalance(account) {
