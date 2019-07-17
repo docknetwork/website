@@ -43,7 +43,7 @@ const ProposalsSection = styled.div`
 `;
 
 const ProposalsSectionTitle = styled.h2`
-  margin: 0 0 40px 0;
+  margin: 0 auto 40px 0;
   font-family: 'Open Sans';
   font-size: 24px;
   font-weight: normal;
@@ -57,6 +57,7 @@ const CustomWrapper = styled(Wrapper)`
 const ProposalsList = styled.div`
   display: flex;
   flex-direction: column;
+  margin-top: 20px;
 `;
 
 const Proposal = styled.a`
@@ -117,7 +118,6 @@ const ProposalDate = styled.span`
 const ProposalsHeader = styled.div`
   display: flex;
   justify-content: center;
-  margin-bottom: 20px;
 `;
 
 const NewProposalButton = styled.a`
@@ -137,7 +137,49 @@ const NewProposalButton = styled.a`
   text-decoration: none;
 `;
 
+const ToggleClosedLink = styled.a`
+  font-size: 18px;
+  font-family: 'Open Sans';
+  color: rgb(75, 107, 220);
+  margin: 0 0 30px 0;
+  cursor: pointer;
+`;
+
+const ProposalPreview = ({proposal}) => (
+  <Link
+    key={proposal.txId}
+    href="/proposal/[id]"
+    as={`/proposal/${proposal.txId}`}
+    passHref>
+    <Proposal>
+      <ProposalTitle>
+        {proposal.title}
+      </ProposalTitle>
+      <ProposalDescription>
+        {proposal.description}
+      </ProposalDescription>
+
+      <ProposalFooter>
+        <ProposalDockStacked>
+          123,000 DOCK Voted
+        </ProposalDockStacked>
+        {proposal.isOpen ? (
+          <ProposalDate>
+            <img src={timeLeftSVG}/>
+            {proposal.endTime.diff(moment(), 'days')} days left
+          </ProposalDate>
+        ) : (
+          <ProposalDate>
+            Closed
+          </ProposalDate>
+        )}
+      </ProposalFooter>
+    </Proposal>
+  </Link>
+);
+
 const Governance = ({from, proposals}) => {
+  const [showClosedProposals, setShowClosedProposals] = useState(false);
   return (
     <Page>
       <Head>
@@ -184,35 +226,32 @@ const Governance = ({from, proposals}) => {
           </ProposalsHeader>
 
           <ProposalsList>
-            {proposals.map(proposal => (
-              <Link
-                key={proposal.txId}
-                href="/proposal/[id]"
-                as={`/proposal/${proposal.txId}`}
-                passHref>
-                <Proposal>
-                  <ProposalTitle>
-                    {proposal.title}
-                  </ProposalTitle>
-                  <ProposalDescription>
-                    {proposal.description}
-                  </ProposalDescription>
-
-                  <ProposalFooter>
-                    <ProposalDockStacked>
-                      123,000 DOCK Voted
-                    </ProposalDockStacked>
-                    {proposal.isOpen && (
-                      <ProposalDate>
-                        <img src={timeLeftSVG}/>
-                        {proposal.endTime.diff(moment(), 'days')} days left
-                      </ProposalDate>
-                    )}
-                  </ProposalFooter>
-                </Proposal>
-              </Link>
+            {proposals.map(proposal => proposal.isOpen && (
+              <ProposalPreview proposal={proposal} />
             ))}
           </ProposalsList>
+        </CustomWrapper>
+      </ProposalsSection>
+
+      <ProposalsSection>
+        <CustomWrapper>
+          <ProposalsHeader>
+            <ProposalsSectionTitle>
+              Closed Proposals
+            </ProposalsSectionTitle>
+          </ProposalsHeader>
+
+          <ToggleClosedLink onClick={() => setShowClosedProposals(!showClosedProposals)}>
+            {showClosedProposals ? 'Hide' : 'Show'}
+          </ToggleClosedLink>
+
+          {showClosedProposals && (
+            <ProposalsList>
+              {proposals.map(proposal => proposal.isClosed && (
+                <ProposalPreview proposal={proposal} />
+              ))}
+            </ProposalsList>
+          )}
         </CustomWrapper>
       </ProposalsSection>
     </Page>
