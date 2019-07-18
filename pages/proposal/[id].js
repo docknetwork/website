@@ -183,9 +183,11 @@ const Proposal = (props) => {
   const [account, setAccount] = useState();
   const [tokens, setTokens] = useState();
   const [isVoting, setIsVoting] = useState();
+  const [submittedVote, setSubmittedVote] = useState();
+  const [votedOption, setVotedOption] = useState(-1);
   const [selectedOption, setSelectedOption] = useState();
-
-  console.log('props', props);
+  const [contract, setContract] = useState();
+  const totalDockStaked = parseFloat(props.totalDockStaked) + (submittedVote ? parseFloat(tokens) : 0);
 
   if (!account && typeof window !== 'undefined') {
     eth.getAccount()
@@ -193,10 +195,35 @@ const Proposal = (props) => {
         if (account) {
           eth.getTokens(account)
             .then(balance => {
-              console.log('balancebalance', balance)
               setAccount(account);
               setTokens(balance);
             });
+
+          setContract(Poll.at(props.txId, {
+            from: account,
+            gas: 150000
+          }));
+
+          // contract.numberOfVotes(account)
+          //   .then(result => {
+          //     this.personalDockStaked = result[0];
+          //     this.voted = this.personalDockStaked.toString(10) !== '0';
+          //     if (this.voted) {
+          //       this.contract.options(this.from)
+          //       .then(result => {
+          //         const optionIndex = result[0].toNumber();
+          //         if (optionIndex > 0) {
+          //           this.votedOn = this.options[result[0].toNumber() - 1];
+          //         }
+          //       });
+          //     }
+          //
+          //     return this.loadEndTime();
+          //   });
+        } else {
+          setContract(Poll.at(props.txId, {
+            gas: 150000
+          }));
         }
       });
   }
@@ -204,29 +231,19 @@ const Proposal = (props) => {
   function vote() {
     if (!isVoting) {
       setIsVoting(true);
-
       const params = {
         from: account,
         gas: 150000
       };
 
-      const contract = Poll.at(props.txId, params);
       return contract.vote(props.options.indexOf(selectedOption) + 1, params)
       .then(txHash => eth.getTransactionReceipt(txHash))
       .then(receipt => {
         if (receipt.status !== '0x0') {
-            // this.resultsShown = true;
-            // if (!this.proposal.voted) {
-            //   this.proposal.voted = true;
-            //   this.proposal.dockStaked[
-            //     this.proposal.options.indexOf(this.selectedVote)
-            //   ] += this.tokens;
-            //   this.proposal.staked += this.tokens;
-            // }
-            // this.proposal.votedOn = this.selectedVote;
-            setSelectedOption(null);
-            setIsVoting(false);
-            console.log('Successfully Submitted');
+          setVotedOption(props.options.indexOf(selectedOption));
+          setSelectedOption(null);
+          setIsVoting(false);
+          setSubmittedVote(true);
         } else {
           setIsVoting(false);
           console.log('failed to vote, invalid status')
@@ -304,7 +321,7 @@ const Proposal = (props) => {
           </Description>
           <ProposalSubtitle>
             <span>
-              {props.totalDockStaked} DOCK Voted
+              {totalDockStaked} DOCK Voted
             </span>
             <span>
               Contract:&nbsp;
@@ -315,22 +332,30 @@ const Proposal = (props) => {
           </ProposalSubtitle>
 
           {props.options.map((option, index) => {
-            const dockStaked = props.dockStaked[index];
-            const percentage = Math.floor(dockStaked / props.totalDockStaked) * 100;
+            let dockStaked = parseFloat(props.dockStaked[index]);
+            if (tokens && submittedVote && votedOption === index) {
+              dockStaked = dockStaked + parseFloat(tokens);
+            }
+
+            const percentage = (dockStaked / totalDockStaked) * 100;
             const isWinningOption = props.highestStakeIndex === index;
             return (
               <ProposalOption onClick={() => {
-                if (!props.isClosed && account && tokens > 0) {
+                if (!props.isClosed && account && tokens > 0 && votedOption === -1) {
                   setSelectedOption(option);
                 }
               }}>
                 <ProposalCheckmark>
-                  {((selectedOption === option) || (props.isClosed && isWinningOption)) && (
+                  {((votedOption === index && !props.isClosed) || (selectedOption === option) || (props.isClosed && isWinningOption)) && (
                     <ProposalCheckmarkImage src={checkSVG}/>
                   )}
                 </ProposalCheckmark>
                 <ProposalOptionTitle>
-                  {option}
+                  {option} {(votedOption === index) && (
+                    <>
+                      (You voted this)
+                    </>
+                  )}
                 </ProposalOptionTitle>
                 <ProposalOptionStats>
                   {percentage}% - {dockStaked} DOCK
@@ -344,11 +369,15 @@ const Proposal = (props) => {
             );
           })}
 
-          {selectedOption && (
+          {submittedVote ? (
+            <p>
+              Vote success!
+            </p>
+          ) : (selectedOption && (
             <VoteButton onClick={vote}>
               {isVoting ? 'Submitting vote...' : 'Vote'}
             </VoteButton>
-          )}
+          ))}
         </Content>
       </Wrapper>
     </Page>

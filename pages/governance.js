@@ -167,7 +167,7 @@ const ProposalPreview = ({proposal}) => (
         <ProposalDockStacked>
           {proposal.totalDockStaked} DOCK Voted
         </ProposalDockStacked>
-        {proposal.isOpen ? (
+        {!proposal.isClosed ? (
           <ProposalDate>
             <img src={timeLeftSVG}/>
             {proposal.endTime.diff(moment(), 'days')} days left
@@ -236,7 +236,7 @@ const Governance = ({from, proposals}) => {
           </ProposalsHeader>
 
           <ProposalsList>
-            {proposals.map(proposal => proposal.isOpen && (
+            {proposals.map(proposal => !proposal.isClosed && (
               <ProposalPreview proposal={proposal} />
             ))}
           </ProposalsList>
