@@ -161,7 +161,7 @@ const ProposalPreview = ({proposal}) => (
 
       <ProposalFooter>
         <ProposalDockStacked>
-          123,000 DOCK Voted
+          {proposal.totalDockStaked} DOCK Voted
         </ProposalDockStacked>
         {proposal.isOpen ? (
           <ProposalDate>

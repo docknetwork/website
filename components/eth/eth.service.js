@@ -12,6 +12,8 @@ const votingCenterAddress = '0x712ed83fAAB76499FA1D3FB51F870FAed61d3C51'; // Mai
 // const dockTokenAddress = '0x2cfb8ee40662e19da372f4969d22327a99fda8f8'; // Rinkeby Test Net
 const dockTokenAddress = '0xe5dada80aa6477e85d09747f2842f7993d0df71c'; // Main Ethereum Net
 
+const DOCK_PASS_AMOUNT = 250000;
+
 let instance;
 
 import moment from 'moment';
@@ -61,6 +63,24 @@ export default class EthWrapper {
       proposal.isClosed = isClosed;
       proposal.ipfsHash = ipfsHash;
       proposal.txId = transaction;
+      proposal.dockStaked = [];
+      proposal.totalDockStaked = 0;
+      proposal.highestStakeIndex = -1;
+      let highestStake = 0;
+      for (let i = 0; i < proposal.options.length; i++) {
+        const stakeVal = await contract.totalVotes(i + 1);
+        console.log('stakeVal', stakeVal[0])
+        const stake = Math.floor(Eth.fromWei(stakeVal[0], 'ether'));
+        if (stake > highestStake) {
+          highestStake = stake;
+          proposal.highestStakeIndex = i;
+        }
+        proposal.totalDockStaked += stake;
+        proposal.dockStaked.push(stake);
+      }
+
+      proposal.passed = proposal.isClosed && proposal.totalDockStaked >= DOCK_PASS_AMOUNT;
+
       return proposal;
     }
   }
