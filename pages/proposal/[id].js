@@ -189,37 +189,32 @@ const Proposal = (props) => {
   const [contract, setContract] = useState();
   const totalDockStaked = parseFloat(props.totalDockStaked) + (submittedVote ? parseFloat(tokens) : 0);
 
-  if (!account && typeof window !== 'undefined') {
+  if (!contract && typeof window !== 'undefined') {
     eth.getAccount()
       .then(account => {
         if (account) {
+          setAccount(account);
+
+          const pollContract = Poll.at(props.txId, {
+            from: account,
+            gas: 150000
+          });
+
+
           eth.getTokens(account)
             .then(balance => {
-              setAccount(account);
               setTokens(balance);
             });
 
-          setContract(Poll.at(props.txId, {
-            from: account,
-            gas: 150000
-          }));
+          pollContract.options(account)
+            .then(result => {
+              const optionIndex = result[0].toNumber();
+              if (optionIndex > 0) {
+                setVotedOption(optionIndex - 1);
+              }
+            });
 
-          // contract.numberOfVotes(account)
-          //   .then(result => {
-          //     this.personalDockStaked = result[0];
-          //     this.voted = this.personalDockStaked.toString(10) !== '0';
-          //     if (this.voted) {
-          //       this.contract.options(this.from)
-          //       .then(result => {
-          //         const optionIndex = result[0].toNumber();
-          //         if (optionIndex > 0) {
-          //           this.votedOn = this.options[result[0].toNumber() - 1];
-          //         }
-          //       });
-          //     }
-          //
-          //     return this.loadEndTime();
-          //   });
+          setContract(pollContract);
         } else {
           setContract(Poll.at(props.txId, {
             gas: 150000
@@ -231,12 +226,10 @@ const Proposal = (props) => {
   function vote() {
     if (!isVoting) {
       setIsVoting(true);
-      const params = {
+      return contract.vote(props.options.indexOf(selectedOption) + 1, {
         from: account,
         gas: 150000
-      };
-
-      return contract.vote(props.options.indexOf(selectedOption) + 1, params)
+      })
       .then(txHash => eth.getTransactionReceipt(txHash))
       .then(receipt => {
         if (receipt.status !== '0x0') {
