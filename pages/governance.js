@@ -115,6 +115,10 @@ const ProposalDate = styled.span`
   }
 `;
 
+const ProposalPassed = styled(ProposalDate)`
+  color: rgb(72,72,88);
+`;
+
 const ProposalsHeader = styled.div`
   display: flex;
   justify-content: center;
@@ -169,9 +173,15 @@ const ProposalPreview = ({proposal}) => (
             {proposal.endTime.diff(moment(), 'days')} days left
           </ProposalDate>
         ) : (
-          <ProposalDate>
-            Closed
-          </ProposalDate>
+          proposal.passed ? (
+            <ProposalPassed>
+              Passed
+            </ProposalPassed>
+          ) : (
+            <ProposalDate>
+              Failed
+            </ProposalDate>
+          )
         )}
       </ProposalFooter>
     </Proposal>
