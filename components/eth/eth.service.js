@@ -69,7 +69,6 @@ export default class EthWrapper {
       let highestStake = 0;
       for (let i = 0; i < proposal.options.length; i++) {
         const stakeVal = await contract.totalVotes(i + 1);
-        console.log('stakeVal', stakeVal[0])
         const stake = Math.floor(Eth.fromWei(stakeVal[0], 'ether'));
         if (stake > highestStake) {
           highestStake = stake;

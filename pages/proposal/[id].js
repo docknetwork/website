@@ -200,7 +200,6 @@ const Proposal = (props) => {
             gas: 150000
           });
 
-
           eth.getTokens(account)
             .then(balance => {
               setTokens(balance);
@@ -239,14 +238,10 @@ const Proposal = (props) => {
           setSubmittedVote(true);
         } else {
           setIsVoting(false);
-          console.log('failed to vote, invalid status')
         }
       })
       .catch(error => {
         setIsVoting(false);
-        if (error.toString().indexOf('denied') === -1) {
-          console.log('failed to vote, gas maybe?', error)
-        }
       });
     }
   }
