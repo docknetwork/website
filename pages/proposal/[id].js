@@ -292,7 +292,7 @@ const Proposal = (props) => {
       </Head>
       <BlankHero />
       <Wrapper>
-        <Link to="/governance" passHref>
+        <Link href="/governance" passHref>
           <BackButton>
             <img src={arrowLeftSVG}/>
           </BackButton>
