@@ -149,6 +149,11 @@ const ToggleClosedLink = styled.a`
   cursor: pointer;
 `;
 
+const NoProposalsText = styled.p`
+  font-size: 18px;
+  font-family: 'Open Sans';
+`;
+
 const ProposalPreview = ({proposal}) => (
   <Link
     key={proposal.txId}
@@ -190,6 +195,15 @@ const ProposalPreview = ({proposal}) => (
 
 const Governance = ({from, proposals}) => {
   const [showClosedProposals, setShowClosedProposals] = useState(false);
+  let hasOpenProposals = false;
+  for (let i = 0; i < proposals.length; i++) {
+    const proposal = proposals[i];
+    if (!proposal.isClosed) {
+      hasOpenProposals = true;
+      break;
+    }
+  }
+
   return (
     <Page>
       <Head>
@@ -235,11 +249,17 @@ const Governance = ({from, proposals}) => {
             </NewProposalButton>
           </ProposalsHeader>
 
-          <ProposalsList>
-            {proposals.map(proposal => !proposal.isClosed && (
-              <ProposalPreview proposal={proposal} />
-            ))}
-          </ProposalsList>
+          {hasOpenProposals ? (
+            <ProposalsList>
+              {proposals.map(proposal => !proposal.isClosed && (
+                <ProposalPreview proposal={proposal} />
+              ))}
+            </ProposalsList>
+          ) : (
+            <NoProposalsText>
+              No open proposals
+            </NoProposalsText>
+          )}
         </CustomWrapper>
       </ProposalsSection>
 
