@@ -19,22 +19,33 @@ const Wrapper = styled.div`
   max-width: 764px;
   width: 100%;
   margin: 0 auto;
-  transform: translate(0, -250px);
+  padding: 20px;
+  transform: translate(0, -350px);
+
+  @media ${media.medium} {
+    transform: translate(0, -250px);
+    padding: 0;
+  }
 `;
 
 const Title = styled.h1`
   font-family: Poppins;
-  font-size: 30px;
   font-weight: bold;
-  font-style: normal;
-  font-stretch: normal;
   line-height: 1.33;
-  letter-spacing: normal;
   color: rgb(255, 255, 255);
+  font-size: 26px;
+
+  @media ${media.medium} {
+    font-size: 30px;
+  }
 `;
 
 const Description = styled.p`
+  font-size: 14px;
 
+  @media ${media.medium} {
+    font-size: 16px;
+  }
 `;
 
 const Content = styled.div`
@@ -42,14 +53,24 @@ const Content = styled.div`
   border-radius: 3px;
   box-shadow: 0 19px 56px -20px rgba(0, 0, 0, 0.2);
   background-color: rgb(255, 255, 255);
-  margin: 55px auto 0 auto;
-  padding: 36px 36px 30px 36px;
+  padding: 30px 20px;
+  margin: 40px auto 0 auto;
+  word-wrap: break-word;
+
+  @media ${media.medium} {
+    padding: 36px 36px 30px 36px;
+    margin: 55px auto 0 auto;
+  }
 `;
 
 const BackButton = styled.a`
-  margin: 0 0 40px 0;
+  margin: 40px 0 20px 0;
   cursor: pointer;
   display: block;
+
+  @media ${media.medium} {
+    margin: 0 0 40px 0;
+  }
 `;
 
 const MetamaskBanner = styled.div`
@@ -94,6 +115,7 @@ const ProposalSubtitle = styled.div`
   color: #bababa;
   display: flex;
   margin: 20px 0 20px 0;
+  flex-direction: column;
 
   > span {
     margin-right: 30px;
@@ -102,6 +124,10 @@ const ProposalSubtitle = styled.div`
   a {
     text-decoration: none;
     color: #6fbbe1;
+  }
+
+  @media ${media.medium} {
+    flex-direction: row;
   }
 `;
 
@@ -130,17 +156,26 @@ const ProposalCheckmarkImage = styled.img`
 `;
 
 const ProposalOptionTitle = styled.h2`
-    margin: 18px 15px;
+  margin: 18px 15px;
+  font-size: 16px;
+  font-weight: 600;
+  word-wrap: break-word;
+  max-width: 90%;
+
+  @media ${media.medium} {
     font-size: 18px;
-    font-weight: 600;
-    word-wrap: break-word;
-    max-width: 90%;
+  }
 `;
 
 const ProposalOptionStats = styled.span`
-    margin-left: auto;
-    color: #95959f;
-    transition: 1s all cubic-bezier(0.08, 0.825, 0.135, 1.005);
+  margin-left: auto;
+  color: #95959f;
+  transition: 1s all cubic-bezier(0.08, 0.825, 0.135, 1.005);
+  font-size: 14px;
+
+  @media ${media.medium} {
+    font-size: 16px;
+  }
 `;
 
 const ProposalOptionBar = styled.div`
@@ -153,10 +188,10 @@ const ProposalOptionBar = styled.div`
 `;
 
 const ProposalOptionBarInner = styled.div`
-    display: flex;
-    height: 100%;
-    background-color: #7c47ab;
-    transition: 0.75s all cubic-bezier(0.08, 0.825, 0.135, 1.005);
+  display: flex;
+  height: 100%;
+  background-color: #7c47ab;
+  transition: 0.75s all cubic-bezier(0.08, 0.825, 0.135, 1.005);
 `;
 
 const VoteButton = styled.a`
