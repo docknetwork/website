@@ -28,6 +28,8 @@ const pageTitle = 'Dock | Governance and Voting';
 
 
 import timeLeftSVG from '../assets/images/icons/time-left.svg';
+import blueArrowUpSVG from '../assets/images/icons/blue-arrow-up.svg';
+import blueArrowDownSVG from '../assets/images/icons/blue-arrow-down.svg';
 
 const TokensLinkWrapper = styled.div`
   margin: 5px 0 139px 0;
@@ -167,6 +169,12 @@ const ToggleClosedLink = styled.a`
   color: rgb(75, 107, 220);
   margin: 0 0 30px 0;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+
+  > img {
+    margin-left: 10px;
+  }
 `;
 
 const NoProposalsText = styled.p`
@@ -293,6 +301,7 @@ const Governance = ({from, proposals}) => {
 
           <ToggleClosedLink onClick={() => setShowClosedProposals(!showClosedProposals)}>
             {showClosedProposals ? 'Hide' : 'Show'}
+            <img src={showClosedProposals ? blueArrowUpSVG : blueArrowDownSVG}/>
           </ToggleClosedLink>
 
           {showClosedProposals && (
