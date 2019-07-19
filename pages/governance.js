@@ -185,7 +185,7 @@ const NoProposalsText = styled.p`
 const ProposalPreview = ({proposal}) => (
   <Link
     key={proposal.txId}
-    href="/proposal/[id]"
+    href={`/proposal/?id=${proposal.txId}`}
     as={`/proposal/${proposal.txId}`}
     passHref>
     <Proposal>
@@ -280,7 +280,7 @@ const Governance = ({from, proposals}) => {
           {hasOpenProposals ? (
             <ProposalsList>
               {proposals.map(proposal => !proposal.isClosed && (
-                <ProposalPreview proposal={proposal} />
+                <ProposalPreview proposal={proposal} key={proposal.txId} />
               ))}
             </ProposalsList>
           ) : (
@@ -307,7 +307,7 @@ const Governance = ({from, proposals}) => {
           {showClosedProposals && (
             <ProposalsList>
               {proposals.map(proposal => proposal.isClosed && (
-                <ProposalPreview proposal={proposal} />
+                <ProposalPreview proposal={proposal} key={proposal.txId} />
               ))}
             </ProposalsList>
           )}
