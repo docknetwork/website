@@ -85,11 +85,18 @@ const ProposalDescription = styled.p`
   font-size: 18px;
   line-height: 1.56;
   color: rgb(31, 31, 44);
+  word-wrap: break-word;
 `;
 
 const ProposalFooter = styled.div`
   margin: 40px 0 0 0;
   display: flex;
+  flex-direction: column;
+
+  @media ${media.medium} {
+    flex-direction: row;
+    font-size: 30px;
+  }
 `;
 
 const ProposalDockStacked = styled.span`
@@ -106,12 +113,15 @@ const ProposalDate = styled.span`
   line-height: 1.56;
   text-align: right;
   color: rgb(255, 87, 109);
-  margin-left: auto;
   display: flex;
   align-items: center;
 
   > img {
     margin-right: 8px;
+  }
+
+  @media ${media.medium} {
+    margin-left: auto;
   }
 `;
 
@@ -121,15 +131,19 @@ const ProposalPassed = styled(ProposalDate)`
 
 const ProposalsHeader = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: center;
+
+  @media ${media.medium} {
+    flex-direction: row;
+  }
 `;
 
 const NewProposalButton = styled.a`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: auto;
-  width: 186px;
+  width: 100%;
   height: 52px;
   border-radius: 5px;
   border: solid 2px rgb(75, 107, 220);
@@ -139,6 +153,12 @@ const NewProposalButton = styled.a`
   text-align: center;
   color: rgb(75, 107, 220);
   text-decoration: none;
+  margin: 0 0 40px 0;
+
+  @media ${media.medium} {
+    margin: 0 0 40px 0;
+    max-width: 186px;
+  }
 `;
 
 const ToggleClosedLink = styled.a`
