@@ -222,7 +222,7 @@ const ProposalPreview = ({proposal}) => (
 );
 
 const Governance = ({from, proposals}) => {
-  const [showClosedProposals, setShowClosedProposals] = useState(false);
+  const [showClosedProposals, setShowClosedProposals] = useState(true);
   let hasOpenProposals = false;
   for (let i = 0; i < proposals.length; i++) {
     const proposal = proposals[i];
