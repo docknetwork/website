@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
+import Head from 'next/head';
 import styled from 'styled-components';
 import media from '../../helpers/media';
 
@@ -283,6 +284,12 @@ const Proposal = (props) => {
 
   return (
     <Page>
+      <Head>
+        <title>{props.title}</title>
+        <meta name="og:title" content={props.title} />
+        <meta name="description" content={props.description} />
+        <meta name="og:description" content={props.description} />
+      </Head>
       <BlankHero />
       <Wrapper>
         <Link to="/governance" passHref>
