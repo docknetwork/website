@@ -3,6 +3,7 @@ import { useRouter } from 'next/router';
 import Link from 'next/link';
 import Head from 'next/head';
 import styled from 'styled-components';
+import Humanize from 'humanize-plus';
 import media from '../../helpers/media';
 
 import EthService from '../../components/eth/eth.service';
@@ -351,7 +352,7 @@ const Proposal = (props) => {
           </Description>
           <ProposalSubtitle>
             <span>
-              {totalDockStaked} DOCK Voted
+              {Humanize.formatNumber(totalDockStaked)} DOCK Voted
             </span>
             <span>
               Contract:&nbsp;
@@ -367,7 +368,7 @@ const Proposal = (props) => {
               dockStaked = dockStaked + parseFloat(tokens);
             }
 
-            const percentage = (dockStaked / totalDockStaked) * 100;
+            const percentage = Math.floor((dockStaked / totalDockStaked) * 10000) / 100;
             const isWinningOption = props.highestStakeIndex === index;
             return (
               <ProposalOption onClick={() => {
@@ -388,7 +389,7 @@ const Proposal = (props) => {
                   )}
                 </ProposalOptionTitle>
                 <ProposalOptionStats>
-                  {percentage}% - {dockStaked} DOCK
+                  {percentage}% - {Humanize.formatNumber(dockStaked)} DOCK
                 </ProposalOptionStats>
                 <ProposalOptionBar>
                   <ProposalOptionBarInner style={{

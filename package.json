@@ -28,6 +28,7 @@
     "ethereumjs-util": "^6.1.0",
     "ethjs": "^0.4.0",
     "express": "^4.17.1",
+    "humanize-plus": "^1.8.2",
     "ipfs-mini": "^1.1.5",
     "isomorphic-unfetch": "^3.0.0",
     "moment": "^2.24.0",

@@ -3,6 +3,7 @@ import fetch from 'isomorphic-unfetch';
 import Link from 'next/link';
 import Head from 'next/head';
 import styled from 'styled-components';
+import Humanize from 'humanize-plus';
 import media from '../helpers/media';
 import moment from 'moment';
 
@@ -198,7 +199,7 @@ const ProposalPreview = ({proposal}) => (
 
       <ProposalFooter>
         <ProposalDockStacked>
-          {proposal.totalDockStaked} DOCK Voted
+          {Humanize.formatNumber(proposal.totalDockStaked)} DOCK Voted
         </ProposalDockStacked>
         {!proposal.isClosed ? (
           <ProposalDate>
