@@ -8,17 +8,17 @@ const config = {
     await eth.init();
     const transactions = await eth.votingCenter.allPolls();
     const startIndex = transactions['0'].indexOf('0xf5c57613806020a478e68df7b1ea186ef9206087');
-    const postList = transactions['0'].slice(startIndex);
-    const pages = postList.reduce(
-      (pages, post) =>
-        Object.assign({}, pages, {
-          [`/proposal/${post}`]: {
-            page: '/proposal/[id]',
-            query: { id: post }
-          }
-        }),
-      {}
-    );
+
+    let pages = {};
+    for (let i = startIndex; i < transactions['0'].length; i++) {
+      const post = transactions['0'][i];
+      pages = Object.assign(pages, {
+        [`/proposal/${post}`]: {
+          page: '/proposal/[id]',
+          query: { id: post }
+        }
+      });
+    }
 
     return Object.assign({}, pages, {
       '/': { page: '/' },
