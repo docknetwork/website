@@ -1,9 +1,11 @@
-version: 2
+version: 2.0
+
 jobs:
   build:
-    branches:
-      only:
-        - master
+    filters:
+      branches:
+        only:
+          - master
     docker:
       - image: circleci/node:latest
     steps:
@@ -11,3 +13,19 @@ jobs:
       - run: yarn
       - run: yarn lint
       - run: ./deploy.sh build
+
+workflows:
+  version: 2
+  commit:
+    jobs:
+      - build
+  hourly:
+    triggers:
+      - schedule:
+          cron: "0 * * * *"
+          filters:
+            branches:
+              only:
+                - master
+    jobs:
+      - build
