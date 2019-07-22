@@ -4,13 +4,6 @@ import styled from 'styled-components';
 import Header from '../header';
 import media from '../../helpers/media';
 
-const Wrapper = styled.div`
-  display: flex;
-  width: 100%;
-  max-width: 1024px;
-  margin: 0 auto;
-`;
-
 const Root = styled.div`
   height: 367px;
   width: 100%;

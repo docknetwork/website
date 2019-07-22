@@ -5,15 +5,12 @@ import media from '../helpers/media';
 
 import Page from '../layouts/main';
 import HeaderHero from '../components/sections/header-hero';
+import InquiryModal from '../components/modals/inquiry-modal';
 import LitepaperSection from '../components/sections/litepaper';
 import { UnderlineLinkAligned } from '../components/underline-link';
 
-import Modal from '../components/modal';
-import InquiryModal from '../components/modals/inquiry-modal';
-
 import {
   HeaderMarker,
-  Wrapper,
   SectionTitle,
   SectionSubtitle,
   Section,
@@ -24,13 +21,9 @@ import imageOneSVG from '../assets/images/home/image-one.svg';
 import participationBGSVG from '../assets/images/home/participation-bg.svg';
 import webstandardsBGSVG from '../assets/images/home/web-standards-bg.svg';
 import governanceBGSVG from '../assets/images/home/governance-bg.svg';
-
-import arrowRightSVG from '../assets/images/icons/arrow-right-dark.svg';
 import webstandardsIconSVG from '../assets/images/home/webstandards-icon.svg';
 import governanceIconSVG from '../assets/images/home/governance-bg-icon.svg';
 import networkIconSVG from '../assets/images/home/network-icon.svg';
-import litepaperPNG from '../assets/images/home/litepaper.png';
-
 import verifableImage from '../assets/images/home/verifiable-logo.png';
 
 const IntroSectionRight = styled.div`
@@ -146,7 +139,8 @@ const Partner = styled.div`
 `;
 
 const PartnerImage = styled.div`
-  width: 333px;
+  width: 100%;
+  max-width: 333px;
   height: 334px;
   background-color: rgb(53, 188, 152);
   display: flex;
@@ -159,22 +153,6 @@ const PartnerImage = styled.div`
     width: 371px;
     height: 383px;
   }
-`;
-
-const PartnerImageTitle = styled.h4`
-  margin: 23px auto 0 auto;
-  font-size: 35px;
-  font-weight: bold;
-  line-height: 1.26;
-  text-align: center;
-  color: rgb(255, 255, 255);
-`;
-
-const VerifiableImage = styled.div`
-  width: 80px;
-  height: 80px;
-  border-radius: 100%;
-  border: solid 4px rgb(255, 255, 255);
 `;
 
 const PartnerContent = styled.div`

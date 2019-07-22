@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import Link from 'next/link';
 import styled from 'styled-components';
 
 import Header from '../header';
@@ -8,7 +7,6 @@ import media from '../../helpers/media';
 import SubscribeModal from '../modals/subscribe-modal';
 import InquiryModal from '../modals/inquiry-modal';
 
-import logoSVG from '../../assets/images/dock-logo.svg';
 import headerHeroPNG from '../../assets/images/home/header-hero.png';
 import headerHeroBGSVG from '../../assets/images/home/header-hero-bg.svg';
 import arrowRightSVG from '../../assets/images/icons/arrow-right-white.svg';

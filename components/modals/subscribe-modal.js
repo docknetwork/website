@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
-import Link from 'next/link';
 import styled from 'styled-components';
-import media from '../../helpers/media';
 
 import { UnderlineLink } from '../underline-link';
 

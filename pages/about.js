@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import Link from 'next/link';
 import styled from 'styled-components';
 import media from '../helpers/media';
 
@@ -10,10 +9,7 @@ import InquiryModal from '../components/modals/inquiry-modal';
 
 import {
   HeaderMarker,
-  Wrapper,
   SectionTitle,
-  SectionSubtitle,
-  Section,
   SectionColumn
 } from '../components/sections';
 
@@ -275,6 +271,6 @@ const About = () => {
       )}
     </Page>
   );
-}
+};
 
 export default About;

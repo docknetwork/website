@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import { useRouter } from 'next/router';
 import Link from 'next/link';
 import Head from 'next/head';
 import styled from 'styled-components';
@@ -215,7 +214,6 @@ const VoteButton = styled.a`
 `;
 
 const Proposal = (props) => {
-  const router = useRouter();
   const eth = EthService.getInstance();
   const [account, setAccount] = useState();
   const [tokens, setTokens] = useState();
@@ -266,20 +264,20 @@ const Proposal = (props) => {
         from: account,
         gas: 150000
       })
-      .then(txHash => eth.getTransactionReceipt(txHash))
-      .then(receipt => {
-        if (receipt.status !== '0x0') {
-          setVotedOption(props.options.indexOf(selectedOption));
-          setSelectedOption(null);
+        .then(txHash => eth.getTransactionReceipt(txHash))
+        .then(receipt => {
+          if (receipt.status !== '0x0') {
+            setVotedOption(props.options.indexOf(selectedOption));
+            setSelectedOption(null);
+            setIsVoting(false);
+            setSubmittedVote(true);
+          } else {
+            setIsVoting(false);
+          }
+        })
+        .catch(() => {
           setIsVoting(false);
-          setSubmittedVote(true);
-        } else {
-          setIsVoting(false);
-        }
-      })
-      .catch(error => {
-        setIsVoting(false);
-      });
+        });
     }
   }
 
@@ -315,7 +313,7 @@ const Proposal = (props) => {
               <MetamaskBannerContent>
                 <strong>You do not have DOCK tokens in your wallet on MetaMask</strong><br />
                 If you have DOCK tokens in another wallet, you can use MyCrypto to vote.&nbsp;
-                <a href="https://help.dock.io/voting-center/vote-with-mycrypto" target="_blank">Learn more.</a><br />
+                <a href="https://help.dock.io/voting-center/vote-with-mycrypto" target="_blank" rel="noopener noreferrer">Learn more.</a><br />
                 MetaMask wallet address: {account}
               </MetamaskBannerContent>
             </MetamaskBanner>
@@ -325,7 +323,7 @@ const Proposal = (props) => {
               <MetamaskBannerContent>
                 <strong>Unlock MetaMask to Vote</strong><br />
                 To vote, you will need to unlock your MetaMask browser exension and refresh the page.&nbsp;
-                <a href="https://help.dock.io/dock-io-app/how-does-voting-work" target="_blank">
+                <a href="https://help.dock.io/dock-io-app/how-does-voting-work" target="_blank" rel="noopener noreferrer">
                   Learn more.
                 </a>
               </MetamaskBannerContent>
@@ -336,12 +334,13 @@ const Proposal = (props) => {
               <MetamaskBannerContent>
                 <strong>Install MetaMask to Vote</strong><br />
                 To vote, you will need to install MetaMask. It’s a free browser extension to manage your Ethereum identity.&nbsp;
-                <a href={metamaskInstallUrl} target="_blank">
+                <a href={metamaskInstallUrl} target="_blank" rel="noopener noreferrer">
                   <span>Install MetaMask</span> <span svg-sprite="arrow-right-large"></span>
                 </a>
                 or&nbsp;
                 <a href="https://help.dock.io/voting-center/vote-with-mycrypto"
-                  target="_blank">
+                  target="_blank"
+                  rel="noopener noreferrer">
                   Vote with MyCrypto
                 </a>
               </MetamaskBannerContent>
@@ -356,7 +355,7 @@ const Proposal = (props) => {
             </span>
             <span>
               Contract:&nbsp;
-              <a href={`https://etherscan.io/address/${props.txId}`} target="_blank">
+              <a href={`https://etherscan.io/address/${props.txId}`} target="_blank" rel="noopener noreferrer">
                 {props.txId}
               </a>
             </span>
@@ -371,7 +370,7 @@ const Proposal = (props) => {
             const percentage = Math.floor((dockStaked / totalDockStaked) * 10000) / 100;
             const isWinningOption = props.highestStakeIndex === index;
             return (
-              <ProposalOption onClick={() => {
+              <ProposalOption key={index} onClick={() => {
                 if (!props.isClosed && account && tokens > 0 && votedOption === -1) {
                   setSelectedOption(option);
                 }

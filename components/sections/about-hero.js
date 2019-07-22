@@ -1,14 +1,11 @@
 import React from 'react';
-import Link from 'next/link';
 import styled from 'styled-components';
 
 import Header from '../header';
 import media from '../../helpers/media';
 
-import logoSVG from '../../assets/images/dock-logo.svg';
 import headerHeroBGSVG from '../../assets/images/about/hero-bg.svg';
 import headerHeroBGMblSVG from '../../assets/images/about/hero-bg-mbl.svg';
-import arrowRightSVG from '../../assets/images/icons/arrow-right-white.svg';
 
 const Wrapper = styled.div`
   display: flex;

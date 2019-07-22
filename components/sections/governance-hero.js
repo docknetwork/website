@@ -1,15 +1,12 @@
 import React from 'react';
-import Link from 'next/link';
 import styled from 'styled-components';
 
 import Header from '../header';
 import media from '../../helpers/media';
 
-import logoSVG from '../../assets/images/dock-logo.svg';
 import headerHeroSVG from '../../assets/images/governance/hero-image.png';
 import headerHeroBGSVG from '../../assets/images/governance/hero-bg.svg';
 import headerHeroBGMblSVG from '../../assets/images/network/hero-bg-mbl.svg';
-import arrowRightSVG from '../../assets/images/icons/arrow-right-white.svg';
 
 const Wrapper = styled.div`
   display: flex;
@@ -96,52 +93,6 @@ const HeroSubtitle = styled.h2`
   @media ${media.medium} {
     margin: 0 0 50px 0;
     font-size: 18px;
-  }
-`;
-
-const IssueButton = styled.a`
-  display: block;
-  text-align: center;
-  font-size: 18px;
-  font-weight: bold;
-  text-align: center;
-  color: rgb(255, 255, 255);
-  height: 52px;
-  line-height: 52px;
-  border-radius: 5px;
-  background-color: rgb(75, 107, 220);
-  text-decoration: none;
-  width: 100%;
-
-  @media ${media.medium} {
-    width: 215px;
-  }
-`;
-
-const UnderlineLink = styled.a`
-  border-bottom: 3px solid rgb(75, 107, 220);
-  font-size: 18px;
-  font-weight: bold;
-  line-height: 1.56;
-  color: rgb(255, 255, 255);
-  padding: 4px 5px;
-  display: flex;
-  align-self: flex-start;
-  width: 180px;
-  text-decoration: none;
-`;
-
-const UnderlineLinkIcon = styled.img`
-  margin-left: 15px;
-`;
-
-const Buttons = styled.div`
-  display: flex;
-  flex-direction: column;
-
-  @media ${media.medium} {
-    flex-direction: row;
-    align-items: center;
   }
 `;
 

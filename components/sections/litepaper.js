@@ -8,7 +8,6 @@ import {
 } from '../sections';
 import { UnderlineLink } from '../underline-link';
 
-import arrowRightSVG from '../../assets/images/icons/arrow-right-dark.svg';
 import litepaperPNG from '../../assets/images/home/litepaper.png';
 
 const Root = styled.div`

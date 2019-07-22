@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import fetch from 'isomorphic-unfetch';
 import Link from 'next/link';
 import Head from 'next/head';
 import styled from 'styled-components';
@@ -10,23 +9,19 @@ import moment from 'moment';
 import Page from '../layouts/main';
 import GovernanceHero from '../components/sections/governance-hero';
 import { UnderlineLink } from '../components/underline-link';
-import InquiryModal from '../components/modals/inquiry-modal';
 
 import {
   HeaderMarker,
   Wrapper,
   SectionTitle,
   SectionSubtitle,
-  Section,
   SectionColumn
 } from '../components/sections';
-
 
 import EthService from '../components/eth/eth.service';
 
 const pageDesc = 'Dock believes the community should help guide the direction of the project and help with governance. An overview of governance and the Dock token.';
 const pageTitle = 'Dock | Governance and Voting';
-
 
 import timeLeftSVG from '../assets/images/icons/time-left.svg';
 import blueArrowUpSVG from '../assets/images/icons/blue-arrow-up.svg';
@@ -222,7 +217,7 @@ const ProposalPreview = ({proposal}) => (
   </Link>
 );
 
-const Governance = ({from, proposals}) => {
+const Governance = ({proposals}) => {
   const [showClosedProposals, setShowClosedProposals] = useState(true);
   let hasOpenProposals = false;
   for (let i = 0; i < proposals.length; i++) {

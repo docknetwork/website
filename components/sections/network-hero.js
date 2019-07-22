@@ -1,11 +1,9 @@
 import React from 'react';
-import Link from 'next/link';
 import styled from 'styled-components';
 
 import Header from '../header';
 import media from '../../helpers/media';
 
-import logoSVG from '../../assets/images/dock-logo.svg';
 import headerHeroSVG from '../../assets/images/network/hero.svg';
 import headerHeroBGSVG from '../../assets/images/network/hero-bg.svg';
 import headerHeroBGMblSVG from '../../assets/images/network/hero-bg-mbl.svg';
@@ -99,25 +97,6 @@ const HeroSubtitle = styled.h2`
   }
 `;
 
-const IssueButton = styled.a`
-  display: block;
-  text-align: center;
-  font-size: 18px;
-  font-weight: bold;
-  text-align: center;
-  color: rgb(255, 255, 255);
-  height: 52px;
-  line-height: 52px;
-  border-radius: 5px;
-  background-color: rgb(75, 107, 220);
-  text-decoration: none;
-  width: 100%;
-
-  @media ${media.medium} {
-    width: 215px;
-  }
-`;
-
 const UnderlineLink = styled.a`
   border-bottom: 3px solid rgb(75, 107, 220);
   font-size: 18px;
@@ -133,16 +112,6 @@ const UnderlineLink = styled.a`
 
 const UnderlineLinkIcon = styled.img`
   margin-left: 15px;
-`;
-
-const Buttons = styled.div`
-  display: flex;
-  flex-direction: column;
-
-  @media ${media.medium} {
-    flex-direction: row;
-    align-items: center;
-  }
 `;
 
 const NetworkHero = () => (

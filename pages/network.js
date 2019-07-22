@@ -11,7 +11,6 @@ import { UnderlineLinkAligned } from '../components/underline-link';
 
 import {
   HeaderMarker,
-  Wrapper,
   SectionTitle,
   SectionSubtitle,
   Section,

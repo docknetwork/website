@@ -8,7 +8,7 @@
     "build": "next build",
     "export": "next export",
     "start": "next start",
-    "lint": "eslint ./components && eslint ./layouts && eslint ./helpers && eslint ./pages && eslint ./scripts"
+    "lint": "eslint ./components && eslint ./layouts && eslint ./helpers && eslint ./pages"
   },
   "repository": {
     "type": "git",

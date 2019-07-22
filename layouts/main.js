@@ -1,3 +1,4 @@
+import React from 'react';
 import styled, { ServerStyleSheet } from 'styled-components';
 import Safe from 'react-safe';
 import Head from 'next/head';

@@ -1,10 +1,5 @@
 import React, { useState } from 'react';
-import Link from 'next/link';
 import styled from 'styled-components';
-import media from '../../helpers/media';
-
-import { UnderlineLink } from '../underline-link';
-
 import Modal from '../modal';
 
 const ModalContent = styled.div`
@@ -121,7 +116,7 @@ const InquiryModal = ({ onClose }) => {
       {isSubscribed ? (
         <ModalContentCentered>
           <Title>
-            We'll be in touch!
+            We&apos;ll be in touch!
           </Title>
           <Text>
             Thanks for contacting us, we will get back to you shortly.
