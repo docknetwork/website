@@ -16,4 +16,7 @@ It's the dock.io website!
 Typically, builds are automatic and handled by [CircleCI](https://circleci.com) when committing to master, but there is a manual option:
 - run `$ yarn build` to create an optimized production build
 - run `$ yarn export` to create an a static export of HTML, JS, CSS and assets
-- run `$ ./deploy.sh` to automatically commit to the repository
+- run `$ ./deploy.sh` to automatically commit to the GitHub pages branch
+
+# Contributing
+If you wish to contribute code, it is welcome. Just fork the repository and create a pull request.
