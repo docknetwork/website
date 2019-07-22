@@ -1,12 +1,12 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import styled from 'styled-components';
 
-import Header from '../../components/header';
+import Header from '../header';
 import media from '../../helpers/media';
 
-import SubscribeModal from '../../components/modals/subscribe-modal';
-import InquiryModal from '../../components/modals/inquiry-modal';
+import SubscribeModal from '../modals/subscribe-modal';
+import InquiryModal from '../modals/inquiry-modal';
 
 import logoSVG from '../../assets/images/dock-logo.svg';
 import headerHeroPNG from '../../assets/images/home/header-hero.png';
@@ -160,12 +160,12 @@ const HeaderHero = () => {
               </IssueButton>
               <UnderlineLink onClick={() => setShowSubscribeModal(true)}>
                 Subscribe to updates
-                <UnderlineLinkIcon src={arrowRightSVG}/>
+                <UnderlineLinkIcon src={arrowRightSVG} />
               </UnderlineLink>
             </Buttons>
           </div>
-          <HeaderHeroBGImage src={headerHeroBGSVG}/>
-          <HeaderHeroImage src={headerHeroPNG}/>
+          <HeaderHeroBGImage src={headerHeroBGSVG} />
+          <HeaderHeroImage src={headerHeroPNG} />
         </Wrapper>
       </Root>
 

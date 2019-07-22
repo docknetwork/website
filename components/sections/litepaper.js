@@ -5,7 +5,7 @@ import media from '../../helpers/media';
 import {
   SectionTitle,
   SectionSubtitle,
-} from '../../components/sections';
+} from '../sections';
 import { UnderlineLink } from '../underline-link';
 
 import arrowRightSVG from '../../assets/images/icons/arrow-right-dark.svg';
@@ -46,18 +46,18 @@ const LitepaperImage = styled.img`
 
 const LitepaperSection = () => (
   <Root>
-      <LitepaperImage src={litepaperPNG}/>
-      <LitepaperContent>
-        <SectionTitle>
+    <LitepaperImage src={litepaperPNG} />
+    <LitepaperContent>
+      <SectionTitle>
           Read the Litepaper
-        </SectionTitle>
-        <SectionSubtitle>
+      </SectionTitle>
+      <SectionSubtitle>
           Overview of the Dock blockchain and network.
-        </SectionSubtitle>
-        <UnderlineLink href="https://dock.io/litepaper.pdf">
+      </SectionSubtitle>
+      <UnderlineLink href="https://dock.io/litepaper.pdf">
           Read Litepaper
-        </UnderlineLink>
-      </LitepaperContent>
+      </UnderlineLink>
+    </LitepaperContent>
   </Root>
 );
 

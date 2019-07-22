@@ -17,16 +17,15 @@ export default class Contract {
       instance.new(options, (error, hash) => {
         if (error) {
           return reject(error);
-        } else {
-          eth
-            .getTransactionReceipt(hash)
-            .then(receipt => {
-              resolve(instance.at(receipt.contractAddress));
-            })
-            .catch(error => {
-              reject(error);
-            });
         }
+        eth
+          .getTransactionReceipt(hash)
+          .then((receipt) => {
+            resolve(instance.at(receipt.contractAddress));
+          })
+          .catch((error) => {
+            reject(error);
+          });
       });
     });
   }

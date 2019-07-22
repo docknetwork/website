@@ -1,7 +1,9 @@
 import Eth from 'ethjs';
-import {DockToken, VotingCenter, Poll} from './contracts';
+import moment from 'moment';
+import { DockToken, VotingCenter, Poll } from './contracts';
 import HexUtils from './hex-utils';
 import IPFS from './ipfs';
+
 
 // const rpcURL = 'https://rinkeby.infura.io/'; // Rinkeby Test Net
 const rpcURL = 'https://mainnet.infura.io/Ij97ilgQwoAhbHk38cyq'; // Main Ethereum Net
@@ -15,8 +17,6 @@ const dockTokenAddress = '0xe5dada80aa6477e85d09747f2842f7993d0df71c'; // Main E
 const DOCK_PASS_AMOUNT = 250000;
 
 let instance;
-
-import moment from 'moment';
 
 export default class EthWrapper {
   constructor() {
@@ -41,7 +41,7 @@ export default class EthWrapper {
     if (!this.votingCenter) {
       this.votingCenter = VotingCenter.at(
         votingCenterAddress,
-        this.contractParams
+        this.contractParams,
       );
     }
   }
@@ -86,8 +86,8 @@ export default class EthWrapper {
 
   hasMetaMask() {
     return typeof window !== 'undefined' ? (
-      typeof window.web3 !== 'undefined' &&
-      typeof window.web3.currentProvider !== 'undefined'
+      typeof window.web3 !== 'undefined'
+      && typeof window.web3.currentProvider !== 'undefined'
     ) : false;
   }
 
@@ -107,11 +107,12 @@ export default class EthWrapper {
     if (typeof window === 'undefined') {
       return null;
     }
-    return this.getAccounts().then(accounts => {
+    return this.getAccounts().then((accounts) => {
       this.account = accounts.length ? accounts[0] : null;
       return this.account;
     });
   }
+
   fromWei(amount, unit = 'ether') {
     return Eth.fromWei(amount, unit);
   }
@@ -121,7 +122,7 @@ export default class EthWrapper {
       const receiptInterval = setInterval(() => {
         this.eth
           .getTransactionReceipt(hash)
-          .then(receipt => {
+          .then((receipt) => {
             if (receipt) {
               clearInterval(receiptInterval);
               resolve(receipt);
@@ -136,14 +137,12 @@ export default class EthWrapper {
     if (!this.dockToken) {
       this.dockToken = DockToken.at(dockTokenAddress, {
         from: account,
-        gas: 100000
+        gas: 100000,
       });
     }
 
     return this.dockToken.balanceOf(account)
-      .then(result => {
-        return this.fromWei(result[0], 'ether');
-      });
+      .then(result => this.fromWei(result[0], 'ether'));
   }
 
   getBalance(account) {

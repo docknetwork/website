@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import styled from 'styled-components';
 
-import Header from '../../components/header';
+import Header from '../header';
 import media from '../../helpers/media';
 
 import logoSVG from '../../assets/images/dock-logo.svg';
@@ -157,9 +157,9 @@ const NetworkHero = () => (
           Governance is a vital element of building a decentralized network and Dock is committed to iterating towards a decentralized state.
         </HeroSubtitle>
       </div>
-      <HeaderHeroBGImageMobile src={headerHeroBGMblSVG}/>
-      <HeaderHeroBGImage src={headerHeroBGSVG}/>
-      <HeaderHeroImage src={headerHeroSVG}/>
+      <HeaderHeroBGImageMobile src={headerHeroBGMblSVG} />
+      <HeaderHeroBGImage src={headerHeroBGSVG} />
+      <HeaderHeroImage src={headerHeroSVG} />
     </Wrapper>
   </Root>
 );

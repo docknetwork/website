@@ -87,7 +87,7 @@ class Modal extends React.Component {
           {this.props.children}
 
           <CloseButton onClick={this.handleClose.bind(this)}>
-            <img src={closeSVG}/>
+            <img src={closeSVG} />
           </CloseButton>
         </ModalWrapper>
       </Root>

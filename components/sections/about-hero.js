@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import styled from 'styled-components';
 
-import Header from '../../components/header';
+import Header from '../header';
 import media from '../../helpers/media';
 
 import logoSVG from '../../assets/images/dock-logo.svg';
@@ -78,8 +78,8 @@ const AboutHero = () => (
       <HeroTitle>
         About
       </HeroTitle>
-      <HeaderHeroBGImageMobile src={headerHeroBGMblSVG}/>
-      <HeaderHeroBGImage src={headerHeroBGSVG}/>
+      <HeaderHeroBGImageMobile src={headerHeroBGMblSVG} />
+      <HeaderHeroBGImage src={headerHeroBGSVG} />
     </Wrapper>
   </Root>
 );

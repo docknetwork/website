@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import styled from 'styled-components';
 
-import Header from '../../components/header';
+import Header from '../header';
 import media from '../../helpers/media';
 
 import logoSVG from '../../assets/images/dock-logo.svg';
@@ -158,12 +158,12 @@ const NetworkHero = () => (
         </HeroSubtitle>
         <UnderlineLink href="https://dock.io/litepaper.pdf">
           Read Litepaper
-          <UnderlineLinkIcon src={arrowRightSVG}/>
+          <UnderlineLinkIcon src={arrowRightSVG} />
         </UnderlineLink>
       </div>
-      <HeaderHeroBGImageMobile src={headerHeroBGMblSVG}/>
-      <HeaderHeroBGImage src={headerHeroBGSVG}/>
-      <HeaderHeroImage src={headerHeroSVG}/>
+      <HeaderHeroBGImageMobile src={headerHeroBGMblSVG} />
+      <HeaderHeroBGImage src={headerHeroBGSVG} />
+      <HeaderHeroImage src={headerHeroSVG} />
     </Wrapper>
   </Root>
 );

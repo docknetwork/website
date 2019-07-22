@@ -38,16 +38,15 @@ class IPFSWrapper {
     return new Promise((resolve, reject) => {
       if (this.cache[address]) {
         return resolve(this.cache[address]);
-      } else {
-        this.ipfs.catJSON(address, (error, result) => {
-          this.cache[address] = result;
-          if (error) {
-            reject(error);
-          } else {
-            resolve(result);
-          }
-        });
       }
+      this.ipfs.catJSON(address, (error, result) => {
+        this.cache[address] = result;
+        if (error) {
+          reject(error);
+        } else {
+          resolve(result);
+        }
+      });
     });
   }
 }

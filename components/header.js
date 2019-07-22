@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import Link from './active-link';
 import styled from 'styled-components';
+import Link from './active-link';
 
 import media from '../helpers/media';
 
@@ -264,9 +264,12 @@ const Header = () => {
         <CommunityMenuWrapper
           onMouseEnter={() => setShowMenu(true)}
           onMouseLeave={() => setShowMenu(false)}
-          onClick={() => setShowMenu(!showMenu)}>
+          onClick={() => setShowMenu(!showMenu)}
+        >
           <NavLinkCommunity>
-            Community <NavLinkCommunityIcon src={chevronDown} />
+            Community
+            {' '}
+            <NavLinkCommunityIcon src={chevronDown} />
           </NavLinkCommunity>
           {showMenu && (
             <CommunityMenu>
@@ -281,32 +284,37 @@ const Header = () => {
                 <CommunityMenuIcon
                   href="https://t.me/dockio"
                   target="_blank"
-                  rel="noopener noreferrer">
-                  <img src={telegramIcon}/>
+                  rel="noopener noreferrer"
+                >
+                  <img src={telegramIcon} />
                 </CommunityMenuIcon>
                 <CommunityMenuIcon
                   href="https://twitter.com/docknetwork"
                   target="_blank"
-                  rel="noopener noreferrer">
-                  <img src={twitterIcon}/>
+                  rel="noopener noreferrer"
+                >
+                  <img src={twitterIcon} />
                 </CommunityMenuIcon>
                 <CommunityMenuIcon
                   href="https://www.reddit.com/r/dockio"
                   target="_blank"
-                  rel="noopener noreferrer">
-                  <img src={redditIcon}/>
+                  rel="noopener noreferrer"
+                >
+                  <img src={redditIcon} />
                 </CommunityMenuIcon>
                 <CommunityMenuIcon
                   href="https://www.facebook.com/docknetwork/"
                   target="_blank"
-                  rel="noopener noreferrer">
-                  <img src={facebookIcon}/>
+                  rel="noopener noreferrer"
+                >
+                  <img src={facebookIcon} />
                 </CommunityMenuIcon>
                 <CommunityMenuIcon
                   href="https://github.com/getdock"
                   target="_blank"
-                  rel="noopener noreferrer">
-                  <img src={githubIcon}/>
+                  rel="noopener noreferrer"
+                >
+                  <img src={githubIcon} />
                 </CommunityMenuIcon>
               </CommunityMenuIcons>
             </CommunityMenu>
@@ -315,7 +323,8 @@ const Header = () => {
       </Nav>
       <HamburgerIcon
         onClick={() => setNavEnabled(!navEnabled)}
-        className={navEnabled && 'active'}>
+        className={navEnabled && 'active'}
+      >
         <span />
         <span />
         <span />

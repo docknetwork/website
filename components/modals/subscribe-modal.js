@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import styled from 'styled-components';
 import media from '../../helpers/media';
@@ -79,7 +79,7 @@ const Submit = styled.input`
   -webkit-appearance: none;
 `;
 
-const SubscribeModal = ({onClose}) => {
+const SubscribeModal = ({ onClose }) => {
   const [email, setEmail] = useState();
   const [isSubscribed, setIsSubscribed] = useState();
 
@@ -112,7 +112,8 @@ const SubscribeModal = ({onClose}) => {
           </Title>
           <Text>
             We’ll keep you updated with the latest Dock news and updates.
-            <br /><br />
+            <br />
+            <br />
             In the meantime, you can find the most recent news at the Dock blog.
           </Text>
           <UnderlineLink href="https://blog.dock.io">
@@ -120,20 +121,20 @@ const SubscribeModal = ({onClose}) => {
           </UnderlineLink>
         </ModalContentCentered>
       ) : (
-      <ModalContent>
-        <Title>
+        <ModalContent>
+          <Title>
           Subscribe
-        </Title>
-        <Text>
+          </Title>
+          <Text>
           Get the latest news and updates about Dock.
-        </Text>
+          </Text>
 
-        <Form onSubmit={handleSubmit}>
-          <Label>Email</Label>
-          <Input type="email" onChange={handleInputChange} />
-          <Submit type="submit" value="Submit" />
-        </Form>
-      </ModalContent>
+          <Form onSubmit={handleSubmit}>
+            <Label>Email</Label>
+            <Input type="email" onChange={handleInputChange} />
+            <Submit type="submit" value="Submit" />
+          </Form>
+        </ModalContent>
       )}
     </Modal>
   );

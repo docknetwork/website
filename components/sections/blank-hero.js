@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import Header from '../../components/header';
+import Header from '../header';
 import media from '../../helpers/media';
 
 const Wrapper = styled.div`

@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import styled from 'styled-components';
 import media from '../../helpers/media';
@@ -92,7 +92,7 @@ const Submit = styled.input`
   -webkit-appearance: none;
 `;
 
-const InquiryModal = ({onClose}) => {
+const InquiryModal = ({ onClose }) => {
   const [details, setDetails] = useState({});
   const [isSubscribed, setIsSubscribed] = useState();
 
@@ -128,25 +128,25 @@ const InquiryModal = ({onClose}) => {
           </Text>
         </ModalContentCentered>
       ) : (
-      <ModalContent>
-        <Title>
+        <ModalContent>
+          <Title>
           Join the Dock network
-        </Title>
+          </Title>
 
-        <Form onSubmit={handleSubmit}>
-          <Label>Name</Label>
-          <Input type="text" name="name" onChange={handleInputChange} required/>
-          <Label>Email</Label>
-          <Input type="email" name="email" onChange={handleInputChange} required/>
-          <Label>Phone number</Label>
-          <Input type="text" name="phone" onChange={handleInputChange} required/>
-          <Label>Company website</Label>
-          <Input type="text" name="website" onChange={handleInputChange} required/>
-          <Label>Tell us how you’d like to work with Dock</Label>
-          <Textarea name="message" onChange={handleInputChange} />
-          <Submit type="submit" value="Submit" />
-        </Form>
-      </ModalContent>
+          <Form onSubmit={handleSubmit}>
+            <Label>Name</Label>
+            <Input type="text" name="name" onChange={handleInputChange} required />
+            <Label>Email</Label>
+            <Input type="email" name="email" onChange={handleInputChange} required />
+            <Label>Phone number</Label>
+            <Input type="text" name="phone" onChange={handleInputChange} required />
+            <Label>Company website</Label>
+            <Input type="text" name="website" onChange={handleInputChange} required />
+            <Label>Tell us how you’d like to work with Dock</Label>
+            <Textarea name="message" onChange={handleInputChange} />
+            <Submit type="submit" value="Submit" />
+          </Form>
+        </ModalContent>
       )}
     </Modal>
   );

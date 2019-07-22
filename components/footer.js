@@ -113,9 +113,9 @@ const Footer = () => (
           <Link href="/network" passHref>
             <NavLink>Network</NavLink>
           </Link>
-          {/*<Link href="/governance" passHref>
+          {/* <Link href="/governance" passHref>
             <NavLink>Governance</NavLink>
-          </Link>*/}
+          </Link> */}
           <Link href="/about" passHref>
             <NavLink>About</NavLink>
           </Link>
@@ -130,49 +130,57 @@ const Footer = () => (
         <SocialLink
           href="https://t.me/dockio"
           target="_blank"
-          rel="noopener noreferrer">
-          <img src={telegramSVG}/>
+          rel="noopener noreferrer"
+        >
+          <img src={telegramSVG} />
         </SocialLink>
 
         <SocialLink
           href="https://medium.com/dock"
           target="_blank"
-          rel="noopener noreferrer">
-          <img src={mediumSVG}/>
+          rel="noopener noreferrer"
+        >
+          <img src={mediumSVG} />
         </SocialLink>
 
-        <SocialLink href="https://twitter.com/docknetwork"
+        <SocialLink
+          href="https://twitter.com/docknetwork"
           target="_blank"
-          rel="noopener noreferrer">
-          <img src={twitterSVG}/>
+          rel="noopener noreferrer"
+        >
+          <img src={twitterSVG} />
         </SocialLink>
 
         <SocialLink
           href="https://www.reddit.com/r/dockio"
           target="_blank"
-          rel="noopener noreferrer">
-          <img src={redditSVG}/>
+          rel="noopener noreferrer"
+        >
+          <img src={redditSVG} />
         </SocialLink>
 
         <SocialLink
           href="https://github.com/getdock"
           target="_blank"
-          rel="noopener noreferrer">
-          <img src={githubSVG}/>
+          rel="noopener noreferrer"
+        >
+          <img src={githubSVG} />
         </SocialLink>
 
         <SocialLink
           href="https://www.facebook.com/docknetwork/"
           target="_blank"
-          rel="noopener noreferrer">
-          <img src={facebookSVG}/>
+          rel="noopener noreferrer"
+        >
+          <img src={facebookSVG} />
         </SocialLink>
 
         <SocialLink
           href="https://www.binance.com/en/trade/DOCK_BTC"
           target="_blank"
-          rel="noopener noreferrer">
-          <img src={binanceSVG}/>
+          rel="noopener noreferrer"
+        >
+          <img src={binanceSVG} />
         </SocialLink>
       </Socials>
     </Wrapper>

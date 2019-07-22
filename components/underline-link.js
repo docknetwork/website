@@ -25,10 +25,10 @@ const UnderlineLinkIcon = styled.img`
   margin-left: 15px;
 `;
 
-export const UnderlineLink = ({href, onClick, children}) => (
+export const UnderlineLink = ({ href, onClick, children }) => (
   <Root href={href} onClick={onClick}>
     {children}
-    <UnderlineLinkIcon src={arrowRightSVG}/>
+    <UnderlineLinkIcon src={arrowRightSVG} />
   </Root>
 );
 
