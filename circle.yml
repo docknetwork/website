@@ -9,6 +9,7 @@ jobs:
     steps:
       - checkout
       - run: yarn
+      - run: yarn lint
       - run: yarn build
       - run: yarn export
       - run: cp ./assets/favicons/favicon.ico ./out/favicon.ico
