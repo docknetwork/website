@@ -35,6 +35,7 @@
     "multihashes": "^0.4.15",
     "next": "^8.1.0",
     "next-compose-plugins": "^2.2.0",
+    "next-ga": "^2.3.4",
     "next-optimized-images": "^2.5.3",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
@@ -43,13 +44,13 @@
     "styled-components": "^4.3.2"
   },
   "devDependencies": {
+    "babel-eslint": "^10.0.1",
     "babel-plugin-styled-components": "^1.10.6",
+    "dev-configs": "^1.1.0",
     "eslint": "^5.16.0",
     "eslint-config-airbnb": "^17.1.1",
     "eslint-plugin-import": "^2.18.0",
     "eslint-plugin-jsx-a11y": "^6.2.3",
-    "eslint-plugin-react": "^7.14.3",
-    "dev-configs": "^1.1.0",
-    "babel-eslint": "^10.0.1"
+    "eslint-plugin-react": "^7.14.3"
   }
 }

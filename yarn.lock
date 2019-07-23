@@ -1936,7 +1936,7 @@ debug@^3.1.0, debug@^3.2.6:
   dependencies:
     ms "^2.1.1"
 
-debug@^4.0.1, debug@^4.1.0:
+debug@^4.0.0, debug@^4.0.1, debug@^4.1.0:
   version "4.1.1"
   resolved "https://registry.yarnpkg.com/debug/-/debug-4.1.1.tgz#3b72260255109c6b589cee050f1d516139664791"
   integrity sha512-pYAIzeRo8J6KPEaJ0VWOh5Pzkbw/RetuzehGM7QRRX5he4fPHx2rdKMB256ehJCkX+XRQm16eZLqLNS8RSZXZw==
@@ -3945,6 +3945,14 @@ next-compose-plugins@^2.2.0:
   resolved "https://registry.yarnpkg.com/next-compose-plugins/-/next-compose-plugins-2.2.0.tgz#95cd8eb40ab0652070d76572fb648354191628b0"
   integrity sha512-ChUlpT9tWfJ7YxqGw/WQ2T1gf8EeX93n1XqeQw0lkvGa7seszahvF4eOZUJoq7Hetsbzg4UHVnPoCXfXTyQR3g==
 
+next-ga@^2.3.4:
+  version "2.3.4"
+  resolved "https://registry.yarnpkg.com/next-ga/-/next-ga-2.3.4.tgz#0bec23e7c2eea35485af0b342e7794bbbdb61d04"
+  integrity sha512-mIol83ehPCz9Z+QtK6ig1w9Db4ShoyhjS6NgDnTIVJuBQ1iobiZap2xXn6KtYWBc+AH5DdTCBtZRF8PP5yJAVA==
+  dependencies:
+    debug "^4.0.0"
+    react-ga "^2.5.3"
+
 next-optimized-images@^2.5.3:
   version "2.5.3"
   resolved "https://registry.yarnpkg.com/next-optimized-images/-/next-optimized-images-2.5.3.tgz#40b8f0f98917742e3262d5b4ffac68ee09cfee30"
@@ -4763,6 +4771,11 @@ react-error-overlay@5.1.4:
   version "5.1.4"
   resolved "https://registry.yarnpkg.com/react-error-overlay/-/react-error-overlay-5.1.4.tgz#88dfb88857c18ceb3b9f95076f850d7121776991"
   integrity sha512-fp+U98OMZcnduQ+NSEiQa4s/XMsbp+5KlydmkbESOw4P69iWZ68ZMFM5a2BuE0FgqPBKApJyRuYHR95jM8lAmg==
+
+react-ga@^2.5.3:
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/react-ga/-/react-ga-2.6.0.tgz#c3fe830ead2ad25117e1d33280d9698de9b28496"
+  integrity sha512-GWHBWZDFjDGMkIk1LzroIn0mNTygKw3adXuqvGvheFZvlbpqMPbHsQsTdQBIxRRdXGQM/Zq+dQLRPKbwIHMTaw==
 
 react-is@16.8.6, react-is@^16.6.0, react-is@^16.8.1:
   version "16.8.6"
