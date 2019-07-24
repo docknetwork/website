@@ -7,6 +7,7 @@ set -e
 # build and export site
 yarn build
 yarn export
+yarn build-proposals
 
 # copy some non-build assets
 cp ./assets/favicons/favicon.ico ./out/favicon.ico

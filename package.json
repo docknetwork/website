@@ -4,6 +4,7 @@
   "description": "dock.io website",
   "main": "index.js",
   "scripts": {
+    "build-proposals": "cross-env node -r @babel/register ./proposals.js",
     "dev": "cross-env NODE_ENV=development PORT=3000 node -r @babel/register ./server.js",
     "build": "next build",
     "export": "next export",
