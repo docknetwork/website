@@ -318,7 +318,7 @@ const Proposal = (props) => {
             <MetamaskBanner>
               <MetamaskLogo src={metamaskLogo} />
               <MetamaskBannerContent>
-                <strong>You don't have any DOCK tokens</strong><br />
+                <strong>You don&apos;t have any DOCK tokens</strong><br />
                 Your wallet needs to have atleast 1 DOCK token to vote. Alternatively, you can <a href="https://help.dock.io/voting-center/vote-with-mycrypto" target="_blank" rel="noopener noreferrer">vote with MyCrypto</a>
                 <br />
                 Wallet address: {account}
@@ -329,7 +329,7 @@ const Proposal = (props) => {
               <MetamaskLogo src={metamaskLogo} />
               <MetamaskBannerContent>
                 <strong>Cannot find wallet</strong><br />
-                Your browser is Web3 capable, but we can't find your wallet. If you are using MetaMask, unlock it and reload this page.<br />
+                Your browser is Web3 capable, but we can&apos;t find your wallet. If you are using MetaMask, unlock it and reload this page.<br />
                 <a href="https://help.dock.io/dock-io-app/how-does-voting-work" target="_blank" rel="noopener noreferrer">
                   Learn more.
                 </a>
