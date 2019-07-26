@@ -14,8 +14,6 @@ import checkSVG from '../../assets/images/icons/check.svg';
 import arrowLeftSVG from '../../assets/images/icons/arrow-left-header.svg';
 import metamaskLogo from '../../assets/images/proposal/metamask.png';
 
-const metamaskInstallUrl = 'https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn?hl=en';
-
 const Wrapper = styled.div`
   max-width: 764px;
   width: 100%;
@@ -43,6 +41,8 @@ const Title = styled.h1`
 
 const Description = styled.p`
   font-size: 14px;
+  line-height: 1.76;
+  word-wrap: break-word;
 
   @media ${media.medium} {
     font-size: 16px;
@@ -91,6 +91,12 @@ const MetamaskLogo = styled.img`
   width: 49px;
   height: 49px;
   margin-right: 1.5rem;
+  display: none;
+  flex-shrink: 0;
+
+  @media ${media.medium} {
+    display: block;
+  }
 `;
 
 const MetamaskBannerContent = styled.p`
@@ -98,6 +104,7 @@ const MetamaskBannerContent = styled.p`
   color: #70707a;
   line-height: 1.43;
   font-family: Lato;
+  word-wrap: break-word;
 
   strong {
     font-family: Lato;
@@ -133,23 +140,23 @@ const ProposalSubtitle = styled.div`
 `;
 
 const ProposalOption = styled.div`
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    width: 100%;
-    margin-bottom: 20px;
-    cursor: pointer;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+  cursor: pointer;
 `;
 
 const ProposalCheckmark = styled.div`
-    border-radius: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 22px;
-    height: 22px;
-    background-color: #f7f7f7;
-    color: #ffffff;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  background-color: #f7f7f7;
+  color: #ffffff;
 `;
 
 const ProposalCheckmarkImage = styled.img`
@@ -180,12 +187,12 @@ const ProposalOptionStats = styled.span`
 `;
 
 const ProposalOptionBar = styled.div`
-    order: 4;
-    display: flex;
-    position: relative;
-    width: 100%;
-    height: 3px;
-    background-color: #efeff0;
+  order: 4;
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 3px;
+  background-color: #efeff0;
 `;
 
 const ProposalOptionBarInner = styled.div`
@@ -311,18 +318,18 @@ const Proposal = (props) => {
             <MetamaskBanner>
               <MetamaskLogo src={metamaskLogo} />
               <MetamaskBannerContent>
-                <strong>You do not have DOCK tokens in your wallet on MetaMask</strong><br />
-                If you have DOCK tokens in another wallet, you can use MyCrypto to vote.&nbsp;
-                <a href="https://help.dock.io/voting-center/vote-with-mycrypto" target="_blank" rel="noopener noreferrer">Learn more.</a><br />
-                MetaMask wallet address: {account}
+                <strong>You don't have any DOCK tokens</strong><br />
+                Your wallet needs to have atleast 1 DOCK token to vote. Alternatively, you can <a href="https://help.dock.io/voting-center/vote-with-mycrypto" target="_blank" rel="noopener noreferrer">vote with MyCrypto</a>
+                <br />
+                Wallet address: {account}
               </MetamaskBannerContent>
             </MetamaskBanner>
           ))) : (
             <MetamaskBanner>
               <MetamaskLogo src={metamaskLogo} />
               <MetamaskBannerContent>
-                <strong>Unlock MetaMask to Vote</strong><br />
-                To vote, you will need to unlock your MetaMask browser exension and refresh the page.&nbsp;
+                <strong>Cannot find wallet</strong><br />
+                Your browser is Web3 capable, but we can't find your wallet. If you are using MetaMask, unlock it and reload this page.<br />
                 <a href="https://help.dock.io/dock-io-app/how-does-voting-work" target="_blank" rel="noopener noreferrer">
                   Learn more.
                 </a>
@@ -332,16 +339,24 @@ const Proposal = (props) => {
             <MetamaskBanner>
               <MetamaskLogo src={metamaskLogo} />
               <MetamaskBannerContent>
-                <strong>Install MetaMask to Vote</strong><br />
-                To vote, you will need to install MetaMask. It’s a free browser extension to manage your Ethereum identity.&nbsp;
-                <a href={metamaskInstallUrl} target="_blank" rel="noopener noreferrer">
-                  <span>Install MetaMask</span> <span svg-sprite="arrow-right-large"></span>
+                <strong>You need Web3 to vote</strong><br />
+                To vote, you will need to use a&nbsp;
+                <a href="https://www.google.com/search?hl=en&q=Web3%20browser"
+                  target="_blank"
+                  rel="noopener noreferrer">
+                Web3 browser
+                </a>&nbsp;
+                or &nbsp;
+                <a href="https://metamask.io/" target="_blank" rel="noopener noreferrer">
+                  install MetaMask
                 </a>
-                or&nbsp;
+                &nbsp;which is a free browser extension to manage your Ethereum identity.
+                <br />
+                Alternatively, you can&nbsp;
                 <a href="https://help.dock.io/voting-center/vote-with-mycrypto"
                   target="_blank"
                   rel="noopener noreferrer">
-                  Vote with MyCrypto
+                  vote with MyCrypto.
                 </a>
               </MetamaskBannerContent>
             </MetamaskBanner>
