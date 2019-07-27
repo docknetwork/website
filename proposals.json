@@ -1,0 +1,42 @@
+[
+  {
+    "title": "DGP-1: The Dock Governance Proposal Process",
+    "description": "This process is meant to be the first of several steps towards embracing decentralized governance for the betterment of the Dock network and community. We expect DGPs to be a driving force for community input on development decisions that are shaping the future of the Dock network.  \n\nRead the full proposal: https://github.com/getdock/voting/blob/master/DGPs/DGP-1.md",
+    "options": [
+      "Approve",
+      "Reject"
+    ],
+    "startTime": "2019-06-25T17:15:00.000Z",
+    "endTime": "2019-07-09T17:15:00.000Z",
+    "isClosed": true,
+    "ipfsHash": "QmRAJJWA1wk6fDChf2ViZun3WV5yN71ybs1ogf3rg6dtyk",
+    "txId": "0xf5c57613806020a478e68df7b1ea186ef9206087",
+    "dockStaked": [
+      1779357,
+      0
+    ],
+    "totalDockStaked": 1779357,
+    "highestStakeIndex": 0,
+    "passed": true
+  },
+  {
+    "title": "DGP-2: Move Dock from Ethereum to Polkadot",
+    "description": "Since Dock's inception the market has experienced many advancements in technology that enable faster development velocity, vastly improved scalability, on-chain governance upgrades, and far better user experiences. In this pivotal and exciting time, Dock Core Developers are preparing to release an updated lightpaper after alternative blockchain ecosystem choices have been evaluated.\n\nRead the full proposal: https://github.com/getdock/voting/blob/master/DGPs/DGP-2.md",
+    "options": [
+      "Approve",
+      "Reject"
+    ],
+    "startTime": "2019-06-25T17:15:00.000Z",
+    "endTime": "2019-07-09T17:15:00.000Z",
+    "isClosed": true,
+    "ipfsHash": "QmWc3oXDfR8UfdBgLgfi7Z1g1phuMNJ5zvYqD9sPFqBqUE",
+    "txId": "0xd65db8552e2c35f4853419658a5f4bfbb44a7573",
+    "dockStaked": [
+      1779444,
+      200428
+    ],
+    "totalDockStaked": 1979872,
+    "highestStakeIndex": 0,
+    "passed": true
+  }
+]
