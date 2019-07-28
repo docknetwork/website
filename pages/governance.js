@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import Link from 'next/link';
 import Head from 'next/head';
 import styled from 'styled-components';
 import Humanize from 'humanize-plus';
@@ -179,42 +178,38 @@ const NoProposalsText = styled.p`
 `;
 
 const ProposalPreview = ({proposal}) => (
-  <Link
+  <Proposal
     key={proposal.txId}
-    href={`/proposal/?id=${proposal.txId}`}
-    as={`/proposal/${proposal.txId}`}
-    passHref>
-    <Proposal>
-      <ProposalTitle>
-        {proposal.title}
-      </ProposalTitle>
-      <ProposalDescription>
-        {proposal.description}
-      </ProposalDescription>
+    href={`/proposal/${proposal.txId}`}>
+    <ProposalTitle>
+      {proposal.title}
+    </ProposalTitle>
+    <ProposalDescription>
+      {proposal.description}
+    </ProposalDescription>
 
-      <ProposalFooter>
-        <ProposalDockStacked>
-          {Humanize.formatNumber(proposal.totalDockStaked)} DOCK Voted
-        </ProposalDockStacked>
-        {!proposal.isClosed ? (
-          <ProposalDate>
-            <img src={timeLeftSVG}/>
-            {proposal.endTime.diff(moment(), 'days')} days left
-          </ProposalDate>
+    <ProposalFooter>
+      <ProposalDockStacked>
+        {Humanize.formatNumber(proposal.totalDockStaked)} DOCK Voted
+      </ProposalDockStacked>
+      {!proposal.isClosed ? (
+        <ProposalDate>
+          <img src={timeLeftSVG}/>
+          {proposal.endTime.diff(moment(), 'days')} days left
+        </ProposalDate>
+      ) : (
+        proposal.passed ? (
+          <ProposalPassed>
+            Passed
+          </ProposalPassed>
         ) : (
-          proposal.passed ? (
-            <ProposalPassed>
-              Passed
-            </ProposalPassed>
-          ) : (
-            <ProposalDate>
-              Failed
-            </ProposalDate>
-          )
-        )}
-      </ProposalFooter>
-    </Proposal>
-  </Link>
+          <ProposalDate>
+            Failed
+          </ProposalDate>
+        )
+      )}
+    </ProposalFooter>
+  </Proposal>
 );
 
 const Governance = ({proposals}) => {
