@@ -28,7 +28,7 @@ const Background = styled.div`
 
 const ModalWrapper = styled.div`
   width: 100%;
-  height: 100%;
+  min-height: 100%;
   background-color: rgb(255, 255, 255);
   margin: auto;
   display: flex;
@@ -39,6 +39,7 @@ const ModalWrapper = styled.div`
   @media ${media.medium} {
     max-width: 660px;
     max-height: 650px;
+    min-height: auto;
     box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.06);
     border-radius: 5px;
     height: auto;
