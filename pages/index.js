@@ -140,7 +140,6 @@ const Partner = styled.div`
 
 const PartnerImage = styled.div`
   width: 100%;
-  max-width: 333px;
   height: 334px;
   background-color: rgb(53, 188, 152);
   display: flex;
@@ -153,12 +152,16 @@ const PartnerImage = styled.div`
     width: 371px;
     height: 383px;
   }
+
+  > img {
+    max-width: 100%;
+  }
 `;
 
 const PartnerContent = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 40px 53px 42px 16px;
+  padding: 30px;
 
   @media ${media.medium} {
     padding: 46px 50px;
@@ -176,7 +179,7 @@ const PartnerDescription = styled.p`
   font-size: 18px;
   line-height: 1.56;
   color: rgb(49, 42, 67);
-  margin: 10px 0 15px 0;
+  margin: 0 0 15px 0;
 
   @media ${media.medium} {
     margin: 10px 0 0 0;
