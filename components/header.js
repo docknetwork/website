@@ -44,7 +44,7 @@ const Nav = styled.div`
     position: fixed;
     z-index: 100;
     background: #ffffff;
-    padding: 20px 0;
+    padding: 30px 0;
     margin: 0 auto;
     box-shadow: 0 15px 30px -10px rgba(0,0,0,.3);
     border: 1px solid #e5e5e5;
@@ -66,14 +66,13 @@ const CommunityMenuWrapper = styled.div`
 `;
 
 const NavLink = styled.a`
-  text-align: center;
   transition: color 0.2s ease-in-out;
   cursor: pointer;
   text-decoration: none;
   color: rgb(49, 42, 67);
   line-height: 1.63;
-  font-size: 28px;
-  padding: 0 0 10px 0;
+  font-size: 22px;
+  padding: 10px 40px;
 
   @media ${media.medium} {
     color: rgb(255, 255, 255);
@@ -82,6 +81,7 @@ const NavLink = styled.a`
     margin-left: 30px;
     border-bottom: solid 2px transparent;
     padding: 4px;
+    text-align: center;
 
     &:hover {
       color: rgb(75, 107, 220);
@@ -143,6 +143,7 @@ const CommunityMenuSpan = styled.span`
 
 const CommunityMenuIcons = styled.div`
   display: flex;
+  width: 100%;
   margin: 4px 0 0 0;
 `;
 
@@ -242,6 +243,56 @@ const HamburgerIcon = styled.div`
 }
 `;
 
+const MobileSocialIcons = styled.div`
+  display: flex;
+  padding: 0 40px;
+  margin: auto 0 0 0;
+
+  @media ${media.medium} {
+    display: none;
+  }
+`;
+
+const SocialIcons = () => (
+  <CommunityMenuIcons>
+    <CommunityMenuIcon
+      href="https://t.me/dockio"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <img src={telegramIcon} />
+    </CommunityMenuIcon>
+    <CommunityMenuIcon
+      href="https://twitter.com/docknetwork"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <img src={twitterIcon} />
+    </CommunityMenuIcon>
+    <CommunityMenuIcon
+      href="https://www.reddit.com/r/dockio"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <img src={redditIcon} />
+    </CommunityMenuIcon>
+    <CommunityMenuIcon
+      href="https://www.facebook.com/docknetwork/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <img src={facebookIcon} />
+    </CommunityMenuIcon>
+    <CommunityMenuIcon
+      href="https://github.com/getdock"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <img src={githubIcon} />
+    </CommunityMenuIcon>
+  </CommunityMenuIcons>
+);
+
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
   const [navEnabled, setNavEnabled] = useState(false);
@@ -261,6 +312,9 @@ const Header = () => {
         <NavLink href="/governance">
           Governance
         </NavLink>
+        <MobileSocialIcons>
+          <SocialIcons />
+        </MobileSocialIcons>
         <CommunityMenuWrapper
           onMouseEnter={() => setShowMenu(true)}
           onMouseLeave={() => setShowMenu(false)}
@@ -280,43 +334,7 @@ const Header = () => {
                 Forum
               </CommunityMenuLink>
               <CommunityMenuSpan>Connect with us</CommunityMenuSpan>
-              <CommunityMenuIcons>
-                <CommunityMenuIcon
-                  href="https://t.me/dockio"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img src={telegramIcon} />
-                </CommunityMenuIcon>
-                <CommunityMenuIcon
-                  href="https://twitter.com/docknetwork"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img src={twitterIcon} />
-                </CommunityMenuIcon>
-                <CommunityMenuIcon
-                  href="https://www.reddit.com/r/dockio"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img src={redditIcon} />
-                </CommunityMenuIcon>
-                <CommunityMenuIcon
-                  href="https://www.facebook.com/docknetwork/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img src={facebookIcon} />
-                </CommunityMenuIcon>
-                <CommunityMenuIcon
-                  href="https://github.com/getdock"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img src={githubIcon} />
-                </CommunityMenuIcon>
-              </CommunityMenuIcons>
+              <SocialIcons />
             </CommunityMenu>
           )}
         </CommunityMenuWrapper>
