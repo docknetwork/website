@@ -38,7 +38,7 @@ const Nav = styled.div`
     flex-direction: column;
     width: 100%;
     height: 100%;
-    max-height: 500px;
+    max-height: 350px;
     left: 0;
     top: 0;
     position: fixed;
