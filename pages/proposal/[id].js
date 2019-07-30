@@ -339,7 +339,7 @@ const Proposal = (props) => {
             <MetamaskBanner>
               <MetamaskLogo src={metamaskLogo} />
               <MetamaskBannerContent>
-                <strong>You need Web3 to vote</strong><br />
+                <strong>Install Metamask or use a different browser</strong><br />
                 To vote, you will need to use a&nbsp;
                 <a href="https://www.google.com/search?hl=en&q=Web3%20browser"
                   target="_blank"
