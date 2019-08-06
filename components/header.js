@@ -48,6 +48,7 @@ const Nav = styled.div`
     margin: 0 auto;
     box-shadow: 0 15px 30px -10px rgba(0,0,0,.3);
     border: 1px solid #e5e5e5;
+    z-index: 30;
   }
 
   @media ${media.medium} {
@@ -253,6 +254,21 @@ const MobileSocialIcons = styled.div`
   }
 `;
 
+const MobileBackground = styled.div`
+  display: block;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.75);
+  height: 100vh;
+  width: 100vw;
+  z-index: 20;
+
+  @media ${media.medium} {
+    display: none;
+  }
+`;
+
 const SocialIcons = () => (
   <CommunityMenuIcons>
     <CommunityMenuIcon
@@ -302,6 +318,9 @@ const Header = () => {
       <Link href="/">
         <LogoImg src={logoSVG} />
       </Link>
+      {navEnabled && (
+        <MobileBackground />
+      )}
       <Nav className={navEnabled && 'active'}>
         <Link href="/" passHref>
           <NavLink>Home</NavLink>
