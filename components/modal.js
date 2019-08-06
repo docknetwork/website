@@ -14,6 +14,7 @@ const Root = styled.div`
   left: 0;
   top: 0;
   overflow-y: auto;
+  z-index: 10000;
 `;
 
 const Background = styled.div`
