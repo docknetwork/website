@@ -313,13 +313,18 @@ const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
   const [navEnabled, setNavEnabled] = useState(false);
 
+  function toggleNav() {
+    document.body.style.overflow = navEnabled ? 'auto' : 'hidden';
+    setNavEnabled(!navEnabled);
+  }
+
   return (
     <HeaderWrapper>
       <Link href="/">
         <LogoImg src={logoSVG} />
       </Link>
       {navEnabled && (
-        <MobileBackground onClick={() => setNavEnabled(!navEnabled)} />
+        <MobileBackground onClick={toggleNav} />
       )}
       <Nav className={navEnabled && 'active'}>
         <Link href="/" passHref>
@@ -359,7 +364,7 @@ const Header = () => {
         </CommunityMenuWrapper>
       </Nav>
       <HamburgerIcon
-        onClick={() => setNavEnabled(!navEnabled)}
+        onClick={toggleNav}
         className={navEnabled && 'active'}
       >
         <span />
