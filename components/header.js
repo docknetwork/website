@@ -319,7 +319,7 @@ const Header = () => {
         <LogoImg src={logoSVG} />
       </Link>
       {navEnabled && (
-        <MobileBackground />
+        <MobileBackground onClick={() => setNavEnabled(!navEnabled)} />
       )}
       <Nav className={navEnabled && 'active'}>
         <Link href="/" passHref>
