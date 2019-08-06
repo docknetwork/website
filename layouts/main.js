@@ -92,22 +92,30 @@ const ModalFooter = styled.div`
 
 const ModalTitle = styled.h4`
   font-family: Poppins;
-  font-size: 24px;
+  font-size: 20px;
   line-height: 1.67;
   text-align: center;
   color: rgb(53, 188, 152);
   font-weight: normal;
   margin: 20px 0;
+
+  @media ${media.medium} {
+    font-size: 24px;
+  }
 `;
 
 const ModalSubtitle = styled.h3`
   font-family: Poppins;
-  font-size: 66px;
+  font-size: 46px;
   font-weight: bold;
   line-height: 0.61;
   text-align: center;
   color: rgb(53, 188, 152);
   margin-bottom: 21px;
+
+  @media ${media.medium} {
+    font-size: 66px;
+  }
 `;
 
 const ModalImage = styled.img`
