@@ -254,6 +254,14 @@ const MobileSocialIcons = styled.div`
   }
 `;
 
+const NavLinkMobile = styled(NavLink)`
+  display: block;
+
+  @media ${media.medium} {
+    display: none;
+  }
+`;
+
 const MobileBackground = styled.div`
   display: block;
   position: fixed;
@@ -336,6 +344,12 @@ const Header = () => {
         <NavLink href="/governance">
           Governance
         </NavLink>
+        <NavLinkMobile href="https://blog.dock.io">
+          Blog
+        </NavLinkMobile>
+        <NavLinkMobile href="https://community.dock.io">
+          Forum
+        </NavLinkMobile>
         <MobileSocialIcons>
           <SocialIcons />
         </MobileSocialIcons>
