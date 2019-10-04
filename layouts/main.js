@@ -10,8 +10,8 @@ import favicon16 from '../assets/favicons/favicon-16x16.png';
 import favicon32 from '../assets/favicons/favicon-32x32.png';
 import favicon96 from '../assets/favicons/favicon-96x96.png';
 
-const pageDesc = 'Dock is a decentralized network enabling organizations to produce digital credentials at scale.';
-const pageTitle = 'Dock : High-performance blockchain credentials';
+const pageDesc = 'Dock is a decentralized network enabling organizations to produce digital claims at scale.';
+const pageTitle = 'Dock : High-performance blockchain claims';
 
 
 const Banner = styled.a`

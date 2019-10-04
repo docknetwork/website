@@ -146,10 +146,10 @@ const HeaderHero = () => {
         <Wrapper>
           <div>
             <HeroTitle>
-              Verifiable Credentials
+              Verifiable claims
             </HeroTitle>
             <HeroSubtitle>
-              High-performance distributed ledger technology to produce verifiable credentials at scale.
+              High-performance distributed ledger technology to produce verifiable claims at scale.
             </HeroSubtitle>
 
             <Buttons>

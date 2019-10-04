@@ -28,7 +28,7 @@ import tokenThreeSVG from '../assets/images/network/token-3.svg';
 
 import recordsPNG from '../assets/images/network/records.png';
 
-const pageDesc = 'An overview of Dock’s decentralized blockchain and cryptocurrency enabling the production of digital credentials for organizations at scale.';
+const pageDesc = 'An overview of Dock’s decentralized blockchain and cryptocurrency enabling the production of digital claims for organizations at scale.';
 const pageTitle = 'Dock Network | Dock Token';
 
 const ParticipantsGrid = styled.div`
@@ -287,7 +287,7 @@ const Network = () => (
           </DarkSectionTitle>
           <DarkSectionText>
             Credential issuing is the bloodline of the network and feeds demand.
-            As Issuers request credentials, operators process and issue credentials.
+            As Issuers request claims, operators process and issue claims.
             The Dock token is used to deter malicous attacks in the network.
           </DarkSectionText>
         </DarkSectionWrapper>
