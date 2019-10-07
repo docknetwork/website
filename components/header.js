@@ -365,10 +365,19 @@ const Header = () => {
           </NavLinkCommunity>
           {showMenu && (
             <CommunityMenu>
-              <CommunityMenuLink href="https://blog.dock.io">
+              <CommunityMenuLink href="https://blog.dock.io"
+                target="_blank"
+                rel="noopener noreferrer">
                 Blog
               </CommunityMenuLink>
-              <CommunityMenuLink href="https://community.dock.io">
+              <CommunityMenuLink href="https://github.com/docknetwork"
+                target="_blank"
+                rel="noopener noreferrer">
+                Github
+              </CommunityMenuLink>
+              <CommunityMenuLink href="https://community.dock.io"
+                target="_blank"
+                rel="noopener noreferrer">
                 Forum
               </CommunityMenuLink>
               <CommunityMenuSpan>Connect with us</CommunityMenuSpan>
