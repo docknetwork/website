@@ -146,7 +146,7 @@ const HeaderHero = () => {
         <Wrapper>
           <div>
             <HeroTitle>
-              Verifiable claims
+              Verifiable Claims
             </HeroTitle>
             <HeroSubtitle>
               High-performance distributed ledger technology to produce verifiable claims at scale.

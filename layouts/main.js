@@ -13,51 +13,6 @@ import favicon96 from '../assets/favicons/favicon-96x96.png';
 const pageDesc = 'Dock is a decentralized network enabling organizations to produce digital claims at scale.';
 const pageTitle = 'Dock : High-performance blockchain claims';
 
-
-const Banner = styled.a`
-  background-image: linear-gradient(to right, rgb(75, 107, 220), rgb(94, 77, 172));
-  font-size: 18px;
-  line-height: 1.56;
-  text-align: center;
-  color: rgb(255, 255, 255);
-  width: 100%;
-  display: flex;
-  text-decoration: none;
-  flex-direction: column;
-  padding: 10px 0;
-  align-items: center;
-
-  @media ${media.medium} {
-    flex-direction: row;
-    justify-content: center;
-    padding: 0;
-    height: 52px;
-  }
-`;
-
-const BannerButton = styled.span`
-  display: flex;
-  color: rgb(255, 255, 255);
-  margin-left: 12px;
-  text-decoration: none;
-
-  > img {
-    margin-left: 20px;
-  }
-`;
-
-import arrowRightWhiteSVG from '../assets/images/icons/arrow-right-white.svg';
-
-
-
-
-
-
-
-
-
-
-
 const ModalHeader = styled.div`
   width: 100%;
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.06);
@@ -128,40 +83,6 @@ import arrowSVG from '../assets/images/verifable-modal/arrow.svg';
 import Modal from '../components/modal';
 import { UnderlineLinkAligned } from '../components/underline-link';
 
-// TODO: move to separate file
-
-const VerifiableModal = ({onClose}) => (
-  <Modal onClose={onClose}>
-    <ModalHeader>
-      <img src={arrowSVG}/>
-      <ModalTitle>
-        The Dock app has moved to
-      </ModalTitle>
-      <ModalSubtitle>
-        Verifiable
-      </ModalSubtitle>
-      <ModalImage src={modalImageSVG}/>
-    </ModalHeader>
-    <ModalContent>
-      The Dock wallet and data control apps have separated from the Dock blockchain project into a brand new home at Verifiable.com.
-      &nbsp;
-      <a href="https://blog.dock.io/frequently-asked-questions"
-        target="_blank"
-        rel="noopener noreferrer">
-        Learn more
-      </a>
-      <br /><br />
-      <strong>Your Dock account has automatically moved.</strong><br />
-      Use your existing login to access your account.
-    </ModalContent>
-    <ModalFooter>
-      <UnderlineLinkAligned href="https://verifiable.com">
-        Go to Verifiable
-      </UnderlineLinkAligned>
-    </ModalFooter>
-  </Modal>
-);
-
 export default class MainLayout extends React.Component {
   static getInitialProps({ renderPage }) {
     const sheet = new ServerStyleSheet();
@@ -175,9 +96,6 @@ export default class MainLayout extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = {
-      showModal: false
-    };
   }
 
   render() {
@@ -232,19 +150,7 @@ export default class MainLayout extends React.Component {
           }
         `}</style>
 
-        <Banner href="https://verifiable.com" onClick={e => { e.preventDefault(); e.stopPropagation(); this.setState({ showModal: true }); }}>
-          The Dock app has moved to Verifiable.
-          <BannerButton>
-            Learn more
-            <img src={arrowRightWhiteSVG}/>
-          </BannerButton>
-        </Banner>
-
         { this.props.children }
-
-        {this.state.showModal && (
-          <VerifiableModal onClose={() => { this.setState({ showModal: false }); }} />
-        )}
         <Footer />
       </>
     );
