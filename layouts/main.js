@@ -1,8 +1,7 @@
 import React from 'react';
-import styled, { ServerStyleSheet } from 'styled-components';
+import { ServerStyleSheet } from 'styled-components';
 import Safe from 'react-safe';
 import Head from 'next/head';
-import media from '../helpers/media';
 
 import Footer from '../components/footer';
 
