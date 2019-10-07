@@ -261,7 +261,7 @@ const Governance = ({proposals}) => {
               Open Proposals
             </ProposalsSectionTitle>
             <NewProposalButton
-              href="https://github.com/getdock/voting"
+              href="https://github.com/docknetwork/voting"
               target="_blank"
               rel="noopener noreferrer">
               New proposal

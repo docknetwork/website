@@ -122,6 +122,9 @@ const Footer = () => (
         </NavColumn>
         <NavColumn>
           <NavLink href="https://blog.dock.io">Blog</NavLink>
+          <NavLink href="https://github.com/docknetwork"
+            target="_blank"
+            rel="noopener noreferrer">Github</NavLink>
           <NavLink href="https://community.dock.io">Forum</NavLink>
           <NavLink href="https://dock.io/litepaper.pdf">Litepaper</NavLink>
         </NavColumn>
@@ -160,7 +163,7 @@ const Footer = () => (
         </SocialLink>
 
         <SocialLink
-          href="https://github.com/getdock"
+          href="https://github.com/docknetwork"
           target="_blank"
           rel="noopener noreferrer"
         >
