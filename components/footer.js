@@ -160,7 +160,7 @@ const Footer = () => (
         </SocialLink>
 
         <SocialLink
-          href="https://github.com/getdock"
+          href="https://github.com/docknetwork"
           target="_blank"
           rel="noopener noreferrer"
         >

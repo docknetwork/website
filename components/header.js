@@ -308,7 +308,7 @@ const SocialIcons = () => (
       <img src={facebookIcon} />
     </CommunityMenuIcon>
     <CommunityMenuIcon
-      href="https://github.com/getdock"
+      href="https://github.com/docknetwork"
       target="_blank"
       rel="noopener noreferrer"
     >
