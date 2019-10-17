@@ -347,6 +347,9 @@ const Header = () => {
         <NavLinkMobile href="https://blog.dock.io">
           Blog
         </NavLinkMobile>
+        <NavLinkMobile href="https://github.com/docknetwork">
+          GitHub
+        </NavLinkMobile>
         <NavLinkMobile href="https://community.dock.io">
           Forum
         </NavLinkMobile>
@@ -373,7 +376,7 @@ const Header = () => {
               <CommunityMenuLink href="https://github.com/docknetwork"
                 target="_blank"
                 rel="noopener noreferrer">
-                Github
+                GitHub
               </CommunityMenuLink>
               <CommunityMenuLink href="https://community.dock.io"
                 target="_blank"
