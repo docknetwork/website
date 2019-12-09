@@ -3,6 +3,7 @@ import optimizedImages from 'next-optimized-images';
 import withPlugins from 'next-compose-plugins';
 
 const config = {
+  exportTrailingSlash: true,
   exportPathMap: async function() {
     const eth = EthService.getInstance();
     await eth.init();
