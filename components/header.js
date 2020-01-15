@@ -350,9 +350,6 @@ const Header = () => {
         <NavLinkMobile href="https://github.com/docknetwork">
           GitHub
         </NavLinkMobile>
-        <NavLinkMobile href="https://community.dock.io">
-          Forum
-        </NavLinkMobile>
         <MobileSocialIcons>
           <SocialIcons />
         </MobileSocialIcons>
@@ -377,11 +374,6 @@ const Header = () => {
                 target="_blank"
                 rel="noopener noreferrer">
                 GitHub
-              </CommunityMenuLink>
-              <CommunityMenuLink href="https://community.dock.io"
-                target="_blank"
-                rel="noopener noreferrer">
-                Forum
               </CommunityMenuLink>
               <CommunityMenuSpan>Connect with us</CommunityMenuSpan>
               <SocialIcons />
