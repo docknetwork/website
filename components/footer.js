@@ -125,7 +125,6 @@ const Footer = () => (
           <NavLink href="https://github.com/docknetwork"
             target="_blank"
             rel="noopener noreferrer">GitHub</NavLink>
-          <NavLink href="https://community.dock.io">Forum</NavLink>
           <NavLink href="https://dock.io/litepaper.pdf">Litepaper</NavLink>
         </NavColumn>
       </Nav>
