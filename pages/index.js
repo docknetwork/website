@@ -278,11 +278,9 @@ const Index = () => {
                   Open and collaborative governance driven by the DOCK token.
                 </RowItemContentText>
 
-                <Link href="/governance" passHref>
-                  <UnderlineLinkAligned href="https://dock.io">
-                    Learn more
-                  </UnderlineLinkAligned>
-                </Link>
+                <UnderlineLinkAligned href="https://dock.io/governance">
+                  Learn more
+                </UnderlineLinkAligned>
               </RowItemContent>
             </RowItem>
 
@@ -299,7 +297,7 @@ const Index = () => {
                 </RowItemContentText>
 
                 <Link href="/network" passHref>
-                  <UnderlineLinkAligned href="https://dock.io">
+                  <UnderlineLinkAligned>
                     Learn more
                   </UnderlineLinkAligned>
                 </Link>
