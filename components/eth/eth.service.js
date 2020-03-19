@@ -4,9 +4,8 @@ import { DockToken, VotingCenter, Poll } from './contracts';
 import HexUtils from './hex-utils';
 import IPFS from './ipfs';
 
-
 // const rpcURL = 'https://rinkeby.infura.io/'; // Rinkeby Test Net
-const rpcURL = 'https://mainnet.infura.io/Ij97ilgQwoAhbHk38cyq'; // Main Ethereum Net
+const rpcURL = 'https://mainnet.infura.io/v3/f0cc1113681744bcb2482c5164d2064c'; // Main Ethereum Net
 
 // const votingCenterAddress = '0xdc71eF432328E36cAb08382bDa2597192DC0c7Db'; // Rinkeby Test Net
 const votingCenterAddress = '0x712ed83fAAB76499FA1D3FB51F870FAed61d3C51'; // Main Ethereum Net
