@@ -22,4 +22,4 @@ class MyApp extends App {
   }
 }
 
-export default withGA('UA-136965370-1', Router)(MyApp);
+export default withGA('UA-110316080-1', Router)(MyApp);
