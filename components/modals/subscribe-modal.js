@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import axios from 'axios';
 
 import { UnderlineLink } from '../underline-link';
 
 import Modal from '../modal';
+import apiUrl from '../../helpers/api-url';
 
 const ModalContent = styled.div`
   padding: 20px 30px;
@@ -80,25 +82,32 @@ const Submit = styled.input`
 const SubscribeModal = ({ onClose }) => {
   const [email, setEmail] = useState();
   const [isSubscribed, setIsSubscribed] = useState();
+  const [isSubmitting, setIsSubmitting] = useState();
+  const [error, setError] = useState();
 
   function handleInputChange(event) {
     setEmail(event.target.value);
   }
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault();
     e.stopPropagation();
 
-    if (window._cio) {
-      window._cio.identify({
-        email,
-        id: email,
-        created_at: Math.floor(Date.now() / 1000),
-      });
-      window._cio.track('marketing-subscribe');
-    }
+    if (!isSubmitting && email) {
+      setIsSubmitting(true);
 
-    setIsSubscribed(true);
+      try {
+        const result = await axios.post(`${apiUrl}register-email`, {
+          email,
+        });
+
+        setIsSubscribed(true);
+      } catch (error) {
+        setError(error);
+      }
+
+      setIsSubmitting(false);
+    }
   }
 
   return (
@@ -130,7 +139,7 @@ const SubscribeModal = ({ onClose }) => {
           <Form onSubmit={handleSubmit}>
             <Label>Email</Label>
             <Input type="email" onChange={handleInputChange} />
-            <Submit type="submit" value="Submit" />
+            <Submit type="submit" value={isSubmitting ? 'Please wait...' : 'Submit'} disabled={isSubmitting} />
           </Form>
         </ModalContent>
       )}
