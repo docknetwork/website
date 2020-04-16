@@ -36,7 +36,7 @@
     "isomorphic-unfetch": ">=3.0.0",
     "moment": ">=2.24.0",
     "multihashes": ">=0.4.17",
-    "next": ">=9.3.1",
+    "next": ">=9.3.2",
     "next-compose-plugins": ">=2.2.0",
     "next-ga": ">=2.3.4",
     "next-optimized-images": ">=2.5.5",
