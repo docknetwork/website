@@ -96,17 +96,17 @@ const SubscribeModal = ({ onClose }) => {
     if (!isSubmitting && email) {
       setIsSubmitting(true);
 
-      if (window._cio) {
-        window._cio.identify({
-          id: email,
-          email,
-        });
-      }
-
       try {
         const result = await axios.post(`${apiUrl}register-email`, {
           email,
         });
+
+        if (window._cio) {
+          window._cio.identify({
+            id: email,
+            email,
+          });
+        }
 
         if (result.data.errorMessage) {
           throw new Error(result.data.errorMessage);
