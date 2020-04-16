@@ -109,6 +109,13 @@ const InquiryModal = ({ onClose }) => {
     if (!isSubmitting && email) {
       setIsSubmitting(true);
 
+      if (window._cio) {
+        window._cio.identify({
+          id: email,
+          email,
+        });
+      }
+
       try {
         const result = await axios.post(`${apiUrl}register-email`, {
           email,
@@ -116,9 +123,13 @@ const InquiryModal = ({ onClose }) => {
           data: details
         });
 
+        if (result.data.errorMessage) {
+          throw new Error(result.data.errorMessage);
+        }
+
         setIsSubscribed(true);
       } catch (error) {
-        setError(error);
+        setError(error.toString());
       }
       setIsSubmitting(false);
     }
@@ -140,6 +151,12 @@ const InquiryModal = ({ onClose }) => {
           <Title>
           Join the Dock network
           </Title>
+
+          {error && (
+            <Text>
+              {error}
+            </Text>
+          )}
 
           <Form onSubmit={handleSubmit}>
             <Label>Name</Label>

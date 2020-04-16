@@ -96,14 +96,25 @@ const SubscribeModal = ({ onClose }) => {
     if (!isSubmitting && email) {
       setIsSubmitting(true);
 
+      if (window._cio) {
+        window._cio.identify({
+          id: email,
+          email,
+        });
+      }
+
       try {
         const result = await axios.post(`${apiUrl}register-email`, {
           email,
         });
 
+        if (result.data.errorMessage) {
+          throw new Error(result.data.errorMessage);
+        }
+
         setIsSubscribed(true);
       } catch (error) {
-        setError(error);
+        setError(error.toString());
       }
 
       setIsSubmitting(false);
@@ -135,6 +146,12 @@ const SubscribeModal = ({ onClose }) => {
           <Text>
           Get the latest news and updates about Dock.
           </Text>
+
+          {error && (
+            <Text>
+              {error}
+            </Text>
+          )}
 
           <Form onSubmit={handleSubmit}>
             <Label>Email</Label>
