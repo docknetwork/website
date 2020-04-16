@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import axios from 'axios';
+
 import Modal from '../modal';
+import apiUrl from '../../helpers/api-url';
 
 const ModalContent = styled.div`
   padding: 20px 30px;
@@ -90,25 +93,35 @@ const Submit = styled.input`
 const InquiryModal = ({ onClose }) => {
   const [details, setDetails] = useState({});
   const [isSubscribed, setIsSubscribed] = useState();
+  const [isSubmitting, setIsSubmitting] = useState();
+  const [error, setError] = useState();
 
   function handleInputChange(event) {
     details[event.target.name] = event.target.value;
     setDetails(details);
   }
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault();
     e.stopPropagation();
 
-    if (window._cio) {
-      window._cio.identify(Object.assign(details, {
-        id: details.email,
-        created_at: Math.floor(Date.now() / 1000),
-      }));
-      window._cio.track('buildwithdock');
-    }
+    const email = details.email;
+    if (!isSubmitting && email) {
+      setIsSubmitting(true);
 
-    setIsSubscribed(true);
+      try {
+        const result = await axios.post(`${apiUrl}register-email`, {
+          email,
+          event: 'buildwithdock',
+          data: details
+        });
+
+        setIsSubscribed(true);
+      } catch (error) {
+        setError(error);
+      }
+      setIsSubmitting(false);
+    }
   }
 
   return (
@@ -139,7 +152,7 @@ const InquiryModal = ({ onClose }) => {
             <Input type="text" name="website" onChange={handleInputChange} required />
             <Label>Tell us how you’d like to work with Dock</Label>
             <Textarea name="message" onChange={handleInputChange} />
-            <Submit type="submit" value="Submit" />
+            <Submit type="submit" value="Submit" disabled={isSubmitting} />
           </Form>
         </ModalContent>
       )}
