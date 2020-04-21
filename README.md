@@ -1,3 +1,5 @@
+## Repository is out of date, dock.io is now hosted on webflow
+
 # The Dock Decentralized Autonomous Organization Website
 It's the dock.io website!
 
